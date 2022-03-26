@@ -1,0 +1,142 @@
+.travelHomeMobile,
+.travelHomeDesktop,
+.travelHomeDesktopMaxPixel{
+  display: flex;
+  justify-content: space-around;
+  background-color: #6b6b3bde;
+}
+
+.styleParallaxSecond{
+  height: 500px;
+}
+
+/* Italy */
+.italyHomePage{
+  text-align: center;
+  padding: 100px;
+}
+
+.parrafImgHomeItaly{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0.75;
+  border-radius: 10px;
+}
+
+.imgHomeItaly {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.parrafHomeItaly {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.parrafImgHomeItaly:hover .imgHomeItaly {
+  opacity: 0.3;
+}
+
+.parrafImgHomeItaly:hover .parrafHomeItaly {
+  opacity: 1;
+}
+
+/* EEUU */
+.eeuuHomePage{
+  text-align: center;
+  padding: 100px;
+}
+
+.parrafImgHomeNewYork{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.imgHomeNewYork {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.parrafHomeNewYork {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.parrafImgHomeNewYork:hover .imgHomeNewYork {
+  opacity: 0.3;
+}
+
+.parrafImgHomeNewYork:hover .parrafHomeNewYork {
+  opacity: 1;
+}
+
+.textItalyEeuuParrafHomeNewYork{
+  background-color: #8f7d17;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+@media (max-width: 739.99px) {
+
+  .travelHomeDesktop{
+    display: none;
+  }
+
+  .travelHomeDesktopMaxPixel{
+    display: none;
+  }
+
+}
+
+@media (min-width: 740px) and (max-width: 1099.99px) {
+
+  .travelHomeMobile{
+    display: none;
+  }
+
+  .travelHomeDesktopMaxPixel{
+    display: none;
+  }
+
+}
+
+@media (min-width: 1100px)  {
+
+  .travelHomeDesktop{
+    display: none;
+  }
+
+  .travelHomeDesktopMaxPixel{
+    display: none;
+  }
+
+}

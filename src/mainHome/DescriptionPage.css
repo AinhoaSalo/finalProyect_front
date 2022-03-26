@@ -1,0 +1,32 @@
+.descriptionPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	text-align: center;
+  padding: 0 20px;
+  margin-bottom: 300px;
+  margin-top: 200px;
+	color: #f7f8f8;
+  font-size: 20px;
+  background-color: #8fb9b7a6;
+}
+
+.titleDescripcionPage{
+  font-family: 'Cherry Swash', cursive;
+  padding: 0 60px;
+  padding-top: 50px;
+}
+
+.parrafDescripcionPage {
+  font-family: 'Cherry Swash', cursive;
+  margin: 0 20px;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+.styleSpaceDescriptionPage{
+	background: linear-gradient(to bottom, #A9CFD0, #989b69);
+  background-color: #A9CFD0;
+  text-align: center;
+  padding: 100px;
+}
