@@ -12,21 +12,14 @@
 }
 
 .titleDescripcionPage{
-  font-family: 'Cherry Swash', cursive;
+  font-family: "cherry swash";
   padding: 0 60px;
   padding-top: 50px;
 }
 
 .parrafDescripcionPage {
-  font-family: 'Cherry Swash', cursive;
+ 	font-family: "cherry swash";
   margin: 0 20px;
   margin-bottom: 50px;
   text-align: justify;
-}
-
-.styleSpaceDescriptionPage{
-	background: linear-gradient(to bottom, #A9CFD0, #989b69);
-  background-color: #A9CFD0;
-  text-align: center;
-  padding: 100px;
 }

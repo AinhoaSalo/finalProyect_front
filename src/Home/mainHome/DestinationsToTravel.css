@@ -1,13 +1,22 @@
+.styleSpaceDescriptionPage{
+	background: linear-gradient(to bottom, #A9CFD0, #989b69);
+  background-color: #A9CFD0;
+	color: #597575;
+  text-align: center;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
 .travelHomeMobile,
 .travelHomeDesktop,
 .travelHomeDesktopMaxPixel{
   display: flex;
   justify-content: space-around;
-  background-color: #6b6b3bde;
 }
 
 .styleParallaxSecond{
-  height: 500px;
+  height: 600px;
 }
 
 /* Italy */

@@ -5,7 +5,7 @@
 header{
   background: #8fb9b7;
   font-size: 20px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   border-radius: 0 0 30% 30%;
   /* clip-path: ellipse(99% 52% at 51% 32%); */
 }
@@ -15,7 +15,7 @@ header{
 	font-size: 40px;
 	color: #d7dddf;
 	text-shadow: 2px 2px 4px #000000;
-	font-family: 'Cherry Swash', cursive;
+	font-family: "cherry swash";
 }
 
 .titleHomeMobile{
