@@ -1,11 +1,11 @@
 .styleSpaceDescriptionPage{
+    display: flex;
+  flex-direction: column;
+  text-align: center;
 	background: linear-gradient(to bottom, #A9CFD0, #989b69);
   background-color: #A9CFD0;
 	color: #597575;
-  text-align: center;
   padding: 100px;
-  display: flex;
-  flex-direction: column;
 }
 
 .travelHomeMobile,
