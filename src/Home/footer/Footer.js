@@ -2,7 +2,6 @@ import './Footer.css';
 import logo from '../images/srtasalogris.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
-import {Link} from 'react-router-dom'
 
 function Footer() {
   return(
