@@ -16,6 +16,10 @@ function App() {
           <DescriptionPage/>
           <DestinationsToTravel/>
           <PlanningList/>
+          <Routes>
+            <Route></Route>
+            <Route></Route>
+          </Routes>
           <Footer/>
         </Router>
     </>

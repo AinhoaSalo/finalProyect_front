@@ -14,62 +14,114 @@ function DestinationsToTravel() {
       <div className='styleSpaceDescriptionPage'>
         <div className='allTravelHome'>
           <div className='titleDestinationsToTravel'><h2>Ideas de como como organizar tus viajes</h2></div>
-          <div className='travelHomeMobile'>
-            <div className='italyHomePage'>
-              <h3>Italia</h3>
+          <div className='travelHomeSmartPhone'>
+            <div className='italyHomePageSmartPhone'>
               <Link className='linkItaly' to="#">
                 <div className='parrafImgHomeItaly'>
-                  <div className='parrafHomeItaly'><p className='textItalyEeuuParrafHomeNewYork'>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p></div>
-                  <img className='imgHomeItaly' src={italy} alt="Florence" />
+                  <div className='parrafHomeItaly'>
+                    <div className='textItalyEeuuParrafHomeSmartPhone'>
+                      <h3>Italia</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeItalySmartPhone' src={italy} alt="Florence" />
                 </div>
               </Link>           
             </div>
-            <div className='eeuuHomePage'>
-              <h3>EEUU</h3>
+            <div className='eeuuHomePageSmartPhone'>
               <Link className='linkNewYork' to="#">
                 <div className='parrafImgHomeNewYork'>         
-                  <div className='parrafHomeNewYork'><p className='textItalyEeuuParrafHomeNewYork'>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p></div>
-                  <img className='imgHomeNewYork' src={newYork} alt="NewYork" />
+                  <div className='parrafHomeNewYork'>
+                    <div className='textItalyEeuuParrafHomeSmartPhone'>
+                      <h3>EEUU</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeNewYorkSmartPhone' src={newYork} alt="NewYork" />
+                </div>
+              </Link>         
+            </div>
+          </div>
+          <div className='travelHomeMobile'>
+            <div className='italyHomePageMobile'>
+              <Link className='linkItaly' to="#">
+                <div className='parrafImgHomeItaly'>
+                  <div className='parrafHomeItaly'>
+                  <div className='textItalyEeuuParrafHomeMobile'>
+                      <h3>Italia</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeItalyMobile' src={italy} alt="Florence" />
+                </div>
+              </Link>           
+            </div>
+            <div className='eeuuHomePageMobile'>
+              <Link className='linkNewYork' to="#">
+                <div className='parrafImgHomeNewYork'>         
+                  <div className='parrafHomeNewYork'>
+                  <div className='textItalyEeuuParrafHomeMobile'>
+                      <h3>EEUU</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeNewYorkMobile' src={newYork} alt="NewYork" />
                 </div>
               </Link>         
             </div>
           </div>
           <div className='travelHomeDesktop'>
-            <div className='italyHomePage'>
-              <h3>Italia</h3>
+            <div className='italyHomePageDesktop'>
               <Link className='linkItaly' to="#">
                 <div className='parrafImgHomeItaly'>
-                  <div className='parrafHomeItaly'><p className='textItalyEeuuParrafHomeNewYork'>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p></div>
-                  <img className='imgHomeItaly' src={italy} alt="Florence" />
+                  <div className='parrafHomeItaly'>
+                    <div className='textItalyEeuuParrafHomeDesktop'>
+                      <h3>Italia</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeItalyDesktop' src={italy} alt="Florence" />
                 </div>
               </Link>          
             </div>
-            <div className='eeuuHomePage'>
-              <h3>EEUU</h3>
+            <div className='eeuuHomePageDesktop'>
               <Link className='linkNewYork' to="#">
                 <div className='parrafImgHomeNewYork'>         
-                  <div className='parrafHomeNewYork'><p className='textItalyEeuuParrafHomeNewYork'>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p></div>
-                  <img className='imgHomeNewYork' src={newYork} alt="NewYork" />
+                  <div className='parrafHomeNewYork'>
+                    <div className='textItalyEeuuParrafHomeDesktop'>
+                      <h3>EEUU</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeNewYorkDesktop' src={newYork} alt="NewYork" />
                 </div>
               </Link>         
             </div>
           </div>
           <div className='travelHomeDesktopMaxPixel'>
-            <div className='italyHomePage'>
-              <h3>Italia</h3>
+            <div className='italyHomePageDesktopMaxPixel'>
               <Link className='linkItaly' to="#">
                 <div className='parrafImgHomeItaly'>
-                  <div className='parrafHomeItaly'><p className='textItalyEeuuParrafHomeNewYork'>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p></div>
-                  <img className='imgHomeItaly' src={italy} alt="Florence" />
+                  <div className='parrafHomeItaly'>
+                    <div className='textItalyEeuuParrafHomeDesktopMaxPixel'>
+                      <h3>Italia</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeItalyDesktopMaxPixel' src={italy} alt="Florence" />
                 </div>
               </Link>        
             </div>
-            <div className='eeuuHomePage'>
-              <h3>EEUU</h3>
+            <div className='eeuuHomePageDesktopMaxPixel'>
               <Link className='linkNewYork' to="#">
                 <div className='parrafImgHomeNewYork'>         
-                  <div className='parrafHomeNewYork'><p className='textItalyEeuuParrafHomeNewYork'>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p></div>
-                  <img className='imgHomeNewYork' src={newYork} alt="NewYork" />
+                  <div className='parrafHomeNewYork'>
+                    <div className='textItalyEeuuParrafHomeDesktopMaxPixel'>
+                      <h3>EEUU</h3>
+                      <p>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p>
+                    </div>
+                  </div>
+                  <img className='imgHomeNewYorkDesktopMaxPixel' src={newYork} alt="NewYork" />
                 </div>
               </Link>          
             </div>
