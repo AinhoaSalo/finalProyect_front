@@ -1,10 +1,11 @@
 import './App.css';
 import Header from './Home/header/Header';
-import DescriptionPage from './Home/mainHome/DescriptionPage';
-import DestinationsToTravel from './Home/mainHome/DestinationsToTravel';
+import Main from './Home/mainHome/Main';
+import ListTrip from './routes/listTrip/ListTrip';
+import Users from './routes/users/Users';
 import Footer from './Home/footer/Footer';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
-import PlanningList from './Home/mainHome/PlanningList';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+
 
 
 
@@ -13,12 +14,10 @@ function App() {
     <>
         <Router>
           <Header/>
-          <DescriptionPage/>
-          <DestinationsToTravel/>
-          <PlanningList/>
           <Routes>
-            <Route></Route>
-            <Route></Route>
+            <Route exact path='/'  element={<Main/>}/>
+            <Route path='/planearviaje'  element={<ListTrip/>}/>
+            <Route path='/registro'  element={<Users/>}/>
           </Routes>
           <Footer/>
         </Router>

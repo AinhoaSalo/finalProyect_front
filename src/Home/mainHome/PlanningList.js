@@ -1,7 +1,7 @@
 import './PlanningList.css';
-import {Parallax} from 'react-parallax';
-import thirdImgParallax from '../imagesHome/camera.jpg'
 import {Link} from 'react-router-dom'
+import {Parallax} from 'react-parallax'
+import thirdImgParallax from '../imagesHome/camera.jpg'
 
 
 function PlanningList() {
