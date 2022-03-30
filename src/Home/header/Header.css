@@ -6,7 +6,6 @@ header{
   /* background: #8fb9b7; */
   background-color: #A9CFD0;
   font-size: 20px;
-  /* font-family: sans-serif; */
   border-radius: 0 0 30% 30%;
   /* clip-path: ellipse(99% 52% at 51% 32%); */
 }
@@ -100,67 +99,28 @@ nav .animation {
 	width: 120px;
 }
 
-nav .start-Inicio, .linkHeader:nth-child(1):hover~.animation {
+nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
 	width: 100px;
 	left: 0;
 	background-color: #d1bc75;
 }
-nav .start-Europa, .linkHeader:nth-child(2):hover~.animation {
+nav .start-italia, .linkHeader:nth-child(2):hover~.animation {
 	width: 110px;
 	left: 100px;
 	background-color: #be92bc;
 }
-nav .start-EEUU, .linkHeader:nth-child(3):hover~.animation {
+nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	width: 100px;
 	left: 210px;
 	background-color: #92bedb;
 }
-nav .start-Planning, .linkHeader:nth-child(4):hover~.animation {
+nav .start-planearviaje, .linkHeader:nth-child(4):hover~.animation {
 	width: 160px;
 	left: 310px;
 	background-color: #e0d4c6;
 }
-nav .start-contact, .linkHeader:nth-child(5):hover~.animation {
+nav .start-registro, .linkHeader:nth-child(5):hover~.animation {
 	width: 120px;
 	left: 470px;
 	background-color: #e67e22;
-}
-
-
-
-@media (max-width: 739.99px) {
-
-  .headerDesktopMaxPixel{
-    display: none;
-  }
-
-  .headerDesktop{
-    display: none;
-  }
-
-}
-
-@media (min-width: 740px) and (max-width: 1099.99px) {
-
-  .headerMobile{
-    display: none;
-  }
-
-  .headerDesktopMaxPixel{
-    display: none;
-  }
-
-}
-
-@media (min-width: 1100px)  {
-
-  .headerMobile{
-    display: none;
-  }
-
-  .headerDesktop{
-    display: none;
-  }
-
-}
-  
+} 
