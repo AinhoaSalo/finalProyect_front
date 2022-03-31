@@ -17,7 +17,7 @@ function DestinationsToTravel() {
             <div className='titleDestinationsToTravel'><h2>Ideas de como como organizar tus viajes</h2></div>
             <div className='travelHomeSmartPhone'>
               <div className='italyHomePageSmartPhone'>
-                <Link className='linkItaly' to="#">
+                <Link className='linkItaly' to="/italia">
                   <div className='parrafImgHomeItaly'>
                     <div className='parrafHomeItaly'>
                       <div className='textItalyEeuuParrafHomeSmartPhone'>
@@ -30,7 +30,7 @@ function DestinationsToTravel() {
                 </Link>           
               </div>
               <div className='eeuuHomePageSmartPhone'>
-                <Link className='linkNewYork' to="#">
+                <Link className='linkNewYork' to="/eeuu">
                   <div className='parrafImgHomeNewYork'>         
                     <div className='parrafHomeNewYork'>
                       <div className='textItalyEeuuParrafHomeSmartPhone'>
@@ -45,7 +45,7 @@ function DestinationsToTravel() {
             </div>
             <div className='travelHomeMobile'>
               <div className='italyHomePageMobile'>
-                <Link className='linkItaly' to="#">
+                <Link className='linkItaly' to="/italia">
                   <div className='parrafImgHomeItaly'>
                     <div className='parrafHomeItaly'>
                     <div className='textItalyEeuuParrafHomeMobile'>
@@ -58,7 +58,7 @@ function DestinationsToTravel() {
                 </Link>           
               </div>
               <div className='eeuuHomePageMobile'>
-                <Link className='linkNewYork' to="#">
+                <Link className='linkNewYork' to="/eeuu">
                   <div className='parrafImgHomeNewYork'>         
                     <div className='parrafHomeNewYork'>
                     <div className='textItalyEeuuParrafHomeMobile'>
@@ -73,7 +73,7 @@ function DestinationsToTravel() {
             </div>
             <div className='travelHomeDesktop'>
               <div className='italyHomePageDesktop'>
-                <Link className='linkItaly' to="#">
+                <Link className='linkItaly' to="/italia">
                   <div className='parrafImgHomeItaly'>
                     <div className='parrafHomeItaly'>
                       <div className='textItalyEeuuParrafHomeDesktop'>
@@ -86,7 +86,7 @@ function DestinationsToTravel() {
                 </Link>          
               </div>
               <div className='eeuuHomePageDesktop'>
-                <Link className='linkNewYork' to="#">
+                <Link className='linkNewYork' to="/eeuu">
                   <div className='parrafImgHomeNewYork'>         
                     <div className='parrafHomeNewYork'>
                       <div className='textItalyEeuuParrafHomeDesktop'>
@@ -101,7 +101,7 @@ function DestinationsToTravel() {
             </div>
             <div className='travelHomeDesktopMaxPixel'>
               <div className='italyHomePageDesktopMaxPixel'>
-                <Link className='linkItaly' to="#">
+                <Link className='linkItaly' to="/italia">
                   <div className='parrafImgHomeItaly'>
                     <div className='parrafHomeItaly'>
                       <div className='textItalyEeuuParrafHomeDesktopMaxPixel'>
@@ -114,7 +114,7 @@ function DestinationsToTravel() {
                 </Link>        
               </div>
               <div className='eeuuHomePageDesktopMaxPixel'>
-                <Link className='linkNewYork' to="#">
+                <Link className='linkNewYork' to="/eeuu">
                   <div className='parrafImgHomeNewYork'>         
                     <div className='parrafHomeNewYork'>
                       <div className='textItalyEeuuParrafHomeDesktopMaxPixel'>

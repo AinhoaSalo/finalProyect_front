@@ -6,7 +6,7 @@ import Users from './fetch/users/Users';
 import EeuuFetch from './fetch/eeuu/EeuuFetch';
 import ItalyFetch from './fetch/italy/ItalyFetch';
 import Footer from './Home/footer/Footer';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 
 
 
@@ -17,6 +17,7 @@ function App() {
         <Router>
           <Header/>
           <Routes>
+            <Route path="/" element={<Navigate to="/inicio" replace />}/>
             <Route path='/inicio'  element={<Main/>}/>
             <Route path='/italia'  element={<ItalyFetch/>}/>
             <Route path='/eeuu'  element={<EeuuFetch/>}/>

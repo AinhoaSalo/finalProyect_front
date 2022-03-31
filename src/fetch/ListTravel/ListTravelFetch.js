@@ -1,20 +1,24 @@
 
 import { useState, useEffect } from "react"
 
-function ListTravelfetch() {
+function ListTravelFetch() {
   let [destinationPlace, setDestinationPlace] = useState(undefined);
-  let [destinationFetch, setDestinationFetch] = useState(undefined);
+  let [destinationFetch, setDestinationFetch] = useState(0);
   let [executeFetch, setExecuteFetch] = useState(false);
+  let [title, setTitle] = useState("")
 
   useEffect(()=>{
     if (executeFetch) {
-      fetch("http://localhost:3000/destinations?nameUserLogin=test")
+      fetch("http://localhost:8000/destinations?nameUserLogin=test")
       .then(response=>response.json())
       .then(res=>{
-        console.log(res)
-        // setDestinationFetch(res)
-        // setExecuteFetch(false)
-        // console.log(destinationFetch)
+        setDestinationFetch(res.destinations);
+        setExecuteFetch(false);
+        destinationFetch.map(i =>{
+          return setTitle = i.title;
+        })
+
+
       }) 
     }
     
@@ -23,19 +27,18 @@ function ListTravelfetch() {
 
   return (
     <>
-    <input type="text" onChange={(e)=>setDestinationPlace(e.target.value)} value={destinationPlace}/>
-    <button onClick={()=>setExecuteFetch(true)}>Buscar lista</button>
-    {
-      destinationFetch != undefined
+    <div className="inputButtonPlanning">
+    <input className="inputPlanning" type="text" placeholder="Nombre planning viaje" onChange={(e)=>setDestinationPlace(e.target.value)} value={destinationPlace}/>
+    <button className="buttonPlanning" onClick={()=>setExecuteFetch(true)}>Buscar lista</button>
+    </div>
+      {
+      destinationFetch != 0
       ?
-      <div>
-        <p>{destinationFetch.title}</p>
-        <p>{destinationFetch.days.destinos.destino}</p>
-      </div>
-    :
-    "dale al boton para ver la lista de tu viaje"}
+      <div className="titleListUser"><h2>{title}</h2></div>
+      :
+      ""}
     </>
   );
 }
 
-export default ListTravelfetch;
+export default ListTravelFetch;
