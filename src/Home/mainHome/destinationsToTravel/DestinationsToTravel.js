@@ -2,10 +2,10 @@ import './DestinationsToTravel.css';
 import {Link} from 'react-router-dom'
 import {Parallax} from 'react-parallax'
 
-import newYork from '../imagesHome/newYork.jpg'
-import italy from '../imagesHome/florence.jpg'
+import newYork from './img/newYork.jpg'
+import italy from './img/florence.jpg'
 
-import secondImgParallax from '../imagesHome/pexels-oliver-sjöström-931018.jpg'
+import secondImgParallax from './img/pexels-oliver-sjöström-931018.jpg'
 
 function DestinationsToTravel() {
 

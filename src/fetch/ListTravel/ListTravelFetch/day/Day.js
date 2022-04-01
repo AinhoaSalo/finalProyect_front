@@ -1,14 +1,14 @@
-import Destination from "../ListTravelFetch/destination/Destination";
+import Destinations from "../destinations/Destinations";
+import Collapsible from 'react-collapsible';
 
 function Day({day}) {
   return (
     <>
-
+      {/* <h3>{day.day}</h3> */}
       <Collapsible trigger={day.day}>
       {
-      travel.days.map((day, i)=>{
-        console.log(day)
-        return <Destination key={i} day={day}/>
+      day.destinations.map((destinations, i)=>{
+        return <Destinations key={i} destinations={destinations}/>
       })
       }
     </Collapsible>

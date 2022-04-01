@@ -1,5 +1,5 @@
 import './DescriptionPage.css';
-import firstImgParallax from '../imagesHome/sea.jpg';
+import firstImgParallax from './img/sea.jpg';
 import {Parallax} from 'react-parallax'
 
 function DescriptionPage() {

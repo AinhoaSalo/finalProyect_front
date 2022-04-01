@@ -1,5 +1,5 @@
 import './Footer.css';
-import logo from '../imagesHome/srtasalogris.png';
+import logo from './img/srtasalogris.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 

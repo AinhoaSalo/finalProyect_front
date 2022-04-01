@@ -1,6 +1,6 @@
-import PlanningList from "./PlanningList";
-import DestinationsToTravel from "./DestinationsToTravel";
-import DescriptionPage from "./DescriptionPage";
+import PlanningList from "./planningList/PlanningList";
+import DestinationsToTravel from "./destinationsToTravel/DestinationsToTravel";
+import DescriptionPage from "./descriptionPage/DescriptionPage";
 
 function Main() {
   return ( 

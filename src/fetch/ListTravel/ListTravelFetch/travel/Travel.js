@@ -1,4 +1,4 @@
-import Day from "../../day/Day";
+import Day from "../day/Day";
 import Collapsible from 'react-collapsible';
 
 function Travel({travel}) {
