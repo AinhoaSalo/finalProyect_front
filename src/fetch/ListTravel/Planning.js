@@ -1,4 +1,4 @@
-import ListTravelFetch from "./ListTravelFetch";
+import ListTravelFetch from "./ListTravelFetch/ListTravelFetch";
 
 function Planning () {
 
