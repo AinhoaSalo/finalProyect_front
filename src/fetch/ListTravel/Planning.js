@@ -4,7 +4,10 @@ function Planning () {
 
     return(
         <>
-        <ListTravelFetch/>
+        <div className=""><ListTravelFetch/></div>
+        <div><ListTravelFetch/></div>
+        <div><ListTravelFetch/></div>
+        
         </>
     )
     

@@ -1,53 +1,28 @@
-/* body{
-  background: rgb(247, 222, 220);
-} */
-
 header{
-  /* background: #8fb9b7; */
-  background-color: #A9CFD0;
+  background-color: #8fa4a5;
   font-size: 20px;
-  border-radius: 0 0 30% 30%;
-  /* clip-path: ellipse(99% 52% at 51% 32%); */
 }
 
 .titleSoonHomeHeader {
 	text-align: center;
+	margin: 20px;
+	padding-left: 50px;
 	font-size: 40px;
-	color: #d7dddf;
-	text-shadow: 2px 2px 4px #000000;
+	color: #235768;
+	text-shadow: 2px 2px 4px #fdfcfc;
 	font-family: "cherry swash";
 }
 
-.titleHomeMobile{
-  display: flex;
-  justify-content: center; 
-}
-
-.titleHomeDesktop{
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-}
-
 .titleHomeDesktopMaxPixel{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   font-size: 25px;
 }
 
-.titleHomeMobile{
-  display: flex;
-  flex-direction: column;
-}
-
-.titleHomeDesktop{
-  display: flex;
-  flex-direction: column;
-}
-
 .titleHomeDesktopMaxPixel{
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+
 }
 
 nav {
@@ -55,7 +30,7 @@ nav {
 	position: relative;
 	width: 590px;
 	height: 50px;
-	background-color: #bfd3e2;
+	background-color: #afc4c5;
 	border-radius: 8px;
 	font-size: 0;
 }
@@ -102,25 +77,26 @@ nav .animation {
 nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
 	width: 100px;
 	left: 0;
-	background-color: #d1bc75;
+	background-color: #6a9fa8;
 }
 nav .start-italia, .linkHeader:nth-child(2):hover~.animation {
 	width: 110px;
 	left: 100px;
-	background-color: #be92bc;
+	background-color: #808fd3;
 }
 nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	width: 100px;
 	left: 210px;
-	background-color: #92bedb;
+	background-color: #356483;
 }
-nav .start-planearviaje, .linkHeader:nth-child(4):hover~.animation {
+nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, .linkHeader:nth-child(4):hover~.animation{
 	width: 160px;
 	left: 310px;
-	background-color: #e0d4c6;
+	background-color: #EDC5CB;
 }
+
 nav .start-registro, .linkHeader:nth-child(5):hover~.animation {
 	width: 120px;
 	left: 470px;
-	background-color: #e67e22;
+	background-color: #ad9a5a;
 } 

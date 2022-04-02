@@ -11,7 +11,7 @@ function Header() {
             <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
             <NavLink className="linkHeader" to="/italia">Italia</NavLink>
             <NavLink className="linkHeader" to="/eeuu">EEUU</NavLink>
-            <NavLink className="linkHeader" to="/planearviaje">Planning</NavLink>
+            <NavLink className="linkHeader" to="/listascreadas">Planning</NavLink>
             <NavLink className="linkHeader" to="/registro">Registro</NavLink>
             <div className={"animation start-" + (useLocation().pathname).substring(1)}></div>
           </nav>

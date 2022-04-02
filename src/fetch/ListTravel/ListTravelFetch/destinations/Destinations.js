@@ -6,14 +6,14 @@ function Destinations({destinations}) {
   console.log(destinations)
   return (
     <>
-      <Collapsible trigger={destinations.destination}>
+      <Collapsible className="pointer" trigger={destinations.destination}>
       <ol>
       {
       destinations.places.map((place, i)=>{
         return (
           <>
             <li>
-              <Collapsible trigger={place.name}>
+              <Collapsible className="pointer" trigger={place.name}>
               <p key={i}>{place.description}</p>
               </Collapsible>
             </li>

@@ -1,8 +1,13 @@
 .list{
-  background: linear-gradient(to bottom, #6b6b3bde, #caa56e);
+  background: linear-gradient(to bottom, #6b6b3bde, #9c8056ea);
   padding: 100px;
 }
 
 .styleParallaxThird{
   height: 600px;
+}
+
+.navLinkPlanning{
+  display: flex;
+  flex-direction: column;
 }
