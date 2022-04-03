@@ -4,13 +4,11 @@ function AddTitle({travelAll, setTravelAll}){
   let [createTitleList, setCreateTitleList] = useState("");
   
   function Add() {
-    console.log(travelAll)
     let auxTravel = travelAll;
     auxTravel.title = createTitleList;
     setTravelAll(auxTravel)
     setCreateTitleList("")
-    console.log(travelAll)
-
+    console.log(auxTravel)
   }
   
  

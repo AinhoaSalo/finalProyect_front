@@ -1,8 +1,10 @@
 import "./CreateDesktop.css"
 import LinksPlanning from "../../linksPlanning/LinksPlanning";
 import AddTitle from "../anadirInputs/AddTitle";
-import { useState } from "react";
+
 import objetTravel from "../objetList/objetTravel";
+import { useState } from "react";
+import AddDays from "../anadirInputs/AddDays"
 
 function CreateDesktop() {
   let [travelAll, setTravelAll] = useState(objetTravel);
@@ -18,8 +20,7 @@ function CreateDesktop() {
             <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
             <div className="inputCreateListDesktop hidden">
-                <p className="pInputDesktop">Día:</p>
-
+            <AddDays travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
             <div className="inputCreateListDesktop hidden">
                 <p className="pInputDesktop">Destino del día:</p>

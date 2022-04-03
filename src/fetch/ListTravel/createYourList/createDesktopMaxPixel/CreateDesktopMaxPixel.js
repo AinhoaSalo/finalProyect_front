@@ -3,10 +3,13 @@ import LinksPlanning from "../../linksPlanning/LinksPlanning";
 import AddTitle from "../anadirInputs/AddTitle";
 import { useState } from "react";
 import objetTravel from "../objetList/objetTravel";
+import AddDays from "../anadirInputs/AddDays"
+
+
 
 function CreateDesktopMaxPixel() {
-  
-  // let [createDayList, setcreateDayList] = useState("");
+
+  // 
   // let [createDestinationList, setcreateDestinationList] = useState("");
   // let [createPlaceList, setCreatePlaceList] = useState("");
   // let [createDescription, setCreateDescription] = useState("");
@@ -23,7 +26,7 @@ function CreateDesktopMaxPixel() {
             <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
-              <p className="pInputDesktopMaxPixel">Día:</p>
+            <AddDays travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
               <p className="pInputDesktopMaxPixel">Destino del día:</p>
