@@ -1,0 +1,34 @@
+.createYourListDesktop{
+  background: url(../img/workplace-g41ff900d6_1280.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding-bottom: 200px;
+}
+
+.allStyleCreateYourListDesktop{
+  display: flex;
+  flex-direction: row;
+}
+
+.allInputsCreateYourListDesktop{
+  background-color: rgba(187, 193, 199, 0.58);
+  margin: 10px 80px 0 80px;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: default;
+  font-size: 18px;
+  width: 50%;
+}
+
+.textAddInputsCreateYourListDesktop{
+  background-color: rgba(187, 193, 199, 0.58);
+  margin: 10px 80px 0 80px;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: default;
+  font-size: 18px;
+  width: 50%;
+}
+

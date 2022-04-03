@@ -1,7 +1,7 @@
 import "./LinksPlanning.css"
 import {NavLink} from "react-router-dom"
 
-function LinksPlanning () {
+function LinksPlanning() {
 
   return(
     <>

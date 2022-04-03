@@ -21,7 +21,7 @@ function ListTravelFetch() {
         <LinksPlanning/>
         <div className="allCollapsibleSmartPhone">
           {
-            travelFetch != 0
+            travelFetch !== 0
           ?
             travelFetch.map((travel, i) =>{
               return <Travel key={i} travel={travel}/>
@@ -35,7 +35,7 @@ function ListTravelFetch() {
         <LinksPlanning/>
         <div className="allCollapsibleMobile">
           {
-            travelFetch != 0
+            travelFetch !== 0
           ?
             travelFetch.map((travel, i) =>{
               return <Travel key={i} travel={travel}/>
@@ -49,7 +49,7 @@ function ListTravelFetch() {
         <LinksPlanning/>
         <div className="allCollapsibleDesktop">
           {
-            travelFetch != 0
+            travelFetch !== 0
           ?
             travelFetch.map((travel, i) =>{
               return <Travel key={i} travel={travel}/>
@@ -63,7 +63,7 @@ function ListTravelFetch() {
         <LinksPlanning/>
         <div className="allCollapsibleDesktopMaxPixel">
           {
-            travelFetch != 0
+            travelFetch !== 0
           ?
             travelFetch.map((travel, i) =>{
               return <Travel key={i} travel={travel}/>
