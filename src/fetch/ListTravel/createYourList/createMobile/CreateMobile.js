@@ -1,17 +1,11 @@
 import "./CreateMobile.css"
 import LinksPlanning from "../../linksPlanning/LinksPlanning";
+import AddTitle from "../anadirInputs/AddTitle";
+import { useState } from "react";
+import objetTravel from "../objetList/objetTravel";
 
 function CreateMobile() {
-  // let [travelFetch, setTravelFetch] = useState(0);
-
-  // useEffect(()=>{
-  //   fetch("http://localhost:8000/travel?nameUserLogin=test")
-  //   .then(response=>response.json())
-  //   .then(res=>{
-  //     console.log(res)
-  //     setTravelFetch(res.travel);
-  //   }) 
-  // }, [])
+  let [travelAll, setTravelAll] = useState(objetTravel);
 
   return (
     <>
@@ -20,33 +14,27 @@ function CreateMobile() {
         <div className="allStyleCreateYourListMobile">
           <div className="allInputsCreateYourListMobile">
             <div className="inputCreateListMobile">
-              <p className="pInputMobile">Título:</p>
-              <input className="inputMobile" type="text" />
-              <button>Enviar</button>
+            <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
-            <div className="inputCreateListMobile">
+            <div className="inputCreateListMobile hidden">
               <p className="pInputMobile">Día:</p>
-              <input className="inputMobile" type="text" />
-              <button>Enviar</button>
+
             </div>
-            <div className="inputCreateListMobile">
+            <div className="inputCreateListMobile hidden">
               <p className="pInputMobile">Destino del día:</p>
-              <input className="inputMobile" type="text" />
-              <button>Enviar</button>
+
             </div>
-            <div className="inputCreateListMobile">
+            <div className="inputCreateListMobile hidden">
               <p className="pInputMobile">Nombre lugar a visitar:</p>
-              <input className="inputMobile" type="text" />
-              <button>Enviar</button>
+
             </div>
-            <div className="inputCreateListMobile">
+            <div className="inputCreateListMobile hidden">
               <p className="pInputMobile">Descripción lugar a visitar:</p>
-              <input className="inputMobile" type="text" />
-              <button>Enviar</button>
+
             </div>
           </div>
           <div className="textAddInputsCreateYourListMobile">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quaerat qui nesciunt dolorem dolores, esse sed voluptates pariatur eaque doloribus omnis placeat odit ipsam voluptas saepe labore aut odio nulla?</p>
+            <h2>{travelAll.title}</h2>          
           </div>
         </div>
       </div>
