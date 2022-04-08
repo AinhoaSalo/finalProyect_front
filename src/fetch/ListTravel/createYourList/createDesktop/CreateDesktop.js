@@ -2,7 +2,7 @@ import "./CreateDesktop.css"
 import LinksPlanning from "../../linksPlanning/LinksPlanning";
 import AddTitle from "../anadirInputs/AddTitle";
 
-import objetTravel from "../objetList/objetTravel";
+import objetTravel from "../../../objets/objetTravel";
 import { useState } from "react";
 import AddDays from "../anadirInputs/AddDays"
 

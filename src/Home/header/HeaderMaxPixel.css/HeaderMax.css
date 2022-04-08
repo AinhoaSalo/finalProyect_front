@@ -1,0 +1,102 @@
+header{
+  background-color: #8fa4a5;
+  font-size: 20px;
+}
+
+.titleSoonHomeHeader {
+	text-align: center;
+	margin: 20px;
+	padding-left: 50px;
+	font-size: 40px;
+	color: #235768;
+	text-shadow: 2px 2px 4px #fdfcfc;
+	font-family: "cherry swash";
+}
+
+.titleHomeDesktopMaxPixel{
+  display: flex;
+  justify-content: space-around;
+  font-size: 25px;
+}
+
+.titleHomeDesktopMaxPixel{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+nav {
+	margin: 27px auto 0;
+	position: relative;
+	width: 590px;
+	height: 50px;
+	background-color: #afc4c5;
+	border-radius: 8px;
+	font-size: 0;
+}
+
+nav .linkHeader {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgb(107, 106, 106);
+	cursor: pointer;
+}
+
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+.linkHeader:nth-child(1) {
+	width: 100px;
+}
+.linkHeader:nth-child(2) {
+	width: 110px;
+}
+.linkHeader:nth-child(3) {
+	width: 100px;
+}
+.linkHeader:nth-child(4) {
+	width: 160px;
+}
+.linkHeader:nth-child(5) {
+	width: 120px;
+}
+
+nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: #6a9fa8;
+}
+nav .start-italia, .linkHeader:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: #808fd3;
+}
+nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: #356483;
+}
+nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, .linkHeader:nth-child(4):hover~.animation{
+	width: 160px;
+	left: 310px;
+	background-color: #EDC5CB;
+}
+
+nav .start-registro, .linkHeader:nth-child(5):hover~.animation {
+	width: 120px;
+	left: 470px;
+	background-color: #ad9a5a;
+} 

@@ -1,4 +1,5 @@
 function OptionsDay({travelAll}) {
+  //usar onchange para seleccionar el valor
   if (travelAll.days.length > 0){   
     return (
       <>

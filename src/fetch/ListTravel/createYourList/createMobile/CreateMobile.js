@@ -2,7 +2,7 @@ import "./CreateMobile.css"
 import LinksPlanning from "../../linksPlanning/LinksPlanning";
 import AddTitle from "../anadirInputs/AddTitle";
 import { useState } from "react";
-import objetTravel from "../objetList/objetTravel";
+import objetTravel from "../../../objets/objetTravel";
 
 function CreateMobile() {
   let [travelAll, setTravelAll] = useState(objetTravel);

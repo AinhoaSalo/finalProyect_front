@@ -2,7 +2,7 @@ import "./CreateDesktopMaxPixel.css"
 import LinksPlanning from "../../linksPlanning/LinksPlanning";
 import AddTitle from "../anadirInputs/AddTitle";
 import { useState } from "react";
-import objetTravel from "../objetList/objetTravel";
+import objetTravel from "../../../objets/objetTravel";
 import AddDays from "../anadirInputs/AddDays"
 
 

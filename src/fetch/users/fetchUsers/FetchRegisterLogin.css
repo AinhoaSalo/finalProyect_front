@@ -1,0 +1,21 @@
+.allRegisterLogin{
+    margin: 100px;
+}
+
+.titleAllRegisterUser{
+    text-align: center;
+}
+
+.RegisterLogin{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.inputRegLog{
+    border-radius: 5px;
+    border: 1px solid rgb(37, 109, 145);
+    margin: 10px;
+    width: 250px;
+}
+

@@ -1,9 +1,15 @@
-// import {Link} from 'react-router-dom'
+import FetchRegister from "./fetchUsers/FetchRegisterLogin";
+import objetUsers from "../objets/objetUsers";
+import { useState } from "react";
 
 function Users() {
-    return ( 
-       <p>Aquí irá el registro o/y login usuario</p>
-    );
-  }
+  let [allUser, setAllUser] = useState(objetUsers);
+
+  return ( 
+    <>
+      <FetchRegister allUser={allUser} setAllUser={setAllUser}/>
+    </>
+  );
+}
   
   export default Users;
