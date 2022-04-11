@@ -1,20 +1,20 @@
 let objetTravel = {
   title: "",
   days: [
-  // {
-  //   day: "",
-  //   destinations: [
-  //     {
-  //       destination: "",
-  //       places: [
-  //         {
-  //           name: "",
-  //           description: ""
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // }
+  {
+    day: "",
+    destinations: [
+      {
+        destination: "",
+        places: [
+          {
+            name: "",
+            description: ""
+          }
+        ]
+      }
+    ]
+  }
 ]
 }
 

@@ -1,9 +1,12 @@
-function OptionsDay({travelAll}) {
-  //usar onchange para seleccionar el valor
+import { useState } from "react"
+
+function OptionsDay({travelAll, day, setDay}) {
+  console.log(day)
+
   if (travelAll.days.length > 0){   
     return (
       <>
-      <select>
+      <select onChange={(e)=> setDay(e.target.value)} value={day}>
       {travelAll.days.map((day, i)=>{
         return(    
           <>     

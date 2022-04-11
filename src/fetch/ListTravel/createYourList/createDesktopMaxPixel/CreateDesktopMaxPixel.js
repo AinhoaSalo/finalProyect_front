@@ -1,9 +1,10 @@
 import "./CreateDesktopMaxPixel.css"
 import LinksPlanning from "../../linksPlanning/LinksPlanning";
 import AddTitle from "../anadirInputs/AddTitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import objetTravel from "../../../objets/objetTravel";
 import AddDays from "../anadirInputs/AddDays"
+import AddDestinations from "../anadirInputs/AddDestination";
 
 
 
@@ -15,6 +16,11 @@ function CreateDesktopMaxPixel() {
   // let [createDescription, setCreateDescription] = useState("");
   // let [tripAll, setTripAll] = useState({})
   let [travelAll, setTravelAll] = useState(objetTravel);
+  let [day, setDay] = useState ("")
+
+  useEffect(()=>{
+    console.log(travelAll)
+  }, [travelAll])
 
   return (
     <>
@@ -26,10 +32,10 @@ function CreateDesktopMaxPixel() {
             <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
-            <AddDays travelAll={travelAll} setTravelAll={setTravelAll}/>
+            <AddDays travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
-              <p className="pInputDesktopMaxPixel">Destino del día:</p>
+            <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
               <p className="pInputDesktopMaxPixel">Nombre lugar a visitar:</p>

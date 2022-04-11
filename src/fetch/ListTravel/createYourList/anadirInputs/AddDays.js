@@ -3,12 +3,13 @@ import OptionsDay from "./OptionsDays";
 // import React, { Component } from 'react'
 // import Select from 'react-select'
 
-function AddDays({travelAll, setTravelAll}){
+function AddDays({travelAll, setTravelAll, day, setDay}){
   let [createDayList, setcreateDayList] = useState("");
+
 
   function AddDay() {
     if(createDayList.length > 0){
-      let auxTravelDay = travelAll;
+      let auxTravelDay = {...travelAll};
       if (checkIfExist(auxTravelDay.days, createDayList)){
         auxTravelDay.days.push({
           day: createDayList
@@ -27,7 +28,7 @@ function AddDays({travelAll, setTravelAll}){
       <p className="pInputDesktop">Día:</p>
       <input className="input" type="text" onChange={e=>setcreateDayList(e.target.value)} value={createDayList}/>
       <button onClick={AddDay}>Guardar</button>
-      <OptionsDay travelAll={travelAll}/>
+      <OptionsDay travelAll={travelAll} day={day} setDay={setDay}/>
     </>
     
   )
