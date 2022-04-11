@@ -10,7 +10,6 @@ function ListTravelFetch() {
     fetch("http://localhost:8000/travel?nameUserLogin=test")
     .then(response=>response.json())
     .then(res=>{
-      console.log(res)
       setTravelFetch(res.travel);
     }) 
   }, [])

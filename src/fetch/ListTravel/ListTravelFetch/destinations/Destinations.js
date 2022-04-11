@@ -3,7 +3,6 @@ import Collapsible from 'react-collapsible';
 
 
 function Destinations({destinations}) {
-  console.log(destinations)
   return (
     <>
       <Collapsible className="pointer" trigger={destinations.destination}>

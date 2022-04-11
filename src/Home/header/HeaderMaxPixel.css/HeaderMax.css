@@ -1,5 +1,5 @@
 header{
-  background-color: #8fa4a5;
+  background-color: #dddedf;
   font-size: 20px;
 }
 
@@ -8,8 +8,8 @@ header{
 	margin: 20px;
 	padding-left: 50px;
 	font-size: 40px;
-	color: #235768;
-	text-shadow: 2px 2px 4px #fdfcfc;
+	color: #656666;
+	text-shadow: 2px 2px 4px #858686;
 	font-family: "cherry swash";
 }
 
@@ -30,7 +30,7 @@ nav {
 	position: relative;
 	width: 590px;
 	height: 50px;
-	background-color: #afc4c5;
+	background-color: #8e8f8f;
 	border-radius: 8px;
 	font-size: 0;
 }
@@ -45,7 +45,7 @@ nav .linkHeader {
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
-	color: rgb(107, 106, 106);
+	color: rgb(212, 209, 209);
 	cursor: pointer;
 }
 
@@ -92,7 +92,7 @@ nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, .linkHeader:nth-child(4):hover~.animation{
 	width: 160px;
 	left: 310px;
-	background-color: #EDC5CB;
+	background-color: #c78993;
 }
 
 nav .start-registro, .linkHeader:nth-child(5):hover~.animation {

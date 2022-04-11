@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-	background: linear-gradient(to bottom, #8fa4a5, #989b69);
+	background: linear-gradient(to bottom, #dddedf, #707070);
   background-color: #A9CFD0;
-	color: #597575;
+	color: #525e5e;
+  
 }
 
 .titleDestinationsToTravel{
@@ -76,8 +77,8 @@
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
 }
 
@@ -189,8 +190,8 @@
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
   z-index: 0;
 }
@@ -267,14 +268,14 @@
 }
 
 .textItalyEeuuParrafHomeSmartPhone{
-  background-color: #8f7d17;
+  background-color: #525e5e;
   color: white;
   font-size: 13px;
   padding: 16px 32px;
 }
 
 .textItalyEeuuParrafHomeMobile{
-  background-color: #8f7d17;
+  background-color: #525e5e;
   color: white;
   width: 300px;
   font-size: 16px;
@@ -282,14 +283,14 @@
 }
 
 .textItalyEeuuParrafHomeDesktop{
-  background-color: #8f7d17;
+  background-color: #525e5e;
   color: white;
   font-size: 18px;
   padding: 16px 32px;
 }
 
 .textItalyEeuuParrafHomeDesktopMaxPixel{
-  background-color: #8f7d17;
+  background-color: #525e5e;
   color: white;
   font-size: 20px;
   padding: 16px 32px;

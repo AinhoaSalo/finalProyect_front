@@ -1,62 +1,167 @@
-.styleSpacePlanningListHomeSmartPhone{
+.styleSpacePlanningListHome{
   display: flex;
   justify-content: space-around;
   text-align: center;
-	background: linear-gradient(to bottom, #8fa4a5, #989b69);
-  background-color: #A9CFD0;
-	color: #597575;
+	background: linear-gradient(to bottom, #707070, #dfeced);
+	color: #626464;
 }
 
-.titlePlanningHomeSmartPhone{
-  padding-top: 20px;
+.allPlanningHomeSmartPhone{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.allPlanningHomeMobile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.allPlanningHomeDesktop{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.allPlanningHomeDesktopMaxPixel{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .planningHomeSmartPhone{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  padding: 20px;
 }
 
 .planningHomeMobile{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  padding: 20px;
 }
 
 .planningHomeDesktop{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  padding: 20px;
 }
 
 .planningHomeDesktopMaxPixel{
-  display: flex;
-  justify-content: space-around;
+  padding: 20px;
+  width: 50%;
 }
 
-.styleParallaxSecond{
+.imgHomePlanningSmartPhone{
+  border-radius: 10px;
+  opacity: 0.85;
+  width: 400px;
+  height: 400px;
+}
+
+.imgHomePlanningMobile{
+  border-radius: 10px;
+  opacity: 0.85;
+  width: 500px;
+  height: 500px;
+}
+
+.imgHomePlanningDesktop{
+  border-radius: 10px;
+  opacity: 0.85;
+  width: 600px;
   height: 600px;
 }
 
+.imgHomePlanningDesktopMaxPixel{
+  width: 600px;
+  height: 700px;
+  border-radius: 10px;
+  opacity: 0.85;
+  
+}
 
-
-
-/* .navLinkPlanning{
+.titleAndParrafPlanningHomeSmartPhone{
   display: flex;
   flex-direction: column;
-} */
+  margin: 20px 80px 20px 100px;
+  padding: 250px 50px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.titleAndParrafPlanningHomeMobile{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 80px 20px 100px;
+  padding: 250px 50px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.titleAndParrafPlanningHomeDesktop{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 80px 20px 100px;
+  padding: 250px 50px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.titleAndParrafPlanningHomeDesktopMaxPixel{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 700px;
+  margin: 20px 80px 20px 100px;
+  padding: 250px 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.parrafPlanningSmartPhone{
+  text-align: justify;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.parrafPlanningMobile{
+  text-align: justify;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.parrafPlanningDesktop{
+  text-align: justify;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.parrafPlanningDesktopMaxPixel{
+  text-align: justify;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.styleParallaxThird{
+  height: 600px;
+} 
 
 @media (max-width: 534.99px) {
 
-  .styleSpacePlanningListHomeMobile{
+  .allPlanningHomeMobile{
     display: none;
   }
 
-  .styleSpacePlanningListHomeDesktop{
+  .allPlanningHomeDesktop{
     display: none;
   }
 
-  .styleSpacePlanningListHomeDesktopMaxPixel{
+  .allPlanningHomeDesktopMaxPixel{
     display: none;
   }
 
@@ -64,15 +169,15 @@
 
 @media (min-width: 535px) and (max-width: 739.99px) {
 
-  .styleSpacePlanningListHomeSmartPhone{
+  .allPlanningHomeSmartPhone{
     display: none;
   }
 
-  .styleSpacePlanningListHomeDesktop{
+  .allPlanningHomeDesktop{
     display: none;
   }
 
-  .styleSpacePlanningListHomeDesktopMaxPixel{
+  .allPlanningHomeDesktopMaxPixel{
     display: none;
   }
 
@@ -80,15 +185,15 @@
 
 @media (min-width: 740px) and (max-width: 1229.99px) {
 
-  .styleSpacePlanningListHomeSmartPhone{
+  .allPlanningHomeSmartPhone{
     display: none;
   }
 
-  .styleSpacePlanningListHomeMobile{
+  .allPlanningHomeMobile{
     display: none;
   }
 
-  .styleSpacePlanningListHomeDesktopMaxPixel{
+  .allPlanningHomeDesktopMaxPixel{
     display: none;
   }
 
@@ -96,15 +201,15 @@
 
 @media (min-width: 1230px)  {
 
-  .styleSpacePlanningListHomeSmartPhone{
+  .allPlanningHomeSmartPhone{
     display: none;
   }
 
-  .styleSpacePlanningListHomeMobile{
+  .allPlanningHomeMobile{
     display: none;
   }
 
-  .styleSpacePlanningListHomeDesktop{
+  .allPlanningHomeDesktop{
     display: none;
   }
 }

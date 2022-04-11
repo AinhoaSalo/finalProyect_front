@@ -1,15 +1,55 @@
-.descriptionPage{
+.descriptionPageSmartPhone{
   display: flex;
   flex-direction: column;
   justify-content: center;
 	text-align: center;
   padding: 0 20px;
-  margin: 250px 450px 250px 450px;
+  margin: 250px 50px;
   border-radius: 10px;
   font-size: 20px;
-  background-color: #8fa4a5;
-  color: #f7f8f8;
+  background-color: #dddedf;
+  color: #525e5e;
 }
+
+.descriptionPageMobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	text-align: center;
+  padding: 0 20px;
+  margin: 250px 100px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #dddedf;
+  color: #525e5e;
+}
+
+.descriptionPageDesktop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	text-align: center;
+  padding: 0 20px;
+  margin: 250px 170px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #dddedf;
+  color: #525e5e;
+}
+
+.descriptionPageDesktopMaxPixel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	text-align: center;
+  padding: 0 20px;
+  margin: 250px 200px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #dddedf;
+  color: #525e5e;
+}
+
 
 .titleDescripcionPage{
   font-family: "cherry swash";
@@ -22,4 +62,67 @@
   margin: 0 20px;
   margin-bottom: 50px;
   text-align: justify;
+}
+
+@media (max-width: 534.99px) {
+
+  .descriptionPageMobile{
+    display: none;
+  }
+
+  .descriptionPageDesktop{
+    display: none;
+  }
+
+  .descriptionPageDesktopMaxPixel{
+    display: none;
+  }
+
+}
+
+@media (min-width: 535px) and (max-width: 739.99px) {
+
+  .descriptionPageSmartPhone{
+    display: none;
+  }
+
+  .descriptionPageDesktop{
+    display: none;
+  }
+
+  .descriptionPageDesktopMaxPixel{
+    display: none;
+  }
+
+}
+
+@media (min-width: 740px) and (max-width: 1229.99px) {
+
+  .descriptionPageSmartPhone{
+    display: none;
+  }
+
+  .descriptionPageMobile{
+    display: none;
+  }
+
+  .descriptionPageDesktopMaxPixel{
+    display: none;
+  }
+
+}
+
+@media (min-width: 1230px)  {
+
+  .descriptionPageSmartPhone{
+    display: none;
+  }
+
+  .descriptionPageMobile{
+    display: none;
+  }
+
+  .descriptionPageDesktop{
+    display: none;
+  }
 }
