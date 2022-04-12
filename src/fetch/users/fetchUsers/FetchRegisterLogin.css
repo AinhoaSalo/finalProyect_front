@@ -1,23 +1,8 @@
-.allRegisterLoginSmartPhone{
-  background-color: rgb(170, 187, 197);
-  padding: 100px 40px;
-}
 
-.allRegisterLoginMobile{
-  background-color: rgb(170, 187, 197);
-  padding: 100px 40px;
-}
-
-.allRegisterLoginDesktop{
-  background-color: rgb(170, 187, 197);
-  padding: 100px 40px 190px 40px;
-}
-
-.allRegisterLoginDesktopMaxPixel{
+.allRegisterLogin{
   background-color: rgb(170, 187, 197);
   padding: 80px 100PX 150PX 100PX;
 }
-
 
 .titleAllRegisterUser{
   text-align: center;
@@ -28,7 +13,7 @@
   font-size: 30px;
 }
 
-.registerLoginSmartPhone{
+.registerLogin{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -40,60 +25,7 @@
   border: 1px solid rgb(37, 109, 145);
 }
 
-.registerLoginMobile{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-  margin: 50px 0;
-  padding: 50px;
-  background-color: rgb(220, 233, 233);
-  border: 1px solid rgb(37, 109, 145);
-}
-
-.registerLoginDesktop{
-  display: flex;
-  justify-content: space-around;
-  border-radius: 10px;
-  margin: 50px 0;
-  padding: 20px;
-  background-color: rgb(220, 233, 233);
-  border: 1px solid rgb(37, 109, 145);
-}
-
-.registerLoginDesktopMaxPixel{
-  display: flex;
-  justify-content: space-around;
-  border-radius: 10px;
-  margin: 50px 0;
-  padding: 50px;
-  background-color: rgb(220, 233, 233);
-  border: 1px solid rgb(37, 109, 145);
-}
-
-.inputRegLogSmartPhone {
-  border-radius: 5px;
-  border: 1px solid rgb(37, 109, 145);
-  margin: 10px;
-  width: 180px;
-}
-
-.inputRegLogMobile {
-  border-radius: 5px;
-  border: 1px solid rgb(37, 109, 145);
-  margin: 10px;
-  width: 190px;
-}
-
-.inputRegLogDesktop {
-  border-radius: 5px;
-  border: 1px solid rgb(37, 109, 145);
-  margin: 10px;
-  width: 200px;
-}
-
-.inputRegLogDesktopMaxPixel {
+.inputRegLog {
   border-radius: 5px;
   border: 1px solid rgb(37, 109, 145);
   margin: 10px;
@@ -107,66 +39,82 @@ label{
 }
 
 @media (max-width: 534.99px) {
-
-  .allRegisterLoginMobile{
-    display: none;
+  .allRegisterLogin{
+    background-color: rgb(170, 187, 197);
+    padding: 100px 40px;
   }
 
-  .allRegisterLoginDesktop{
-    display: none;
+  .inputRegLog {
+    border-radius: 5px;
+    border: 1px solid rgb(37, 109, 145);
+    margin: 10px;
+    width: 180px;
   }
-
-  .allRegisterLoginDesktopMaxPixel{
-    display: none;
-  }
-
 }
 
 @media (min-width: 535px) and (max-width: 739.99px) {
 
-  .allRegisterLoginSmartPhone{
-    display: none;
+  .allRegisterLogin{
+    background-color: rgb(170, 187, 197);
+    padding: 100px 40px;
   }
 
-  .allRegisterLoginDesktop{
-    display: none;
-  }
-
-  .allRegisterLoginDesktopMaxPixel{
-    display: none;
+  .inputRegLog {
+    border-radius: 5px;
+    border: 1px solid rgb(37, 109, 145);
+    margin: 10px;
+    width: 190px;
   }
 
 }
 
 @media (min-width: 740px) and (max-width: 1229.99px) {
-
-  .allRegisterLoginSmartPhone{
-    display: none;
+  .allRegisterLogin{
+    background-color: rgb(170, 187, 197);
+    padding: 100px 40px 190px 40px;
   }
 
-  .allRegisterLoginMobile{
-    display: none;
+  .registerLogin{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: rgb(220, 233, 233);
+    border: 1px solid rgb(37, 109, 145);
   }
 
-  .allRegisterLoginDesktopMaxPixel{
-    display: none;
+  .registerLogin{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 50px 0;
+    padding: 50px;
+    background-color: rgb(220, 233, 233);
+    border: 1px solid rgb(37, 109, 145);
+  }
+
+  .inputRegLog {
+    border-radius: 5px;
+    border: 1px solid rgb(37, 109, 145);
+    margin: 10px;
+    width: 200px;
   }
 
 }
 
 @media (min-width: 1230px)  {
-
-  .allRegisterLoginSmartPhone{
-    display: none;
+  .registerLogin{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 50px 0;
+    padding: 50px;
+    background-color: rgb(220, 233, 233);
+    border: 1px solid rgb(37, 109, 145);
   }
 
-  .allRegisterLoginMobile{
-    display: none;
-  }
-
-  .allRegisterLoginDesktop{
-    display: none;
-  }
+  
 }
 
 
