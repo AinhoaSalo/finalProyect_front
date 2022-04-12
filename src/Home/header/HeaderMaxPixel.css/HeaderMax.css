@@ -89,7 +89,7 @@ nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	left: 210px;
 	background-color: #356483;
 }
-nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, .linkHeader:nth-child(4):hover~.animation{
+nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, nav .start-areapersonal, .linkHeader:nth-child(4):hover~.animation{
 	width: 160px;
 	left: 310px;
 	background-color: #c78993;

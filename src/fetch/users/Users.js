@@ -1,4 +1,4 @@
-import FetchRegister from "./fetchUsers/FetchRegisterLogin";
+import FetchRegister from "./fetchUsers/RegisterLogin/FetchRegisterLogin";
 import objetUsers from "../objets/objetUsers";
 import { useState } from "react";
 
