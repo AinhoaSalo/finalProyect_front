@@ -1,9 +1,6 @@
 import "./FetchRegisterLogin.css"
 import { useState, useEffect } from "react"
-import RegisterLoginSmartPhone from "./responsive/registerLoginSmartPhone";
-import RegisterLoginMobile from "./responsive/registerLoginMobile";
-import RegisterLoginDesktop from "./responsive/registerLoginDesktop";
-import RegisterLoginDesktopMaxPixel from "./responsive/registerLoginDesktopMaxPixel";
+
 
 
 
@@ -76,10 +73,27 @@ function FetchRegister() {
 
   return(
     <>
-      <RegisterLoginSmartPhone/>
-      <RegisterLoginMobile/>
-      <RegisterLoginDesktop/>
-      <RegisterLoginDesktopMaxPixel/>
+      <div className="allRegisterLogin">
+        <h2 className="titleRegisterLogin">USUARIOS</h2>
+        <div className="registerLogin">
+          <div className="addUserRegister">
+            <h3>Registrate aquí</h3>
+            <div><label className="labelInputsRegister">Usuario: </label><input className="nameUserRegisterFront inputRegLog" type="text"/></div>
+            <div><label className="labelInputsRegister">Nombre: </label><input className="nameRegisterFront inputRegLog" type="text"  /></div>
+            <div><label className="labelInputsRegister">Apellidos: </label><input className="lastnameRegisterFront inputRegLog" type="text"/></div>
+            <div><label className="labelInputsRegister">Contraseña: </label><input className="passwordUserRegisterFront inputRegLog" type="password"/></div>
+            <div><button className="btnRegister">Registrar</button></div>
+            <div className="messageRegistrer"></div>
+          </div>
+          <div className="addUserLogin">
+            <h3>Conectate aquí</h3>
+            <div><label className="labelInputsLogin">Usuario: </label><input className="nameUserLogin inputRegLog" type="text" /></div>
+            <div><label className="labelInputsLogin">Contraseña: </label><input className="passwordUserLogin inputRegLog" type="password" /></div>
+            <div><button className="btnLogin">Conectar</button></div>
+            <div className="messageLogin"></div>
+          </div>
+        </div>
+      </div>
     </>
   )
 
