@@ -1,9 +1,6 @@
 import "./FetchRegisterLogin.css"
 import { useState, useEffect } from "react"
 
-
-
-
 function FetchRegister() {
   let [body, setBody] = useState([]);
   let [bodyLogin, setBodyLogin] = useState([]);
@@ -31,6 +28,7 @@ function FetchRegister() {
       fetch("http://localhost:8000/registro", data)
           .then(response=>response.json())
           .then(res=>{
+            alert(res.message)
             console.log(res)
             setBody(res)
           }) 
@@ -61,6 +59,7 @@ function FetchRegister() {
             if (res.login == true){
               sessionStorage.setItem('nameUserLogin', nameUserLogin);
               window.location.replace("http://localhost:3000/listascreadas");
+              alert(res.message)
               setBodyLogin(res)
             } else {
               console.log(res)

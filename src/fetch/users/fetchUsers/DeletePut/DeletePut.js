@@ -7,6 +7,9 @@ function DeletePut() {
   let [executeDelete, setExecuteDelete] = useState(false);
   let [executePut, setExecutePut] = useState(false);
 
+  let [dataUser, setDataUser] = useState("");
+
+
 
   //singOff
   if (document.querySelector(".deleteAndPutUserLogin")) {
@@ -19,18 +22,19 @@ function DeletePut() {
 
   //get dataUser
   useEffect(()=>{
-    if (true) {
-      fetch("http://localhost:8000/areapersonal?"+ new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),})) 
-      .then(response=>response.json())
-      .then(res=>{
-        console.log(res)
-        let name = res.nameRegister;
-        let lastname = res.lastnameRegister;
-        document.querySelector(".dataUserLogin").innerHTML = `<div className="personalArea"><div className="namePersonalArea"><p>Nombre: <span className="name">${name}</span></p></div><div className="lastnamePersonalArea"><p>Apellidos: <span className="lastname">${lastname}</span></p></div>`; 
-      }) 
-    }
-    
+    fetch("http://localhost:8000/areapersonal?"+ new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),})) 
+    .then(response=>response.json())
+    .then(res=>{
+      console.log(res)
+      setDataUser(res); 
+      document.querySelector(".dataUserLogin").innerHTML = `<div className="personalArea"><div className="namePersonalArea"><p>Nombre: <span className="name">${dataUser.nameRegister}</span></p></div><div className="lastnamePersonalArea"><p>Apellidos: <span className="lastname">${dataUser.lastnameRegister}</span></p></div>`;
+    }) 
+
   }, [])
+
+
+
+ 
 
   //delete user
   useEffect(()=>{
@@ -56,11 +60,13 @@ function DeletePut() {
             .then(function (res) {
               if (res.delete == true){
                 sessionStorage.removeItem('nameUserLogin');
+                alert(res.message)
                 window.location.replace("http://localhost:3000/inicio");
                 setUserDelete(res)
                 setExecuteDelete(false)
               } else {
                 console.log(res)
+                alert(res.message)
               }
             });
         });
@@ -74,8 +80,9 @@ function DeletePut() {
     if (executePut) {
       if (document.querySelector(".deleteAndPutUserLogin")) {
         document.querySelector(".btnPut").addEventListener("click", function () {
-          let nameRegister = document.querySelector(".name").innerHTML;
-          let lastnameRegister = document.querySelector(".lastname").innerHTML;
+          debugger
+          let nameRegister = dataUser.nameRegister;
+          let lastnameRegister = dataUser.lastnameRegister;
           document.querySelector(".name").innerHTML = `<input className="nameRegister" type="text" value=${nameRegister}>`;
           document.querySelector(".lastname").innerHTML = `<input className="lastnameRegister" type="text" value=${lastnameRegister}>`;
           document.querySelector(".btnModify").className = "show"
@@ -84,8 +91,8 @@ function DeletePut() {
       
         document.querySelector(".btnModify").addEventListener("click", function () {
           let nameUserRegister = sessionStorage.getItem('nameUserLogin');
-          let nameRegister = document.querySelector(".nameRegister").value;
-          let lastnameRegister = document.querySelector(".lastnameRegister").value;
+          let nameRegister = document.querySelectorAll(".nameRegister").value;
+          let lastnameRegister = document.querySelectorAll(".lastnameRegister").value;
       
           userPut = {
             nameUserRegister,

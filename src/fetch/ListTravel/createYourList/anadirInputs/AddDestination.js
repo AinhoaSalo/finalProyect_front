@@ -3,7 +3,7 @@ import OptionsDay from "./OptionsDays";
 // import React, { Component } from 'react'
 // import Select from 'react-select'
 
-function AddDestinations({travelAll, setTravelAll, day}){
+function AddDestinations({travelAll, setTravelAll, day, setDay}){
   let [createDestinationsList, setcreateDestinationsList] = useState([]);
 
   function AddDestination() {
@@ -15,7 +15,10 @@ function AddDestinations({travelAll, setTravelAll, day}){
           contador = i
         }
       });
-      if (checkIfExist(auxTravelDestination.days[contador].destinations, createDestinationsList)){
+      if(auxTravelDestination.days[contador].destinations == undefined){
+        auxTravelDestination.days[contador].destinations = [{destination: createDestinationsList}]
+      }
+      else if (checkIfExist(auxTravelDestination.days[contador].destinations, createDestinationsList)){
         auxTravelDestination.days[contador].destinations.push({
           destination: createDestinationsList
         });
@@ -30,10 +33,10 @@ function AddDestinations({travelAll, setTravelAll, day}){
 
   return(
     <>
+      <OptionsDay travelAll={travelAll} day={day} setDay={setDay}/>
       <p className="pInputDesktop">Destino:</p>
       <input className="input" type="text" onChange={e=>setcreateDestinationsList(e.target.value)} value={createDestinationsList}/>
       <button onClick={AddDestination}>Guardar</button>
-      <OptionsDay travelAll={travelAll}/>
     </>
     
   )

@@ -1,8 +1,16 @@
 .allAreaUsers{
-    background: url(../../../ListTravel/createYourList/img/workplace-g41ff900d6_1280.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    padding-bottom: 266px;
-  }
+  background: url(../../../ListTravel/createYourList/img/workplace-g41ff900d6_1280.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding-bottom: 266px;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}

@@ -5,6 +5,8 @@ import AddTitle from "./anadirInputs/AddTitle";
 import objetTravel from "../../objets/objetTravel";
 import AddDays from "./anadirInputs/AddDays"
 import AddDestinations from "./anadirInputs/AddDestination";
+import AddPlaces from "./anadirInputs/AddPlaces";
+
 
 function CreateYourList() {
 
@@ -15,6 +17,35 @@ function CreateYourList() {
   // let [tripAll, setTripAll] = useState({})
   let [travelAll, setTravelAll] = useState(objetTravel);
   let [day, setDay] = useState ("")
+  let [destination, setDestination] = useState ("")
+
+  let list = 
+  travelAll.days.map(days=>{
+   return (
+     <>
+      <p>{days.day}</p>
+      {
+        days.destinations ?
+        days.destinations.map(destinations=>{
+          return (  
+            <>
+              <p>{destinations.destination}</p>
+              {
+                destinations.places ?
+                destinations.places.map(places=>{
+                    return <p>{places.name}</p>
+                })
+                : <></>
+              }
+            </> 
+          )
+        
+        })
+        : <></>
+      }
+    </>
+   )
+  })
 
   useEffect(()=>{
     console.log(travelAll)
@@ -22,7 +53,7 @@ function CreateYourList() {
 
   return (
     <>
-      <div className="createYourListDesktopMaxPixel">
+       <div className="createYourListDesktopMaxPixel">
         <LinksPlanning/>
         <div className="allStyleCreateYourListDesktopMaxPixel">
           <div className="allInputsCreateYourListDesktopMaxPixel">
@@ -30,13 +61,14 @@ function CreateYourList() {
             <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
-            <AddDays travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
+            <AddDays travelAll={travelAll} setTravelAll={setTravelAll} />
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
-            <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day}/>
+            <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
-              <p className="pInputDesktopMaxPixel">Nombre lugar a visitar:</p>
+              
+            <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
             </div>
             <div className="inputCreateListDesktopMaxPixel hidden">
               <p className="pInputDesktopMaxPixel">Descripción lugar a visitar:</p>
@@ -44,6 +76,8 @@ function CreateYourList() {
           </div>
           <div className="textAddInputsCreateYourListDesktopMaxPixel">
             <h2>{travelAll.title}</h2>
+            {list}
+
           </div>
         </div>
       </div>
