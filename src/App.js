@@ -6,7 +6,7 @@ import EeuuFetch from './fetch/eeuu/EeuuFetch';
 import ListTravelFetch from './fetch/ListTravel/ListTravelFetch/ListTravelFetch';
 import CreateYourList from './fetch/ListTravel/createYourList/CreateYourList';
 import UsersRegisterLogin from './fetch/users/registerLogin/UsersRegisterLogin';
-import UserArea from './fetch/users/fetchUsers/DeletePut/UserArea';
+import UserArea from './fetch/users/deleteput/UserArea';
 import Footer from './Home/footer/Footer';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 

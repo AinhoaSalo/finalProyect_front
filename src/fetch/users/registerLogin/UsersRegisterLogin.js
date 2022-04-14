@@ -1,9 +1,8 @@
 import "./UsersRegisterLogin.css"
-import Register from "../fetchUsers/RegisterLogin/Register";
-import Login from "../fetchUsers/RegisterLogin/Login";
+import Register from "./RegisterLoginFetch/Register";
+import Login from "./RegisterLoginFetch/Login";
 
 function UsersRegisterLogin() {
-
   return ( 
     <>
       <div className="allRegisterLogin">
@@ -17,4 +16,4 @@ function UsersRegisterLogin() {
   );
 }
   
-  export default UsersRegisterLogin;
+export default UsersRegisterLogin;

@@ -1,21 +1,10 @@
-import "./DeletePut.css"
 import { useState, useEffect } from "react";
 
-function UserArea() {
+function PutGet() {
   let [dataUser, setDataUser] = useState("");
-  let [isEditing, setIsEditing] = useState(false);
   let [modifyName, setModifyName] = useState("");
   let [modifyLastname, setModifyLastname] = useState("");
-
-
-
-  //singOff
-  function singOff() {
-    sessionStorage.removeItem('nameUserLogin');
-    alert("Sesión cerrada") // TODO: pop up
-    window.location.replace("http://localhost:3000");
-  }
-
+  let [isEditing, setIsEditing] = useState(false);
 
   //get dataUser
   useEffect(()=>{
@@ -24,39 +13,8 @@ function UserArea() {
     .then(res=>{
       setDataUser(res);
     }) 
-
   }, [])
 
-  //delete user
-  function deleteUser() {
-    let nameUserLogin = sessionStorage.getItem('nameUserLogin');
-
-    let userDelete = {
-      nameUserLogin,
-    };
-
-    let data = {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(userDelete),
-    };
-
-    fetch("http://localhost:8000/borrar", data)
-    .then(response=>response.json())
-    .then(function (res) {
-      if (res.delete == true){
-        sessionStorage.removeItem('nameUserLogin');
-        alert(res.message)
-        window.location.replace("http://localhost:3000/inicio");
-      } else {
-        console.log(res)
-        alert(res.message)
-      }
-    });
-
-  }
   //Put user
   function renderModify() {
     
@@ -116,28 +74,14 @@ function UserArea() {
       </>
     )
   }
-  
-  return (
+  return(
     <>
-      <div className='allAreaUsers'>
-        <div className="allUserLogin">
-          <div className="dataUserLogin">
-            <div className="personalArea">
-              { isEditing ? renderModify() : renderFields() }
-            </div>
-          </div>
-          <div className="deleteAndPutUserLogin">
-            <div><button onClick={()=>deleteUser()} className="btnDelete">Borrar usuario</button></div>
-            <div><button onClick={()=>singOff()} className="btnSingOff">Cerrar sesion</button></div>
-            <div className="messageDeletePut"></div>
-          </div>
-        </div>
+      <div className="personalArea">
+        { isEditing ? renderModify() : renderFields() }
       </div>
     </>
+
   )
 }
 
-export default UserArea;
-
-          
-
+export default PutGet;
