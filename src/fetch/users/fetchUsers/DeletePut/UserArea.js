@@ -10,13 +10,12 @@ function UserArea() {
 
 
   //singOff
-  if (document.querySelector(".deleteAndPutUserLogin")) {
-    document.querySelector(".btnSingOff").addEventListener("click", function () {
+  function singOff() {
     sessionStorage.removeItem('nameUserLogin');
     alert("Sesión cerrada") // TODO: pop up
     window.location.replace("http://localhost:3000");
-    });
   }
+
 
   //get dataUser
   useEffect(()=>{
@@ -58,8 +57,6 @@ function UserArea() {
     });
 
   }
-
-
   //Put user
   function renderModify() {
     
@@ -131,8 +128,7 @@ function UserArea() {
           </div>
           <div className="deleteAndPutUserLogin">
             <div><button onClick={()=>deleteUser()} className="btnDelete">Borrar usuario</button></div>
-
-            <div><button className="btnSingOff">Cerrar sesion</button></div>
+            <div><button onClick={()=>singOff()} className="btnSingOff">Cerrar sesion</button></div>
             <div className="messageDeletePut"></div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import ItalyFetch from './fetch/italy/ItalyFetch';
 import EeuuFetch from './fetch/eeuu/EeuuFetch';
 import ListTravelFetch from './fetch/ListTravel/ListTravelFetch/ListTravelFetch';
 import CreateYourList from './fetch/ListTravel/createYourList/CreateYourList';
-import Users from './fetch/users/Users';
+import UsersRegisterLogin from './fetch/users/registerLogin/UsersRegisterLogin';
 import UserArea from './fetch/users/fetchUsers/DeletePut/UserArea';
 import Footer from './Home/footer/Footer';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
@@ -25,7 +25,7 @@ function App() {
             <Route path='/eeuu'  element={<EeuuFetch/>}/>
             <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
             <Route path='/creatulista'  element={<CreateYourList/>}/>
-            <Route path='/registro'  element={<Users/>}/>
+            <Route path='/registro'  element={<UsersRegisterLogin/>}/>
             <Route path='/areapersonal'  element={<UserArea/>}/>
           </Routes>
           <Footer/>
