@@ -8,8 +8,10 @@ function UsersRegisterLogin() {
       <div className="allRegisterLogin">
         <h2 className="titleRegisterLogin">USUARIOS</h2>
         <div className="registerLogin">
-          <Register/>
-          <Login/>
+          <div className="registerLoginSoon">
+            <div className="registerLoginStyle"><Register/></div>
+            <div className="registerLoginStyle"><Login/></div>
+          </div>
         </div>
       </div>
     </>

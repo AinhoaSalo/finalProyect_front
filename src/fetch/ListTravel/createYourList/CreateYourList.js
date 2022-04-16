@@ -10,11 +10,6 @@ import AddPlaces from "./anadirInputs/AddPlaces";
 
 function CreateYourList() {
 
-  // 
-  // let [createDestinationList, setcreateDestinationList] = useState("");
-  // let [createPlaceList, setCreatePlaceList] = useState("");
-  // let [createDescription, setCreateDescription] = useState("");
-  // let [tripAll, setTripAll] = useState({})
   let [travelAll, setTravelAll] = useState(objetTravel);
   let [day, setDay] = useState ("")
   let [destination, setDestination] = useState ("")

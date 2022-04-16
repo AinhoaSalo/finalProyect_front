@@ -7,6 +7,7 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
   let [createPlacesList, setcreatePlacesList] = useState([]);
 
   function AddPlace() {
+    debugger
     if(createPlacesList.length > 0){
       let auxTravelDestination = {...travelAll};
       let contadorDay = 0;
