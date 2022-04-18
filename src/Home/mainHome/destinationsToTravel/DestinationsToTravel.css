@@ -115,12 +115,13 @@
 .imgHomeItalyDesktopMaxPixel {
   opacity: 1;
   display: block;
+  margin-right: 10px;
   width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   border-radius: 10px;
   z-index: 0;
 }
@@ -229,12 +230,13 @@
 .imgHomeNewYorkDesktopMaxPixel {
   opacity: 1;
   display: block;
+  margin-left: 10px;
   width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   border-radius: 10px;
   z-index: 0;
 }
