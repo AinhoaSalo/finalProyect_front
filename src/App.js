@@ -16,20 +16,20 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 function App() {
   return (
     <>
-        <Router>
-          <Header/>
-          <Routes>
-            <Route path="/" element={<Navigate to="/inicio" replace />}/>
-            <Route path='/inicio'  element={<Main/>}/>
-            <Route path='/italia'  element={<ItalyFetch/>}/>
-            <Route path='/eeuu'  element={<EeuuFetch/>}/>
-            <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
-            <Route path='/creatulista'  element={<CreateYourList/>}/>
-            <Route path='/registro'  element={<UsersRegisterLogin/>}/>
-            <Route path='/areapersonal'  element={<UserArea/>}/>
-          </Routes>
-          <Footer/>
-        </Router>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Navigate to="/inicio" replace />}/>
+          <Route path='/inicio'  element={<Main/>}/>
+          <Route path='/italia'  element={<ItalyFetch/>}/>
+          <Route path='/eeuu'  element={<EeuuFetch/>}/>
+          <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
+          <Route path='/creatulista'  element={<CreateYourList/>}/>
+          <Route path='/registro'  element={<UsersRegisterLogin/>}/>
+          <Route path='/areapersonal'  element={<UserArea/>}/>
+        </Routes>
+        <Footer/>
+      </Router>
     </>
   );
 }

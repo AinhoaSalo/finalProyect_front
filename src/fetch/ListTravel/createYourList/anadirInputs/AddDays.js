@@ -1,7 +1,4 @@
 import { useState } from "react";
-// import OptionsDay from "./OptionsDays";
-// import React, { Component } from 'react'
-// import Select from 'react-select'
 
 function AddDays({travelAll, setTravelAll, day, setDay}){
   let [createDayList, setcreateDayList] = useState("");
@@ -25,7 +22,7 @@ function AddDays({travelAll, setTravelAll, day, setDay}){
 
   return(
     <>
-      <p className="pInputDesktop">Día:</p>
+      <p className="pInput">Día:</p>
       <input className="input" type="text" onChange={e=>setcreateDayList(e.target.value)} value={createDayList}/>
       <button onClick={AddDay}>Guardar</button>
     </>

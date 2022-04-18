@@ -1,4 +1,4 @@
-.allListTravelFetchSmartPhone{
+.allListTravelFetch{
   background: url(./img/workplace-g41ff900d6_1280.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -7,44 +7,7 @@
   padding-bottom: 300px;
 }
 
-.allListTravelFetchMobile{
-  background: url(./img/workplace-g41ff900d6_1280.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  padding-bottom: 300px;
-}
-
-.allListTravelFetchDesktop{
-  background: url(./img/workplace-g41ff900d6_1280.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  padding-bottom: 200px;
-}
-
-.allListTravelFetchDesktopMaxPixel{
-  background: url(./img/workplace-g41ff900d6_1280.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  padding-bottom: 266px;
-}
-
-.allCollapsibleSmartPhone{
-  background-color: rgba(187, 193, 199, 0.582);
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px 100px 0 100px;
-  padding-bottom: 50px;
-  border-radius: 15px;
-  cursor: default;
-}
-
-.allCollapsibleMobile{
+.allCollapsible{
   background-color: rgba(187, 193, 199, 0.58);
   display: flex;
   flex-wrap: wrap;
@@ -52,30 +15,6 @@
   padding-bottom: 50px;
   border-radius: 15px;
   cursor: default;
-}
-
-.allCollapsibleDesktop{
-  background-color: rgba(187, 193, 199, 0.58);
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px 100px 0 100px;
-  padding-bottom: 100px;
-  border-radius: 15px;
-  cursor: default;
-  font-size: 18px;
-}
-
-
-.allCollapsibleDesktopMaxPixel{
-  background-color: rgba(187, 193, 199, 0.58);
-  display: flex;
-  flex-wrap: wrap;
-  /* grid-template-columns: repeat(4,1fr); */
-  margin: 10px 100px 0 100px;
-  padding-bottom: 190px;
-  border-radius: 15px;
-  cursor: default;
-  font-size: 20px;
 }
 
 .titleCollapsible{
@@ -94,111 +33,27 @@
   cursor: pointer;
 }
 
-@media (max-width: 534.99px) {
-  
-  .allListTravelFetchMobile{
-    display: none;
-  }
-  
-  .allListTravelFetchDesktop{
-    display: none;
-  }
-  
-  .allListTravelFetchDesktopMaxPixel{
-    display: none;
-  }
-
-  .allCollapsibleMobile{
-    display: none;
-  }
-  
-  .allCollapsibleDesktop{
-    display: none;
-  }
-  
-  .allCollapsibleDesktopMaxPixel{
-    display: none;
-  }
-
-}
-
-@media (min-width: 535px) and (max-width: 739.99px) {
-
-  .allListTravelFetchSmartPhone{
-    display: none;
-  }
-
-  .allListTravelFetchDesktop{
-    display: none;
-  }
-  
-  .allListTravelFetchDesktopMaxPixel{
-    display: none;
-  }
-
-  .allCollapsibleSmartPhone{
-    display: none;
-  }
-
-  .allCollapsibleDesktop{
-    display: none;
-  }
-  
-  .allCollapsibleDesktopMaxPixel{
-    display: none;
-  }
-
-}
-
 @media (min-width: 740px) and (max-width: 1229.99px) {
 
-  .allListTravelFetchSmartPhone{
-    display: none;
-  }
-  .allListTravelFetchMobile{
-    display: none;
+  .allListTravelFetch{
+    padding-bottom: 200px;
   }
 
-  .allListTravelFetchDesktopMaxPixel{
-    display: none;
+  .allCollapsible{
+    padding-bottom: 100px;
+    font-size: 18px;
   }
-
-  .allCollapsibleSmartPhone{
-    display: none;
-  }
-  .allCollapsibleMobile{
-    display: none;
-  }
-
-  .allCollapsibleDesktopMaxPixel{
-    display: none;
-  }
-
 }
 
 @media (min-width: 1230px)  {
 
-  .allListTravelFetchSmartPhone{
-    display: none;
+  .allListTravelFetch{
+    padding-bottom: 266px;
   }
 
-  .allListTravelFetchMobile{
-    display: none;
-  }
-
-  .allListTravelFetchDesktop{
-    display: none;
-  }
-
-  .allCollapsibleSmartPhone{
-    display: none;
-  }
-  .allCollapsibleMobile{
-    display: none;
-  }
-
-  .allCollapsibleDesktop{
-    display: none;
+  .allCollapsible{
+    padding-bottom: 190px;
+    font-size: 20px;
   }
 
 }

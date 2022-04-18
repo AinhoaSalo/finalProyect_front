@@ -34,7 +34,7 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
     <select>      
         <option>Añade un día</option>
     </select>)
-}
+  }
         
 }
 
