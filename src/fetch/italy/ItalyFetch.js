@@ -1,47 +1,25 @@
 import { useState, useEffect} from "react"
 
 function ItaliFetch() {
-  let [italyFetch, setItalyFetch] = useState([]);
-  useEffect(() => {
+  let [italy, setItaly] = useState([]);
+
+  useEffect(()=>{
     fetch("http://localhost:8000/italia")
     .then(response=>response.json())
     .then(res=>{
-      setItalyFetch(res);
-      console.log(res)
+      setItaly(res.italy)
     })
-  },[]);
+  }, [])
+
  
   function renderItaly() {
-    let list =
-    italyFetch.days.map(days=>{
-      return (
+    console.log(italy);
+    let title = italy[0].title
+    return(
       <>
-        <p>{days.day}</p>
-        {
-          days.destinations.map(destinations=>{
-            return (  
-              <>
-                <p>{destinations.destination}</p>
-                {
-                  destinations.places.map(places=>{
-                      return <p>{places.name}</p>
-                  })
-                }
-              </> 
-            )
-          
-          })
-        }
+         <h2>{title}</h2>
       </>
-      )
-    })
-
-   return(
-     <>
-        {list}
-     </>
-   )
-     
+    )
       
   }
 
@@ -49,7 +27,7 @@ function ItaliFetch() {
   
   return (
     <>
-    {renderItaly()}
+    {italy.length > 0 ? renderItaly() : <></>}
     </>
   );
 }
