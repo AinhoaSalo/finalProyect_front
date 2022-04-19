@@ -25,8 +25,8 @@ function App() {
           <Route path='/eeuu'  element={<EeuuFetch/>}/>
           <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
           <Route path='/creatulista'  element={<CreateYourList/>}/>
-          <Route path='/registro'  element={<UsersRegisterLogin/>}/>
           <Route path='/areapersonal'  element={<UserArea/>}/>
+          <Route path='/registro'  element={<UsersRegisterLogin/>}/>
         </Routes>
         <Footer/>
       </Router>

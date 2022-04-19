@@ -77,7 +77,6 @@ function CreateYourList() {
             <div className="textAddInputsCreateYourList">
               <h2>{travelAll.title}</h2>
               {list}
-
             </div>
           </div>
         </div>
