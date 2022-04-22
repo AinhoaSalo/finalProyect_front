@@ -18,16 +18,18 @@ function App() {
     <>
       <Router>
         <Header/>
-        <Routes>
-          <Route path="/" element={<Navigate to="/inicio" replace />}/>
-          <Route path='/inicio'  element={<Main/>}/>
-          <Route path='/italia'  element={<ItalyFetch/>}/>
-          <Route path='/eeuu'  element={<EeuuFetch/>}/>
-          <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
-          <Route path='/creatulista'  element={<CreateYourList/>}/>
-          <Route path='/areapersonal'  element={<UserArea/>}/>
-          <Route path='/registro'  element={<UsersRegisterLogin/>}/>
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/inicio" replace />}/>
+            <Route path='/inicio'  element={<Main/>}/>
+            <Route path='/italia'  element={<ItalyFetch/>}/>
+            <Route path='/eeuu'  element={<EeuuFetch/>}/>
+            <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
+            <Route path='/creatulista'  element={<CreateYourList/>}/>
+            <Route path='/areapersonal'  element={<UserArea/>}/>
+            <Route path='/registro'  element={<UsersRegisterLogin/>}/>
+          </Routes>
+        </main>
         <Footer/>
       </Router>
     </>

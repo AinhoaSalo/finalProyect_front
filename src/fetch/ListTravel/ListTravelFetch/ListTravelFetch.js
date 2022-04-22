@@ -10,6 +10,7 @@ function ListTravelFetch() {
   if (user != null) {
     isLogged = true;
   }
+  
   function redirect(){
     window.location.replace("http://localhost:3000/registro");
   }

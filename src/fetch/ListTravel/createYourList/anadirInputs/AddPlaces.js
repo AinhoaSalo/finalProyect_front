@@ -2,7 +2,8 @@ import { useState } from "react";
 import OptionsDestination from "./OptionsDestinations";
 
 function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
-  let [createPlacesList, setcreatePlacesList] = useState([]);
+  let [createPlacesList, setcreatePlacesList] = useState("");
+  let [createDescriptionList, setcreateDescriptionList] = useState("");
 
   function AddPlace() {
     debugger
@@ -25,13 +26,15 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
       }
       else if (checkIfExist(auxTravelDestination.days[contadorDay].destinations[contadorDestination].places, createPlacesList)){
         auxTravelDestination.days[contadorDay].destinations[contadorDestination].places.push({
-          name: createPlacesList
+          name: createPlacesList,
+          description: createDescriptionList
         });
       }else{
         alert("sitio repetido")
       }
       setTravelAll(auxTravelDestination);
       setcreatePlacesList("");
+      setcreateDescriptionList("");
     }
 
   }
@@ -41,6 +44,7 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
       <OptionsDestination travelAll={travelAll} day={day} destination={destination} setDestination={setDestination}/>
       <p className="pInput">Sitio:</p>
       <input className="input" type="text" onChange={e=>setcreatePlacesList(e.target.value)} value={createPlacesList}/>
+      <div><textarea className="input"  onChange={e=>setcreateDescriptionList(e.target.value)} value={createDescriptionList}/></div>
       <button onClick={AddPlace}>Guardar</button>
     </>
     
