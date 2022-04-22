@@ -1,4 +1,6 @@
 import { useState, useEffect} from "react"
+import RenderDays from "./DayFetch";
+
 
 function ItaliFetch() {
   let [italy, setItaly] = useState([]);
@@ -11,20 +13,17 @@ function ItaliFetch() {
     })
   }, [])
 
- 
   function renderItaly() {
-    console.log(italy);
     let title = italy[0].title
     return(
       <>
-         <h2>{title}</h2>
+        <h2>{title}</h2>
+        <RenderDays italy={italy}/>
       </>
-    )
-      
+    )    
   }
 
-  
-  
+
   return (
     <>
     {italy.length > 0 ? renderItaly() : <></>}

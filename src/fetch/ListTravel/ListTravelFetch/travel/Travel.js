@@ -1,3 +1,4 @@
+import "../ListTravelFetch.css"
 import Day from "../day/Day";
 import Collapsible from 'react-collapsible';
 

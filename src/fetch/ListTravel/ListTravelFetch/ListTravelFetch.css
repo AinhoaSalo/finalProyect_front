@@ -25,10 +25,11 @@
   border-radius: 15px;
 }
 
-.title{
+.titleCollapsible, .title{
   color: grey;
-  text-align: center;
+  font-size: 25px;
 }
+
 .pointer{
   cursor: pointer;
 }

@@ -67,7 +67,6 @@ function CreateYourList() {
               <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
               </div>
               <div className="inputCreateList">
-                
               <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
               <div className="inputCreateList">
