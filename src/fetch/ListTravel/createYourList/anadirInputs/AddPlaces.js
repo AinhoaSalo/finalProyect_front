@@ -7,7 +7,7 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
 
   function AddPlace() {
     debugger
-    if(createPlacesList.length > 0){
+    if(createPlacesList.length > 0 && createDescriptionList.length > 0){
       let auxTravelDestination = {...travelAll};
       let contadorDay = 0;
       auxTravelDestination.days.forEach((days, i) => {
@@ -22,7 +22,10 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
         }
       })
       if (auxTravelDestination.days[contadorDay].destinations[contadorDestination].places == undefined){
-        auxTravelDestination.days[contadorDay].destinations[contadorDestination].places = [{name: createPlacesList}]
+        auxTravelDestination.days[contadorDay].destinations[contadorDestination].places = [{
+          name: createPlacesList,
+          description: createDescriptionList
+        }]
       }
       else if (checkIfExist(auxTravelDestination.days[contadorDay].destinations[contadorDestination].places, createPlacesList)){
         auxTravelDestination.days[contadorDay].destinations[contadorDestination].places.push({
@@ -44,7 +47,7 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
       <OptionsDestination travelAll={travelAll} day={day} destination={destination} setDestination={setDestination}/>
       <p className="pInput">Sitio:</p>
       <input className="input" type="text" onChange={e=>setcreatePlacesList(e.target.value)} value={createPlacesList}/>
-      <div><textarea className="input"  onChange={e=>setcreateDescriptionList(e.target.value)} value={createDescriptionList}/></div>
+      <div><p className="pInput">Descripción lugar a visitar:</p><textarea className="input"  onChange={e=>setcreateDescriptionList(e.target.value)} value={createDescriptionList}/></div>
       <button onClick={AddPlace}>Guardar</button>
     </>
     

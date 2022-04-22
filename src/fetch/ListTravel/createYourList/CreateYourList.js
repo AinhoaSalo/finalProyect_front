@@ -37,7 +37,12 @@ function CreateYourList() {
                 {
                   destinations.places ?
                   destinations.places.map(places=>{
-                      return <p>{places.name}</p>
+                      return(
+                        <>
+                        <p>{places.name}</p>
+                        <p>{places.description}</p>
+                        </>
+                      ) 
                   })
                   : <></>
                 }
@@ -70,7 +75,7 @@ function CreateYourList() {
               <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
               <div className="inputCreateList">
-                <p className="pInput">Descripción lugar a visitar:</p>
+                
               </div>
             </div>
             <div className="textAddInputsCreateYourList">
