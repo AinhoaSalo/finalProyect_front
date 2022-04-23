@@ -40,6 +40,7 @@ function CreateYourList() {
     .then(response=>response.json())
     .then(res=>{
       setTravelAll(aux);
+      window.location.reload()
     })
     
   }
@@ -76,9 +77,6 @@ function CreateYourList() {
       </>
     );
   }
-  
-
-  
 
   return (
     isLogged ? renderPage() : redirect()
