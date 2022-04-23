@@ -26,7 +26,6 @@ function Login() {
         alert(res.message)
         setBodyLogin(res)
       } else {
-        console.log(res)
       }
     });
   }

@@ -4,42 +4,48 @@ import OptionsDestination from "./OptionsDestinations";
 function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
   let [createPlacesList, setcreatePlacesList] = useState("");
   let [createDescriptionList, setcreateDescriptionList] = useState("");
+  let auxTravelDestination = {...travelAll};
 
   function AddPlace() {
-    debugger
-    if(createPlacesList.length > 0 && createDescriptionList.length > 0){
-      let auxTravelDestination = {...travelAll};
-      let contadorDay = 0;
-      auxTravelDestination.days.forEach((days, i) => {
-        if (days.day == day) {
-          contadorDay = i
-        }
-      });
-      let contadorDestination = 0;
-      auxTravelDestination.days[contadorDay].destinations.forEach((destinations, i) => {
-        if (destinations.day == destination) {
-          contadorDestination = i
-        }
-      })
-      if (auxTravelDestination.days[contadorDay].destinations[contadorDestination].places == undefined){
-        auxTravelDestination.days[contadorDay].destinations[contadorDestination].places = [{
-          name: createPlacesList,
-          description: createDescriptionList
-        }]
-      }
-      else if (checkIfExist(auxTravelDestination.days[contadorDay].destinations[contadorDestination].places, createPlacesList)){
-        auxTravelDestination.days[contadorDay].destinations[contadorDestination].places.push({
-          name: createPlacesList,
-          description: createDescriptionList
+    if (auxTravelDestination.days[0].destinations[0].places[0].name == "" && auxTravelDestination.days[0].destinations[0].places[0].description == "") {
+      auxTravelDestination.days[0].destinations[0].places[0].name = createPlacesList;
+      auxTravelDestination.days[0].destinations[0].places[0].description = createDescriptionList;
+    } else{
+        if(createPlacesList.length > 0 && createDescriptionList.length > 0){
+        let auxTravelDestination = {...travelAll};
+        let contadorDay = 0;
+        auxTravelDestination.days.forEach((days, i) => {
+          if (days.day == day) {
+            contadorDay = i
+          }
         });
-      }else{
-        alert("sitio repetido")
+        let contadorDestination = 0;
+        auxTravelDestination.days[contadorDay].destinations.forEach((destinations, i) => {
+          if (destinations.day == destination) {
+            contadorDestination = i
+          }
+        })
+        if (auxTravelDestination.days[contadorDay].destinations[contadorDestination].places == undefined){
+          auxTravelDestination.days[contadorDay].destinations[contadorDestination].places = [{
+            name: createPlacesList,
+            description: createDescriptionList
+          }]
+        }
+        else if (checkIfExist(auxTravelDestination.days[contadorDay].destinations[contadorDestination].places, createPlacesList)){
+          auxTravelDestination.days[contadorDay].destinations[contadorDestination].places.push({
+            name: createPlacesList,
+            description: createDescriptionList
+          });
+        }else{
+          alert("sitio repetido")
+        }
+    
       }
-      setTravelAll(auxTravelDestination);
-      setcreatePlacesList("");
-      setcreateDescriptionList("");
-    }
 
+    }
+    setTravelAll(auxTravelDestination);
+    setcreatePlacesList("");
+    setcreateDescriptionList("");
   }
 
   return(

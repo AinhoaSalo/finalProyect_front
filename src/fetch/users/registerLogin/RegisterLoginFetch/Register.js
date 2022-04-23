@@ -25,7 +25,6 @@ function Register() {
     .then(response=>response.json())
     .then(res=>{
       alert(res.message)
-      console.log(res)
       setBody(res)
     }) 
   }

@@ -24,7 +24,6 @@ function Delete() {
         alert(res.message)
         window.location.replace("http://localhost:3000/inicio");
       } else {
-        console.log(res)
         alert(res.message)
       }
     });

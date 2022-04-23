@@ -1,23 +1,15 @@
 import RenderDestination from "./DestinationFetch";
 
-function RenderDays({italy}) {
+function RenderDays({days}) {
   return(
     <>
       {
-        italy.map(days => {
+        days.days.map(day =>{
           return(
-            <>
-            {
-              days.days.map(day =>{
-                return(
-                <>
-                <p>{day.day}</p>
-                <RenderDestination day={day}/>
-                </>
-                )
-              })
-            }
-            </>
+          <>
+            <p>{day.day}</p>
+            <RenderDestination day={day}/>
+          </>
           )
         })
       }

@@ -14,11 +14,11 @@ function ItaliFetch() {
   }, [])
 
   function renderItaly() {
-    let title = italy[0].title
+    let title = italy.title
     return(
       <>
         <h2>{title}</h2>
-        <RenderDays italy={italy}/>
+        <RenderDays days={italy}/>
       </>
     )    
   }
@@ -26,7 +26,7 @@ function ItaliFetch() {
 
   return (
     <>
-    {italy.length > 0 ? renderItaly() : <></>}
+    {italy.length !== 0 ? renderItaly() : <></>}
     </>
   );
 }

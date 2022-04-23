@@ -1,15 +1,18 @@
 import "./CreateYourList.css"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LinksPlanning from "../linksPlanning/LinksPlanning";
 import AddTitle from "./anadirInputs/AddTitle";
 import objetTravel from "../../objets/objetTravel";
+import objetTravel2 from "../../objets/objetTravel2";
 import AddDays from "./anadirInputs/AddDays"
 import AddDestinations from "./anadirInputs/AddDestination";
 import AddPlaces from "./anadirInputs/AddPlaces";
+import RenderDays from "../../italy/DayFetch";
 
 
 function CreateYourList() {
   let [travelAll, setTravelAll] = useState(objetTravel);
+  let aux = objetTravel2;
   let [day, setDay] = useState ("");
   let [destination, setDestination] = useState ("");
   let user = sessionStorage.getItem('nameUserLogin');
@@ -22,59 +25,26 @@ function CreateYourList() {
     window.location.replace("http://localhost:3000/registro");
   }
 
-  function renderPage() {
-    let list = 
-    travelAll.days.map(days=>{
-      return (
-      <>
-        <p>{days.day}</p>
-        {
-          days.destinations ?
-          days.destinations.map(destinations=>{
-            return (  
-              <>
-                <p>{destinations.destination}</p>
-                {
-                  destinations.places ?
-                  destinations.places.map(places=>{
-                      return(
-                        <>
-                        <p>{places.name}</p>
-                        <p>{places.description}</p>
-                        </>
-                      ) 
-                  })
-                  : <></>
-                }
-              </> 
-            )
-          
-          })
-          : <></>
-        }
-      </>
-      )
-    })
-
-    function sendTravel() {
-      let user = sessionStorage.getItem('nameUserLogin');
-      let objectToSend = {
-        travel: travelAll,
-        user: user
-      }
-      let data = {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(objectToSend),
-      };
-      fetch("http://localhost:8000/travel", data)
-      .then(response=>response.json())
-      .then(res=>{
-        console.log(res)
-      })
-      
+  function sendTravel() {
+    let user = sessionStorage.getItem('nameUserLogin');
+    let objectToSend = {
+      travel: travelAll,
+      user: user
     }
+    let data = {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(objectToSend),
+    };
+    fetch("http://localhost:8000/travel", data)
+    .then(response=>response.json())
+    .then(res=>{
+      setTravelAll(aux);
+    })
+    
+  }
 
+  function renderPage() {
     return (
       <>
         <div className="createYourList">
@@ -94,12 +64,12 @@ function CreateYourList() {
                 <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
               <div className="buttonEnviar">
-                <button onClick={sendTravel()}>Enviar</button>
+                <button onClick={()=>sendTravel()}>Enviar</button>
               </div>
             </div>
             <div className="textAddInputsCreateYourList">
               <h2>{travelAll.title}</h2>
-              {list}
+              <RenderDays days={travelAll}/>
             </div>
           </div>
         </div>

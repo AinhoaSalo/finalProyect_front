@@ -12,7 +12,7 @@ function ListTravelFetch() {
   }
 
   useEffect(()=>{
-    fetch("http://localhost:8000/travel?nameUserLogin=test")
+    fetch("http://localhost:8000/travel?" + new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),}))
     .then(response=>response.json())
     .then(res=>{
       setTravelFetch(res.travel);
@@ -23,21 +23,62 @@ function ListTravelFetch() {
     window.location.replace("http://localhost:3000/registro");
   }
 
+  function deleteTravel(travel){
+    let nameUserLogin = sessionStorage.getItem('nameUserLogin');
+
+    let travelDelete = {
+      nameUserLogin,
+      travel,
+    };
+
+    let data = {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(travelDelete),
+    };
+
+    fetch("http://localhost:8000/travel", data)
+    .then(response=>response.json())
+    .then(function (res) {
+      if (res.delete == true){
+        alert(res.message);
+        deleteFromTravelArray(travel);
+      } else {
+        alert(res.message);
+      }
+    });
+  }
+
+  function deleteFromTravelArray(travel){
+    let auxTravel = travelFetch;
+    for (let i = auxTravel.length - 1; i >= 0; i--){
+      if (auxTravel[i].title === travel.title){
+        window.location.reload()
+      }
+    }
+  }
+
   function renderPage() {
-    
     return (
       <>
       <div className="allListTravelFetch">
         <LinksPlanning/>
         <div className="allCollapsible">
           {
-            travelFetch !== 0
+            travelFetch !== undefined
           ?
             travelFetch.map((travel, i) =>{
-              return <Travel key={i} travel={travel}/>
+              return (
+                <>
+                  <Travel key={i} travel={travel}/>
+                  <button onClick={()=>deleteTravel(travel)}>Borrar</button>
+                </>
+              )
             })
           :
-            ""
+            "No hay listas creadas"
           }
         </div>
       </div>

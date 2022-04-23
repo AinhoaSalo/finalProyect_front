@@ -1,7 +1,6 @@
 import RenderPlaces from "./PlacesFetch";
 
 function RenderDestination({day}){
-  console.log(day);
   return(
     <>
       {day.destinations.map(destination =>{

@@ -8,7 +8,6 @@ function AddTitle({travelAll, setTravelAll}){
     auxTravel.title = createTitleList;
     setTravelAll(auxTravel)
     setCreateTitleList("")
-    console.log(auxTravel)
   }
   
  

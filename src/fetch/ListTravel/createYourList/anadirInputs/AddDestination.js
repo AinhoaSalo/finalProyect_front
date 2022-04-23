@@ -5,28 +5,32 @@ function AddDestinations({travelAll, setTravelAll, day, setDay}){
   let [createDestinationsList, setcreateDestinationsList] = useState([]);
 
   function AddDestination() {
-    if(createDestinationsList.length > 0){
-      let auxTravelDestination = {...travelAll};
-      let contador = 0;
-      auxTravelDestination.days.forEach((days, i) => {
-        if (days.day == day) {
-          contador = i
-        }
-      });
-      if(auxTravelDestination.days[contador].destinations == undefined){
-        auxTravelDestination.days[contador].destinations = [{destination: createDestinationsList}]
-      }
-      else if (checkIfExist(auxTravelDestination.days[contador].destinations, createDestinationsList)){
-        auxTravelDestination.days[contador].destinations.push({
-          destination: createDestinationsList
+    let auxTravelDestination = {...travelAll};
+    if (auxTravelDestination.days[0].destinations[0].destination == "") {
+      auxTravelDestination.days[0].destinations[0].destination = createDestinationsList
+    }else{
+        if(createDestinationsList.length > 0){
+        let contador = 0;
+        auxTravelDestination.days.forEach((days, i) => {
+          if (days.day == day) {
+            contador = i
+          }
         });
-      }else{
-        alert("Día repetido")
+        if(auxTravelDestination.days[contador].destinations == undefined){
+          auxTravelDestination.days[contador].destinations = [{destination: createDestinationsList}]
+        }
+        else if (checkIfExist(auxTravelDestination.days[contador].destinations, createDestinationsList)){
+          auxTravelDestination.days[contador].destinations.push({
+            destination: createDestinationsList
+          });
+        }else{
+          alert("Día repetido")
+        }
+  
       }
-      setTravelAll(auxTravelDestination);
-      setcreateDestinationsList("");
     }
-
+    setTravelAll(auxTravelDestination);
+    setcreateDestinationsList("");
   }
 
   return(

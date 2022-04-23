@@ -3,7 +3,6 @@ import { useState } from "react";
 function AddDays({travelAll, setTravelAll}){
   let [createDayList, setcreateDayList] = useState("");
 
-
   function AddDay() {
     let auxTravelDay = {...travelAll};
     if (createDayList.length > 0) {
@@ -14,12 +13,12 @@ function AddDays({travelAll, setTravelAll}){
           auxTravelDay.days.push({
             day: createDayList
           });
-        }else{
+        } else {
           alert("Día repetido")
         }
-        setcreateDayList("");
       }
-      setTravelAll(auxTravelDay);   
+      setTravelAll(auxTravelDay);  
+      setcreateDayList(""); 
     }
   }
 

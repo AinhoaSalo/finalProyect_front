@@ -8,7 +8,6 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
       contador = i
     }
   });
-  console.log(travelAll.days[contador])
 
   if (travelAll.days[contador].destinations == undefined ){   
     return ( 
