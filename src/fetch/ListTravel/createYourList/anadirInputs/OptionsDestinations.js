@@ -13,7 +13,7 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
   if (travelAll.days[contador].destinations == undefined ){   
     return ( 
       <select>      
-          <option>Añade un día</option>
+          <option>Añade un destino</option>
       </select>)
    } else if(travelAll.days[contador].destinations.length > 0){
     return (
@@ -32,7 +32,7 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
   } else {
     return ( 
     <select>      
-        <option>Añade un día</option>
+        <option>Añade un destino</option>
     </select>)
   }
         

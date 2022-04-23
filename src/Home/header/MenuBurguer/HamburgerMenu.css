@@ -1,19 +1,20 @@
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #dddedf;
   position: relative;
+  padding: 20px 0;
 }
 
 .topnav a {
-  color: white;
+  color: rgb(14, 13, 13);
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
   display: block;
 }
 
 .topnav a.icon {
-  background: black;
+  background-color: #8e8f8f;
   display: block;
   position: absolute;
   right: 0;
@@ -25,7 +26,4 @@
   color: black;
 }
 
-/* .active {
-  background-color: #04AA6D;
-  color: white;
-} */
+

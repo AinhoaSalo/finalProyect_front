@@ -1,6 +1,6 @@
 import "./ListTravelFetch.css"
 import LinksPlanning from "../linksPlanning/LinksPlanning";
-import { useState} from "react"
+import { useEffect, useState} from "react"
 import Travel from "./travel/Travel";
 
 function ListTravelFetch() {
@@ -10,17 +10,20 @@ function ListTravelFetch() {
   if (user != null) {
     isLogged = true;
   }
+
+  useEffect(()=>{
+    fetch("http://localhost:8000/travel?nameUserLogin=test")
+    .then(response=>response.json())
+    .then(res=>{
+      setTravelFetch(res.travel);
+    }) 
+  }, [])
   
   function redirect(){
     window.location.replace("http://localhost:3000/registro");
   }
 
   function renderPage() {
-    fetch("http://localhost:8000/travel?nameUserLogin=test")
-    .then(response=>response.json())
-    .then(res=>{
-      setTravelFetch(res.travel);
-    }) 
     
     return (
       <>
@@ -43,7 +46,9 @@ function ListTravelFetch() {
   }
 
   return (
-    isLogged ? renderPage() : redirect()
+    <>
+    {isLogged ? renderPage() : redirect()}
+    </>
   );
 }
 

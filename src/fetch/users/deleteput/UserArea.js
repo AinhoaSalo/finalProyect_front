@@ -2,6 +2,7 @@ import "./UserArea.css"
 import PutGet from "./deletePutFetch/PutGet";
 import Delete from "./deletePutFetch/Delete";
 import SingOff from "./deletePutFetch/SingOff";
+import LinksPlanning from "../../ListTravel/linksPlanning/LinksPlanning";
 
 function UserArea() {
   let user = sessionStorage.getItem('nameUserLogin');
@@ -17,6 +18,7 @@ function UserArea() {
     return (
       <>
         <div className='allAreaUsers'>
+          <LinksPlanning/>
           <div className="allUserLogin">
             <div className="dataUserLogin">
               <PutGet/>

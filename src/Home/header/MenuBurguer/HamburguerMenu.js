@@ -11,31 +11,22 @@ function HeaderBurguer() {
   let [open, setOpen]= useState(false)
   return(
     <>
-      {/* <Menu>
-        <div className='headerBurguer'>
-          <NavLink id="home" className="menu-item" to="/inicio">Inicio</NavLink>
-          <NavLink id="about" className="menu-item" to="/about">About</NavLink>
-          <NavLink id="contact" className="menu-item" to="/contact">Contact</NavLink>
-        </div>
-      </Menu> */}
-
-
 
       <div class="mobile-container">
-
-      <div class="topnav">
-        <a href="#home" class="active">Logo</a>
-        {open ? <div id="myLinks">
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-        </div>: <></>}
-        <a class="icon" onClick={()=>setOpen(!open)}>
-        <FontAwesomeIcon icon={solid('bars')} size="2x" />
-        </a>
+        <div class="topnav">
+          <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
+          {open ? <div id="myLinks">
+            <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
+            <NavLink className="linkHeader" to="/italia">Italia</NavLink>
+            <NavLink className="linkHeader" to="/eeuu">EEUU</NavLink>
+            <NavLink className="linkHeader" to="/listascreadas">Planning</NavLink>
+            <NavLink className="linkHeader" to="/registro">Registro</NavLink>
+          </div>: <></>}
+          <a className="icon" onClick={()=>setOpen(!open)}>
+          <FontAwesomeIcon icon={solid('bars')} size="2x" />
+          </a>
+        </div>
       </div>
-</div>
-
     </>  
 
   )

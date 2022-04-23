@@ -56,6 +56,25 @@ function CreateYourList() {
       )
     })
 
+    function sendTravel() {
+      let user = sessionStorage.getItem('nameUserLogin');
+      let objectToSend = {
+        travel: travelAll,
+        user: user
+      }
+      let data = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(objectToSend),
+      };
+      fetch("http://localhost:8000/travel", data)
+      .then(response=>response.json())
+      .then(res=>{
+        console.log(res)
+      })
+      
+    }
+
     return (
       <>
         <div className="createYourList">
@@ -63,19 +82,19 @@ function CreateYourList() {
           <div className="allStyleCreateYourList">
             <div className="allInputsCreateYourList">
               <div className="inputCreateList">
-              <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
+                <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
               </div>
               <div className="inputCreateList">
-              <AddDays travelAll={travelAll} setTravelAll={setTravelAll} />
+                <AddDays travelAll={travelAll} setTravelAll={setTravelAll} />
               </div>
               <div className="inputCreateList">
-              <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
+                <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
               </div>
               <div className="inputCreateList">
-              <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
+                <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
-              <div className="inputCreateList">
-                
+              <div className="buttonEnviar">
+                <button onClick={sendTravel()}>Enviar</button>
               </div>
             </div>
             <div className="textAddInputsCreateYourList">
