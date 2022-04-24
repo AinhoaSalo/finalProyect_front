@@ -6,7 +6,7 @@ function AddDays({travelAll, setTravelAll}){
   function AddDay() {
     let auxTravelDay = {...travelAll};
     if (createDayList.length > 0) {
-      if (auxTravelDay.days.length == 1 && auxTravelDay.days[0].day == "") {
+      if (auxTravelDay.days.length === 1 && auxTravelDay.days[0].day === "") {
         auxTravelDay.days[0].day = createDayList;
       } else {
         if (checkIfExist(auxTravelDay.days, createDayList)){

@@ -1,9 +1,8 @@
-import { useState } from "react"
 
 function OptionsDay({travelAll, day, setDay}) {
   
 
-  if (travelAll.days[0].day != "" && travelAll.days.length > 0){   
+  if (travelAll.days[0].day !== "" && travelAll.days.length > 0){   
     return (
       <>
       <select onChange={(e)=> setDay(e.target.value)} value={day}>
