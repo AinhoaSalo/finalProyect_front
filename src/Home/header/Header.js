@@ -1,5 +1,5 @@
 import './Header.css';
-import HeaderMaxPixel from './HeaderMaxPixel.css/HeaderMaxPixel';
+import HeaderMaxPixel from './HeaderMaxPixel/HeaderMaxPixel';
 import HambuergerMenu from './MenuBurguer/HamburguerMenu';
 
 function Header() {

@@ -7,40 +7,41 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
   let auxTravelDestination = {...travelAll};
 
   function AddPlace() {
-    if (auxTravelDestination.days[0].destinations[0].places[0].name == "" && auxTravelDestination.days[0].destinations[0].places[0].description == "") {
-      auxTravelDestination.days[0].destinations[0].places[0].name = createPlacesList;
-      auxTravelDestination.days[0].destinations[0].places[0].description = createDescriptionList;
+    let contadorDay = 0;
+    auxTravelDestination.days.forEach((days, i) => {
+      if (days.day === day) {
+        contadorDay = i
+      }
+    });
+    let days = auxTravelDestination.days[contadorDay]
+    let contadorDestination = 0;
+    days.destinations.forEach((destinations, i) => {
+      if (destinations.destination === destination) {
+        contadorDestination = i
+      }
+    })
+    let places = days.destinations[contadorDestination].places
+    if (places !== undefined && places[0].name !== undefined && places[0].name == "" && places[0].description == "") {
+      places[0].name = createPlacesList;
+      places[0].description = createDescriptionList;
     } else{
-        if(createPlacesList.length > 0 && createDescriptionList.length > 0){
-        let auxTravelDestination = {...travelAll};
-        let contadorDay = 0;
-        auxTravelDestination.days.forEach((days, i) => {
-          if (days.day == day) {
-            contadorDay = i
-          }
-        });
-        let contadorDestination = 0;
-        auxTravelDestination.days[contadorDay].destinations.forEach((destinations, i) => {
-          if (destinations.day == destination) {
-            contadorDestination = i
-          }
-        })
-        if (auxTravelDestination.days[contadorDay].destinations[contadorDestination].places == undefined){
-          auxTravelDestination.days[contadorDay].destinations[contadorDestination].places = [{
+      if(createPlacesList.length > 0 && createDescriptionList.length > 0){
+        if (places === undefined){
+          places = [{
             name: createPlacesList,
             description: createDescriptionList
           }]
+          auxTravelDestination.days[contadorDay].destinations[contadorDestination].places = places
         }
-        else if (checkIfExist(auxTravelDestination.days[contadorDay].destinations[contadorDestination].places, createPlacesList)){
-          auxTravelDestination.days[contadorDay].destinations[contadorDestination].places.push({
+        else if (checkIfExist(places, createPlacesList)){
+          places.push({
             name: createPlacesList,
             description: createDescriptionList
           });
         }else{
           alert("sitio repetido")
         }
-    
-      }
+    }
 
     }
     setTravelAll(auxTravelDestination);

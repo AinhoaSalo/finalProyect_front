@@ -1,12 +1,13 @@
 import './HeaderMax.css';
 import {NavLink , useLocation} from 'react-router-dom'
+import logoSmall from "../img/logoSmall.png"
 
 function HeaderMaxPixel() {
   return(
     <>
       <header className="headerDesktopMaxPixel">
         <div className="titleHomeDesktopMaxPixel">
-          <h1 className='titleSoonHomeHeader'>Plan Your Trip</h1>
+          <h1 className='titleSoonHomeHeader'><img src={logoSmall} alt="mundo" /></h1>
           <nav className='navLinkHeader'>
             <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
             <NavLink className="linkHeader" to="/italia">Italia</NavLink>

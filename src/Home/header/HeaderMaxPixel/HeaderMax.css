@@ -3,13 +3,11 @@ header{
   font-size: 20px;
 }
 
-.titleSoonHomeHeader {
-	text-align: center;
-	margin: 20px;
-	padding-left: 50px;
-	font-size: 40px;
-	color: #656666;
-	text-shadow: 2px 2px 4px #858686;
+.titleSoonHomeHeader img {
+	width: 80px;
+	height: 80px;
+	margin-left: 70px;
+	margin-top: 15px;
 }
 
 .titleHomeDesktopMaxPixel{

@@ -5,19 +5,18 @@ function AddDestinations({travelAll, setTravelAll, day, setDay}){
   let [createDestinationsList, setcreateDestinationsList] = useState([]);
 
   function AddDestination() {
-    debugger
     let auxTravelDestination = {...travelAll};
     let contador = 0;
     auxTravelDestination.days.forEach((days, i) => {
-      if (days.day == day) {
+      if (days.day === day) {
         contador = i
       }
     });
-    if (auxTravelDestination.days[contador].destinations !== undefined && auxTravelDestination. days[contador].destinations[0].destination == "") {
+    if (auxTravelDestination.days[contador].destinations !== undefined && auxTravelDestination. days[contador].destinations[0].destination === "") {
       auxTravelDestination.days[contador].destinations[0].destination = createDestinationsList
     }else{
       if(createDestinationsList.length > 0){
-        if(auxTravelDestination.days[contador].destinations == undefined){
+        if(auxTravelDestination.days[contador].destinations === undefined){
           auxTravelDestination.days[contador].destinations = [{destination: createDestinationsList}]
         }
         else if (checkIfExist(auxTravelDestination.days[contador].destinations, createDestinationsList)){
