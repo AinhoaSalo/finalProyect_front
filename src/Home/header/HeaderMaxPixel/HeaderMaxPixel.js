@@ -7,7 +7,9 @@ function HeaderMaxPixel() {
     <>
       <header className="headerDesktopMaxPixel">
         <div className="titleHomeDesktopMaxPixel">
-          <h1 className='titleSoonHomeHeader'><img src={logoSmall} alt="mundo" /></h1>
+          <div className='imgAndTitle'>
+            <NavLink to="/inicio"><img className="linkHeaderImg" src={logoSmall} alt="mundo"/></NavLink><h1 className='titleH1Header'>Plan Your Trip</h1>
+          </div>
           <nav className='navLinkHeader'>
             <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
             <NavLink className="linkHeader" to="/italia">Italia</NavLink>

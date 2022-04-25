@@ -1,20 +1,18 @@
 import "./HamburgerMenu.css"
 import React from "react";
-import {slide as Menu} from 'react-burger-menu';
-import {decorator as reduxBurgerMenu} from 'redux-burger-menu';
-import {NavLink , useLocation} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import logoSmall from "../img/logoSmall.png"
 
 function HeaderBurguer() {
   let [open, setOpen]= useState(false)
   return(
     <>
-
       <div class="mobile-container">
         <div class="topnav">
-          <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
+          <NavLink to="/inicio"><img className="linkHeaderImgBurguer" src={logoSmall} alt="mundo" /></NavLink>
           {open ? <div id="myLinks">
             <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
             <NavLink className="linkHeader" to="/italia">Italia</NavLink>

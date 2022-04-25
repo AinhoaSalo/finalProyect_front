@@ -2,7 +2,7 @@ import { useState, useEffect} from "react"
 import RenderDays from "./DayFetch";
 
 
-function ItaliFetch() {
+function ItalyFetch() {
   let [italy, setItaly] = useState([]);
 
   useEffect(()=>{
@@ -31,5 +31,5 @@ function ItaliFetch() {
   );
 }
 
-export default ItaliFetch;
+export default ItalyFetch;
 

@@ -3,29 +3,34 @@ header{
   font-size: 20px;
 }
 
-.titleSoonHomeHeader img {
+.linkHeaderImg{
 	width: 80px;
 	height: 80px;
-	margin-left: 70px;
-	margin-top: 15px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 300px;
 }
 
+.imgAndTitle{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-left: 20px;
+	padding-bottom: 5px;
+}
+
+.titleH1Header{
+	font-size: 15px;
+}
 .titleHomeDesktopMaxPixel{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 25px;
 }
 
-.titleHomeDesktopMaxPixel{
-	display: flex;
-	justify-content: space-around;
-
-}
-
 nav {
-	margin: 27px auto 0;
+	margin: 35px 50px 0;
 	position: relative;
-	width: 590px;
 	height: 50px;
 	background-color: #8e8f8f;
 	border-radius: 8px;
@@ -65,7 +70,7 @@ nav .animation {
 	width: 100px;
 }
 .linkHeader:nth-child(4) {
-	width: 160px;
+	width: 110px;
 }
 .linkHeader:nth-child(5) {
 	width: 120px;
@@ -87,13 +92,13 @@ nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	background-color: #356483;
 }
 nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, nav .start-areapersonal, .linkHeader:nth-child(4):hover~.animation{
-	width: 160px;
+	width: 110px;
 	left: 310px;
 	background-color: #c78993;
 }
 
 nav .start-registro, .linkHeader:nth-child(5):hover~.animation {
 	width: 120px;
-	left: 470px;
+	left: 420px;
 	background-color: #ad9a5a;
 } 

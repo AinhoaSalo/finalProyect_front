@@ -1,38 +1,35 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect} from "react";
+import RenderDays from "../italy/DayFetch";
+
 
 function EeuuFetch() {
-  let [destinationPlaceEeuu, setDestinationPlace] = useState(undefined);
-  let [pokemon, setPokemon] = useState(undefined);
-  let [executeFetch, setexecuteFetch] = useState(false);
+  let [eeuu, setEeuu] = useState([]);
 
   useEffect(()=>{
-    if (executeFetch) {
-      fetch("http://localhost:3000/destinations?nameUserLogin=test")
-      .then(response=>response.json())
-      .then(res=>{
-        console.log(res)
-      }) 
-    }
-    
-  }, [executeFetch])
+    fetch("http://localhost:8000/eeuu")
+    .then(response=>response.json())
+    .then(res=>{
+      setEeuu(res.eeuu)
+    })
+  }, [])
+
+  function renderEeuu() {
+    let title = eeuu.title
+    return(
+      <>
+        <h2>{title}</h2>
+        <RenderDays days={eeuu}/>
+      </>
+    )    
+  }
 
 
   return (
     <>
-    <p>Hola</p>
-{/*     <input type="text" onChange={(e)=>setNombrePokemon(e.target.value)} value={destinationPlaceEeuu}/>
-    <button onClick={()=>setexecuteFetch(true)}></button>
-    {
-      pokemon != undefined
-      ?
-      <div>
-        <p>{pokemon.name}</p>
-        <img src={pokemon.sprites.front_default}/>
-      </div>
-    :
-    "dale al boton para traer al pokemon"} */}
+    {eeuu.length !== 0 ? renderEeuu() : <></>}
     </>
   );
 }
 
 export default EeuuFetch;
+

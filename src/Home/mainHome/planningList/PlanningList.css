@@ -3,14 +3,14 @@
   justify-content: space-around;
   text-align: center;
 	background: linear-gradient(to bottom, #707070, #dfeced);
-	color: #626464;
+	color: #4e6c7e;
 }
 
 .allPlanningHome{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 50px 0;
   border-radius: 10px;
 }
 
@@ -21,13 +21,12 @@
   height: 400px;
 }
 
-.titleAndParrafPlanningHome{
+.titlePlanningHome{
   display: flex;
   flex-direction: column;
-  margin: 20px 80px 20px 100px;
-  padding: 250px 50px;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 10px;
+
 }
 
 .parrafPlanning{
@@ -72,31 +71,33 @@
   .allPlanningHome{
     justify-content: space-around;
     flex-direction: row-reverse;
+    padding: 70px 0;
   }
 
   .titlePlanningHome{
     text-align: center;
-    width: 600px;
-    height: 700px;
-    margin-left:30px;
-    padding: 150px 34px;
+    width: 500px;
+    height: 600px;
+    margin-left: 70px;
+    padding: 180px 34px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.404);
   }
 
   .parrafPlanning{
     font-size: 22px;
+    padding-top: 30px;
   }
 
   .imgHomePlanning{
-    width: 600px;
-    height: 700px;
+    width: 500px;
+    height: 600px;
     border-radius: 10px;
     opacity: 0.85;
   }
 
   .planningHome{
-    margin-right: 30px;
+    margin-right: 70px;
     width: 50%;
   }
   
