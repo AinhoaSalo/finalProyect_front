@@ -10,8 +10,8 @@ function HeaderBurguer() {
   let [open, setOpen]= useState(false)
   return(
     <>
-      <div class="mobile-container">
-        <div class="topnav">
+      <div className="mobile-container">
+        <div className="topnav">
           <NavLink to="/inicio"><img className="linkHeaderImgBurguer" src={logoSmall} alt="mundo" /></NavLink>
           {open ? <div id="myLinks">
             <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
