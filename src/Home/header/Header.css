@@ -1,4 +1,4 @@
-@media (max-width: 962.99px) {
+@media (max-width: 1111.99px) {
 
     .headerDesktopMaxPixel{
       display: none;
@@ -6,7 +6,7 @@
   
 }
 
-@media (min-width: 963px){
+@media (min-width: 1112px){
 
     .mobile-container{
       display: none; 

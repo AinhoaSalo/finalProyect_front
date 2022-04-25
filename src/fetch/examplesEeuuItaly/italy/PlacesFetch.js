@@ -3,12 +3,12 @@ function RenderPlaces({destination}){
     <>
       {destination.places !== undefined ? 
         destination.places[0].name !== "" ?
-          <ol>
+          <ol className="olExampleFetch">
             {destination.places.map(place =>{
               return(
                 <>
                   <>
-                    <li>{place.name}:</li><p>{place.description}</p>
+                    <li className="liExampleFetchName">{place.name}:</li><p className="liExampleFetchdescription">{place.description}</p>
                   </> 
                 </>
               )

@@ -64,7 +64,7 @@ nav .animation {
 	width: 100px;
 }
 .linkHeader:nth-child(2) {
-	width: 110px;
+	width: 100px;
 }
 .linkHeader:nth-child(3) {
 	width: 100px;
@@ -73,7 +73,7 @@ nav .animation {
 	width: 110px;
 }
 .linkHeader:nth-child(5) {
-	width: 120px;
+	width: 110px;
 }
 
 nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
@@ -82,23 +82,23 @@ nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
 	background-color: #6a9fa8;
 }
 nav .start-italia, .linkHeader:nth-child(2):hover~.animation {
-	width: 110px;
+	width: 100px;
 	left: 100px;
 	background-color: #808fd3;
 }
 nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	width: 100px;
-	left: 210px;
+	left: 200px;
 	background-color: #356483;
 }
 nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, nav .start-areapersonal, .linkHeader:nth-child(4):hover~.animation{
 	width: 110px;
-	left: 310px;
+	left: 300px;
 	background-color: #c78993;
 }
 
 nav .start-registro, .linkHeader:nth-child(5):hover~.animation {
-	width: 120px;
-	left: 420px;
+	width: 110px;
+	left: 410px;
 	background-color: #ad9a5a;
 } 

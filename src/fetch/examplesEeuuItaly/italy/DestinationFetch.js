@@ -6,7 +6,7 @@ function RenderDestination({day}){
         {day.destinations !== undefined ? day.destinations.map(destination =>{
           return(
             <>
-            <p>{destination.destination}</p>
+            <p className="destinationsExampleFetch">{destination.destination}</p>
             <RenderPlaces destination={destination}/>
             </>
           )

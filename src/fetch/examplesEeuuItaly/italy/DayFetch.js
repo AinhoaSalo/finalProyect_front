@@ -7,7 +7,7 @@ function RenderDays({days}) {
         days.days.map(day =>{
           return(
           <>
-            <p>{day.day}</p>
+            <p className="daysExampleFetch">{day.day}</p>
             <RenderDestination day={day}/>
           </>
           )

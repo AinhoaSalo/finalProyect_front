@@ -7,8 +7,7 @@ import objetTravel2 from "../../objets/objetTravel2";
 import AddDays from "./anadirInputs/AddDays"
 import AddDestinations from "./anadirInputs/AddDestination";
 import AddPlaces from "./anadirInputs/AddPlaces";
-import RenderDays from "../../italy/DayFetch";
-
+import RenderDays from "../../examplesEeuuItaly/italy/DayFetch";
 
 function CreateYourList() {
   let [travelAll, setTravelAll] = useState(objetTravel);

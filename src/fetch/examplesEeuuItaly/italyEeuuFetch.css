@@ -1,0 +1,74 @@
+.allExampleFetch{
+  background: url(./img/circleColors.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 12px -18px inset;
+}
+
+.styleExampleFetch{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 10px;
+}
+
+.titleRenderExample{
+  padding: 20px;
+  text-align: justify;
+}
+
+.divImgItalyEeuu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.imgItalyEeuu{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+@media (min-width: 535px) and (max-width: 739.99px) {
+
+  .allExampleFetch{
+    padding: 50px 100px;
+  }
+
+}
+
+@media (min-width: 740px) and (max-width: 1229.99px) {
+
+  .allExampleFetch{
+    padding: 50px 100px;
+  }
+
+  .styleExampleFetch{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 10px;
+  }
+
+  .imgItalyEeuu{
+    width: 300px;
+    height: 300px;
+  }
+
+}
+
+@media (min-width: 1230px)  {
+
+  .allExampleFetch{
+    padding: 50px 100px;
+  }
+
+  .imgItalyEeuu{
+    width: 400px;
+    height: 400px;
+  }
+}

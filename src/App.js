@@ -1,14 +1,15 @@
 import './App.css';
 import Header from './Home/header/Header';
 import Main from './Home/mainHome/Main';
-import ItalyFetch from './fetch/italy/ItalyFetch';
-import EeuuFetch from './fetch/eeuu/EeuuFetch';
+import ItalyFetch from './fetch/examplesEeuuItaly/italy/ItalyFetch';
+import EeuuFetch from './fetch/examplesEeuuItaly/eeuu/EeuuFetch';
 import ListTravelFetch from './fetch/ListTravel/ListTravelFetch/ListTravelFetch';
 import CreateYourList from './fetch/ListTravel/createYourList/CreateYourList';
 import UsersRegisterLogin from './fetch/users/registerLogin/UsersRegisterLogin';
 import UserArea from './fetch/users/deleteput/UserArea';
 import Footer from './Home/footer/Footer';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+
 
 
 
