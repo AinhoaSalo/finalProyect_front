@@ -26,50 +26,58 @@ function PutGet() {
         <div className="lastnamePersonalArea">
           <p>Apellidos: <input className="lastname" type="text" onChange={e=>setModifyLastname(e.target.value)} value={modifyLastname}></input></p>
         </div>
-        <div><button onClick={()=>send()} className="btnModify">Enviar datos</button></div>
+        <div><button onClick={()=>send()} className="btnDeleteModifySingOff">Enviar datos</button></div>
       </>
     )
   }
 
   function send(){
-    setIsEditing(false);
-    setDataUser({nameRegister: modifyName,lastnameRegister: modifyLastname})
-
-    let userPut = {
-      nameUserRegister: sessionStorage.getItem('nameUserLogin'),
-      nameRegister: modifyName,
-      lastnameRegister: modifyLastname
-    };
+    if ((modifyName === "") || (modifyLastname === "")){
+      alert("campo vacio, por favor, introduzca el nombre y el apellido")
+    }else{
+      setIsEditing(false);
+      setDataUser({nameRegister: modifyName,lastnameRegister: modifyLastname})
+      let userPut = {
+        nameUserRegister: sessionStorage.getItem('nameUserLogin'),
+        nameRegister: modifyName,
+        lastnameRegister: modifyLastname
+      };
+    
+      let data = {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(userPut),
+      };
   
-    let data = {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(userPut),
-    };
-
-    fetch("http://localhost:8000/modificar", data)
-    .then(response=>response.json())
-    .then(function (res) {
-      if (res.put == true){
-        alert(res.message)
-      } else {
-        alert(res.message)
-      }
-    });
+      fetch("http://localhost:8000/modificar", data)
+      .then(response=>response.json())
+      .then(function (res) {
+        if (res.put == true){
+          alert(res.message)
+        } else {
+          alert(res.message)
+        }
+      });
+    }
   }
 
   function renderFields() {
     return(
       <>
-        <div className="namePersonalArea">
-          <p>Nombre: <span className="name">{dataUser.nameRegister}</span></p>
-        </div>
-        <div className="lastnamePersonalArea">
-          <p>Apellidos: <span className="lastname">{dataUser.lastnameRegister}</span></p>
-        </div>
-        <div><button onClick={()=>setIsEditing(true)} className="btnPut">Modificar datos</button>
+        <div className="allStyleModify">
+          <div className="styleInputs">
+            <div className="namePersonalArea">
+              <p>Nombre: <span className="name">{dataUser.nameRegister}</span></p>
+            </div>
+            <div className="lastnamePersonalArea">
+              <p>Apellidos: <span className="lastname">{dataUser.lastnameRegister}</span></p>
+            </div>
+          </div>
+          <div className="styleButton">
+            <button onClick={()=>setIsEditing(true)} className="btnDeleteModifySingOff">Modificar datos</button>
+          </div>
         </div>
       </>
     )

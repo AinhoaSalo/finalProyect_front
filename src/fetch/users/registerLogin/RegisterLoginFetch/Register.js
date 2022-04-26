@@ -8,6 +8,7 @@ function Register() {
   let [passwordUserRegister, setPasswordUserRegister] = useState("");
 
   function sendDataUserRegister() {
+    
     body = {
       nameUserRegister,
       nameRegister,
@@ -26,6 +27,7 @@ function Register() {
     .then(res=>{
       alert(res.message)
       setBody(res)
+      window.location.reload()
     }) 
   }
 
@@ -37,7 +39,7 @@ function Register() {
         <div><label className="labelInputsRegister">Nombre: </label><input className="nameRegisterFront inputRegLog" type="text" onChange={e=>setNameRegister(e.target.value)} value={nameRegister}/></div>
         <div><label className="labelInputsRegister">Apellidos: </label><input className="lastnameRegisterFront inputRegLog" type="text" onChange={e=>setLastnameRegister(e.target.value)} value={lastnameRegister}/></div>
         <div><label className="labelInputsRegister">Contraseña: </label><input className="passwordUserRegisterFront inputRegLog" type="password" onChange={e=>setPasswordUserRegister(e.target.value)} value={passwordUserRegister}/></div>
-        <div><button onClick={()=>sendDataUserRegister()} className="btnRegister">Registrar</button></div>
+        <div className="flexButtonRegisterLogin"><button onClick={()=>sendDataUserRegister()} className="btnRegisterLogin">Registrar</button></div>
         <div className="messageRegistrer"></div>
       </div>
     </>

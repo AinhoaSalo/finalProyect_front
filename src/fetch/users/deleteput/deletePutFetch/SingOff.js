@@ -8,7 +8,7 @@ function SingOff() {
   return(
     <>    
       <div>
-        <button onClick={()=>singOffButton()} className="btnSingOff">Cerrar sesion</button>
+        <button onClick={()=>singOffButton()} className="btnDeleteModifySingOff">Cerrar sesion</button>
       </div>
     </>
   )

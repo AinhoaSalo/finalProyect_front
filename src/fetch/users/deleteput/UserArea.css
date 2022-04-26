@@ -1,10 +1,56 @@
+main{
+  min-height: calc(100vh - 316px);
+}
+
 .allAreaUsers{
-  background: url(../../ListTravel/createYourList/img/workplace-g41ff900d6_1280.jpg);
+  background: url(../../ListTravel/createYourList/img/coffee.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  padding-bottom: 459px;
+
+}
+
+.allUserLogin{
+  background-color: rgba(255, 255, 255, 0.705);
+  margin: 50px 200px;
+  padding: 100px;
+  border-radius: 10px;
+}
+
+.deleteSingOffAndPutUserLogin{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.personalArea{
+  width: 50%;
+}
+
+.allStyleModify{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.btnDeleteModifySingOff{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #c2c3c4, #6f7172);
+  color: #dddddd;
+  font-size: 12px;
+  padding: 7px;
+  text-decoration: none;
+  border: #969fa8;
+}
+
+.btnDeleteModifySingOff:hover {
+  background-image: linear-gradient(to bottom, #dfd8c4, #AD9A5A);
+  text-decoration: none;
+}
+
+.styleInputs{
+  margin-right: 100px;
 }
 
 .hide{

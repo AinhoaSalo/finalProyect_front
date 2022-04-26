@@ -17,19 +17,19 @@ function UserArea() {
   function renderPage() {
     return (
       <>
-        <div className='allAreaUsers'>
-          <LinksPlanning/>
-          <div className="allUserLogin">
-            <div className="dataUserLogin">
-              <PutGet/>
-            </div>
-            <div className="deleteSingOffAndPutUserLogin">
-              <Delete/>
-              <SingOff/>
-              <div className="messageDeletePut"></div>
+        <main>
+          <div className='allAreaUsers'>
+            <LinksPlanning/>
+            <div className="allUserLogin">
+              <div className="deleteSingOffAndPutUserLogin">
+                <PutGet/>
+                <Delete/>
+                <SingOff/>
+                <div className="messageDeletePut"></div>
+              </div>
             </div>
           </div>
-        </div>
+        </main>
       </>
     )
   }

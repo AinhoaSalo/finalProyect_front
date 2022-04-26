@@ -31,7 +31,7 @@ function Delete() {
   }
   return(
       <>
-        <div><button onClick={()=>deleteUser()} className="btnDelete">Borrar usuario</button></div>
+        <div><button onClick={()=>deleteUser()} className="btnDeleteModifySingOff">Borrar usuario</button></div>
       </>
   )
 }

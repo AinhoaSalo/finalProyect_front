@@ -37,7 +37,22 @@
 
 label{
   display: inline-block;
-  width: 80px;
+  width: 90px;
+}
+
+.btnRegisterLogin{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #c2c3c4, #6f7172);
+  color: #dddddd;
+  font-size: 12px;
+  padding: 7px;
+  text-decoration: none;
+  border: #969fa8;
+}
+
+.btnRegisterLogin:hover {
+  background-image: linear-gradient(to bottom, #dfd8c4, #AD9A5A);
+  text-decoration: none;
 }
 
 @media (min-width: 535px) and (max-width: 859.99px) {

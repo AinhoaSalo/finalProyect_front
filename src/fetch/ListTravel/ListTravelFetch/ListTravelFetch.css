@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  padding-bottom: 300px;
+  min-height: calc(100vh - 280px);
 }
 
 .allCollapsible{
@@ -36,9 +36,9 @@
 
 @media (min-width: 740px) and (max-width: 1229.99px) {
 
-  .allListTravelFetch{
-    padding-bottom: 200px;
-  }
+  /* .allListTravelFetch{
+    min-height: calc(100vh - 316px);
+  } */
 
   .allCollapsible{
     font-size: 18px;
@@ -48,7 +48,7 @@
 @media (min-width: 1230px)  {
 
   .allListTravelFetch{
-    padding-bottom: 330px;
+    min-height: calc(100vh - 316px);
   }
 
   .allCollapsible{

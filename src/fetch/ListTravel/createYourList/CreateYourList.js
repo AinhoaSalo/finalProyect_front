@@ -1,5 +1,5 @@
 import "./CreateYourList.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LinksPlanning from "../linksPlanning/LinksPlanning";
 import AddTitle from "./anadirInputs/AddTitle";
 import objetTravel from "../../objets/objetTravel";
@@ -11,7 +11,6 @@ import RenderDays from "../../examplesEeuuItaly/italy/DayFetch";
 
 function CreateYourList() {
   let [travelAll, setTravelAll] = useState(objetTravel);
-  let aux = objetTravel2;
   let [day, setDay] = useState ("");
   let [destination, setDestination] = useState ("");
   let user = sessionStorage.getItem('nameUserLogin');
@@ -24,7 +23,12 @@ function CreateYourList() {
     window.location.replace("http://localhost:3000/registro");
   }
 
+  useEffect(()=>{
+    renderPage()
+  }, [travelAll])
+
   function sendTravel() {
+    let aux = objetTravel2;
     let user = sessionStorage.getItem('nameUserLogin');
     let objectToSend = {
       travel: travelAll,
@@ -39,9 +43,8 @@ function CreateYourList() {
     .then(response=>response.json())
     .then(res=>{
       setTravelAll(aux);
-      window.location.reload()
     })
-    
+      
   }
 
   function renderPage() {
@@ -69,7 +72,7 @@ function CreateYourList() {
             </div>
             <div className="textAddInputsCreateYourList">
               <h2>{travelAll.title}</h2>
-              <RenderDays days={travelAll}/>
+              <RenderDays travelAll={travelAll} setDays={setTravelAll} button={true}/>
             </div>
           </div>
         </div>
@@ -81,6 +84,10 @@ function CreateYourList() {
     isLogged ? renderPage() : redirect()
   );
 }
+
+
+
+
 
 export default CreateYourList;
 

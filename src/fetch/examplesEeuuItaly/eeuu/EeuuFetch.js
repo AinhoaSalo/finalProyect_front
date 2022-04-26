@@ -23,7 +23,7 @@ function EeuuFetch() {
           <div className="styleExampleFetch">
             <div className="titleRenderExample">
               <h2 className="titleExampleFetch">{title}</h2>
-              <RenderDays days={eeuu}/>
+              <RenderDays travelAll={eeuu} button={false}/>
             </div>
             <div className="divImgItalyEeuu">
               <img className="imgItalyEeuu" src={river} alt="" />
