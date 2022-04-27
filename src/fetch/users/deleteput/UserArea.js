@@ -1,7 +1,6 @@
 import "./UserArea.css"
-import PutGet from "./deletePutFetch/PutGet";
-import Delete from "./deletePutFetch/Delete";
-import SingOff from "./deletePutFetch/SingOff";
+import PutGetDeleteSingOff from "./deletePutFetch/PutGetDeleteSingOff";
+
 import LinksPlanning from "../../ListTravel/linksPlanning/LinksPlanning";
 
 function UserArea() {
@@ -22,9 +21,7 @@ function UserArea() {
             <LinksPlanning/>
             <div className="allUserLogin">
               <div className="deleteSingOffAndPutUserLogin">
-                <PutGet/>
-                <Delete/>
-                <SingOff/>
+                <PutGetDeleteSingOff/>
                 <div className="messageDeletePut"></div>
               </div>
             </div>

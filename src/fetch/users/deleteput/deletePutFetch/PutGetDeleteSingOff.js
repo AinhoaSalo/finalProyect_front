@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-function PutGet() {
+function PutGetDeleteSingOff() {
   let [dataUser, setDataUser] = useState("");
   let [modifyName, setModifyName] = useState("");
   let [modifyLastname, setModifyLastname] = useState("");
   let [isEditing, setIsEditing] = useState(false);
 
-  //get dataUser
+  //get
   useEffect(()=>{
     fetch("http://localhost:8000/areapersonal?"+ new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),})) 
     .then(response=>response.json())
@@ -15,7 +15,43 @@ function PutGet() {
     }) 
   }, [])
 
-  //Put user
+  //SingOff
+  function singOffButton() {
+    sessionStorage.removeItem('nameUserLogin');
+    alert("Sesión cerrada") // TODO: pop up
+    window.location.replace("http://localhost:3000");
+  }
+
+  //Delete
+  function deleteUser() {
+    let nameUserLogin = sessionStorage.getItem('nameUserLogin');
+
+    let userDelete = {
+      nameUserLogin,
+    };
+
+    let data = {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userDelete),
+    };
+
+    fetch("http://localhost:8000/borrar", data)
+    .then(response=>response.json())
+    .then(function (res) {
+      if (res.delete == true){
+        sessionStorage.removeItem('nameUserLogin');
+        alert(res.message)
+        window.location.replace("http://localhost:3000/inicio");
+      } else {
+        alert(res.message)
+      }
+    });
+  }
+
+  //Put
   function renderModify() {
     
     return(
@@ -26,7 +62,11 @@ function PutGet() {
         <div className="lastnamePersonalArea">
           <p>Apellidos: <input className="lastname" type="text" onChange={e=>setModifyLastname(e.target.value)} value={modifyLastname}></input></p>
         </div>
-        <div><button onClick={()=>send()} className="btnDeleteModifySingOff">Enviar datos</button></div>
+        <div>
+          <button onClick={()=>send()} className="btnDeleteModifySingOff">Enviar datos</button>
+          <button onClick={()=>deleteUser()} className="btnDeleteModifySingOff">Borrar usuario</button>
+          <button onClick={()=>singOffButton()} className="btnDeleteModifySingOff">Cerrar sesion</button>
+        </div>
       </>
     )
   }
@@ -77,6 +117,8 @@ function PutGet() {
           </div>
           <div className="styleButton">
             <button onClick={()=>setIsEditing(true)} className="btnDeleteModifySingOff">Modificar datos</button>
+            <button onClick={()=>deleteUser()} className="btnDeleteModifySingOff">Borrar usuario</button>
+            <button onClick={()=>singOffButton()} className="btnDeleteModifySingOff">Cerrar sesion</button>
           </div>
         </div>
       </>
@@ -92,4 +134,4 @@ function PutGet() {
   )
 }
 
-export default PutGet;
+export default PutGetDeleteSingOff;
