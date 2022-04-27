@@ -13,8 +13,7 @@ function RenderDestination({day, travelAll, setTravelAll, button}){
           if (button) {
             return(
             <>
-            <p className="destinationsExampleFetch">{destination.destination}</p>
-            <FontAwesomeIcon className="deleteListUser" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(destination)}/>
+            <p className="destinationsExampleFetch">{destination.destination} <FontAwesomeIcon className="deleteListUser" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(destination)}/></p>
             <RenderPlaces day={day} destination={destination} travelAll={travelAll} setTravelAll={setTravelAll} button={button}/>
             </>
           )
@@ -35,7 +34,6 @@ function RenderDestination({day, travelAll, setTravelAll, button}){
   }
 
   function deleteInputListUser(destination) {
-    debugger
     let array = {...travelAll}
     // if (auxArray.day.destinations == undefined){
     //   return (<></>)
@@ -43,7 +41,6 @@ function RenderDestination({day, travelAll, setTravelAll, button}){
     for (let i = 0; i < array.days.length; i++) {
       if (array.days[i].day === day.day) {
         for (let j = 0; j < array.days[i].destinations.length; j++) {
-        debugger
         if(array.days[i].destinations[j].destination === destination.destination){
           array.days[i].destinations.splice(j, 1);
           j--;

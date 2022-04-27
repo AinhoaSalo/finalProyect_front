@@ -5,7 +5,6 @@ function RenderPlaces({day, travelAll, setTravelAll, destination, button}){
   if (destination.places == undefined) {
     return (<></>)
   }else{
-    debugger
     return(
       <>
         {destination.places !== undefined ? 
@@ -16,8 +15,7 @@ function RenderPlaces({day, travelAll, setTravelAll, destination, button}){
                   return(
                   <>
                     <>
-                      <li className="liExampleFetchName">{place.name}:</li><p className="liExampleFetchdescription">{place.description}</p>
-                      <FontAwesomeIcon className="deleteListUser" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(place)}/>
+                      <li className="liExampleFetchName">{place.name}: <FontAwesomeIcon className="deleteListUser" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(place)}/></li><p className="liExampleFetchdescription">{place.description}</p>
                     </> 
                   </>
                 )
@@ -47,10 +45,8 @@ function RenderPlaces({day, travelAll, setTravelAll, destination, button}){
     for (let i = 0; i < array.days.length; i++) {
       if (array.days[i].day === day.day) {
         for (let j = 0; j < array.days[i].destinations.length; j++) {
-          debugger
           if(array.days[i].destinations[j].places === destination.places){
             for (let k = 0; k < array.days[i].destinations[j].places.length; k++) {
-              debugger
               if(array.days[i].destinations[j].places[k].name === place.name && array.days[i].destinations[j].places[k].description === place.description){
                 array.days[i].destinations[j].places.splice(k, 1);
                 k--;
