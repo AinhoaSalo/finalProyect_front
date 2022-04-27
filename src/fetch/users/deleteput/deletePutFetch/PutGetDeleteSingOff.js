@@ -62,7 +62,7 @@ function PutGetDeleteSingOff() {
         <div className="lastnamePersonalArea">
           <p>Apellidos: <input className="lastname" type="text" onChange={e=>setModifyLastname(e.target.value)} value={modifyLastname}></input></p>
         </div>
-        <div>
+        <div className="allButtonUserArea">
           <button onClick={()=>send()} className="btnDeleteModifySingOff">Enviar datos</button>
           <button onClick={()=>deleteUser()} className="btnDeleteModifySingOff">Borrar usuario</button>
           <button onClick={()=>singOffButton()} className="btnDeleteModifySingOff">Cerrar sesion</button>
