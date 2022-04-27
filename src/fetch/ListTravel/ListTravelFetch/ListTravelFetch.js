@@ -51,13 +51,21 @@ function ListTravelFetch() {
     });
   }
 
+  useEffect(()=>{
+    renderPage()
+  }, [travelFetch])
+
   function deleteFromTravelArray(travel){
-    let auxTravel = travelFetch;
-    for (let i = auxTravel.length - 1; i >= 0; i--){
+    let auxTravel = {...travelFetch};
+    //Recorremos el diccionario y eliminamos el que toca
+    for (let i = Object.keys(auxTravel).length - 1; i >= 0; i--){
       if (auxTravel[i].title === travel.title){
-        window.location.reload()
+        delete auxTravel[i]
       }
     }
+    //Transforma el diccionario en un array
+    auxTravel = Object.values(auxTravel)
+    setTravelFetch(auxTravel)
   }
 
   function renderPage() {
@@ -66,7 +74,7 @@ function ListTravelFetch() {
       <div className="allListTravelFetch">
         <LinksPlanning/>
         <div className="allCollapsible">
-          {
+          { 
             travelFetch !== undefined
           ?
             travelFetch.map((travel, i) =>{

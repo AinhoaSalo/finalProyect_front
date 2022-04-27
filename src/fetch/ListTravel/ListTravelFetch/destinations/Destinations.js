@@ -5,7 +5,8 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 function Destinations({destinations}) {
   let [open, setOpen]= useState(false)
-  return (
+  if (destinations.places !== undefined) {
+    return (
     <>
       <Collapsible className="pointer" trigger={<>{destinations.destination} <FontAwesomeIcon icon={solid('circle-chevron-down')} size="2xs" rotation={open ? 180 : 0}/></>} onOpen={()=> setOpen(true)} onClose={()=> setOpen(false)}>
       <ol>
@@ -25,7 +26,11 @@ function Destinations({destinations}) {
       </ol>
     </Collapsible>
     </>
-  );
+    );
+  }else{
+    return(<></>)
+  }
+  
 }
 
 export default Destinations;

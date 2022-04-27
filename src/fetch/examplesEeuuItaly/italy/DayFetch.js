@@ -2,8 +2,7 @@ import RenderDestination from "./DestinationFetch";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-function RenderDays({travelAll, setDays, button}) {
-  debugger
+function RenderDays({travelAll, setTravelAll, button}) {
   if (travelAll.days == undefined){
     return (<></>)
   } else {
@@ -16,14 +15,14 @@ function RenderDays({travelAll, setDays, button}) {
                 <>
                   <p className="daysExampleFetch">{day.day}</p>
                   <FontAwesomeIcon icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(day)}/>
-                  <RenderDestination day={day} button={button}/>
+                  <RenderDestination day={day} travelAll={travelAll} setTravelAll={setTravelAll} button={button}/>
                 </>
               )
             } else {
               return(
                 <>
                   <p className="daysExampleFetch">{day.day}</p>
-                  <RenderDestination day={day} button={button}/>
+                  <RenderDestination day={day} travellAll={travelAll} button={button}/>
                 </>
               )
             }
@@ -44,7 +43,7 @@ function RenderDays({travelAll, setDays, button}) {
         i--;
       }
     }
-    setDays(auxArray);
+    setTravelAll(auxArray);
   }
 }
 

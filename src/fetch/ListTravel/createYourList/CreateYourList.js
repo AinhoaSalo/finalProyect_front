@@ -28,7 +28,6 @@ function CreateYourList() {
   }, [travelAll])
 
   function sendTravel() {
-    let aux = objetTravel2;
     let user = sessionStorage.getItem('nameUserLogin');
     let objectToSend = {
       travel: travelAll,
@@ -42,7 +41,8 @@ function CreateYourList() {
     fetch("http://localhost:8000/travel", data)
     .then(response=>response.json())
     .then(res=>{
-      setTravelAll(aux);
+      setTravelAll(objetTravel2);
+      window.location.reload()
     })
       
   }
@@ -72,7 +72,7 @@ function CreateYourList() {
             </div>
             <div className="textAddInputsCreateYourList">
               <h2>{travelAll.title}</h2>
-              <RenderDays travelAll={travelAll} setDays={setTravelAll} button={true}/>
+              <RenderDays travelAll={travelAll} setTravelAll={setTravelAll} button={true}/>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 function OptionsDestination({travelAll, day, destination, setDestination}) {
   let contador = 0;
-  if (travelAll.days != undefined || travelAll.days.length != 0){
+  if (travelAll.days != undefined && travelAll.days.length != 0){
     travelAll.days.forEach((days, i) => {
       if (days.day == day) {
         contador = i
