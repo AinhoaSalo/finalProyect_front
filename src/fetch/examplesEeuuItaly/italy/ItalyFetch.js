@@ -2,6 +2,8 @@ import { useState, useEffect} from "react"
 import RenderDays from "./DayFetch";
 import "../italyEeuuFetch.css";
 import italyImg from "../img/italy.jpg";
+import river from"../img/river.jpg"
+import vespa from"../img/vespa.jpg"
 
 function ItalyFetch() {
   let [italy, setItaly] = useState([]);
@@ -26,8 +28,8 @@ function ItalyFetch() {
             </div>
             <div className="divImgItalyEeuu">
               <img className="imgItalyEeuu" src={italyImg} alt="" />
-              <img className="imgItalyEeuu" src={italyImg} alt="" />
-              <img className="imgItalyEeuu" src={italyImg} alt="" />
+              <img className="imgItalyEeuu" src={vespa} alt="" />
+              <img className="imgItalyEeuu" src={river} alt="" />
             </div>
           </div>
         </div>

@@ -33,21 +33,35 @@
   margin-bottom: 10px;
 }
 
-@media (min-width: 550px) and (max-width: 879.99px) {
+@media (min-width: 505px) and (max-width: 640.99px) {
 
   .allExampleFetch{
     padding: 50px 50px;
   }
 
   .imgItalyEeuu{
-    width: 180px;
-    height: 90px;
+    width: 130px;
+    height: 80px;
     margin: 5px;
   }
 
 }
 
-@media (min-width: 880px) and (max-width: 1229.99px) {
+@media (min-width: 641px) and (max-width: 971.99px) {
+
+  .allExampleFetch{
+    padding: 50px 50px;
+  }
+
+  .imgItalyEeuu{
+    width: 230px;
+    height: 110px;
+    margin: 5px;
+  }
+
+}
+
+@media (min-width: 972px) and (max-width: 1229.99px) {
 
   .allExampleFetch{
     padding: 50px 100px;
@@ -85,7 +99,12 @@
   }
 
   .imgItalyEeuu{
-    width: 420px;
-    height: 300px;
+    width: 450px;
+    height: 350px;
+  }
+
+  .EeuuImg{
+    width: 320px;
+    height: 200px;
   }
 }

@@ -1,7 +1,10 @@
 import { useState, useEffect} from "react";
 import RenderDays from "../italy/DayFetch";
 import "../italyEeuuFetch.css";
-import river from "../img/river.jpg";
+import nyc from "../img/nyc.jpg";
+import subway from "../img/subway.jpg"
+import dumbo from "../img/dumbo.jpg"
+
 
 
 function EeuuFetch() {
@@ -26,9 +29,9 @@ function EeuuFetch() {
               <RenderDays travelAll={eeuu} button={false}/>
             </div>
             <div className="divImgItalyEeuu">
-              <img className="imgItalyEeuu" src={river} alt="" />
-              <img className="imgItalyEeuu" src={river} alt="" />
-              <img className="imgItalyEeuu" src={river} alt="" />
+              <img className="imgItalyEeuu EeuuImg" src={nyc} alt="" />
+              <img className="imgItalyEeuu EeuuImg" src={dumbo} alt="" />
+              <img className="imgItalyEeuu EeuuImg" src={subway} alt="" />
             </div>
           </div>
         </div>
