@@ -56,10 +56,10 @@ function PutGetDeleteSingOff() {
     
     return(
       <>
-        <div className="namePersonalArea">
+        <div className="nameLastnamePersonalArea">
           <p>Nombre: <input className="name" type="text"onChange={e=>setModifyName(e.target.value)} value={modifyName}></input></p>
         </div>
-        <div className="lastnamePersonalArea">
+        <div className="nameLastnamePersonalArea">
           <p>Apellidos: <input className="lastname" type="text" onChange={e=>setModifyLastname(e.target.value)} value={modifyLastname}></input></p>
         </div>
         <div className="allButtonUserArea">

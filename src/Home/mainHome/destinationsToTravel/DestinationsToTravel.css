@@ -13,6 +13,8 @@
 
 .titleDestinationsToTravel{
   padding-top: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .travelHome{
@@ -171,7 +173,7 @@
 
   .titleDestinationsToTravel{
     text-align: center;
-    font-size: 23px;
+    font-size: 18px;
   }
 
   .italyHomePage{
@@ -194,7 +196,7 @@
   }
 
   .textItalyEeuuParrafHome{
-    font-size: 20px;
+    font-size: 15px;
   }
 
 }

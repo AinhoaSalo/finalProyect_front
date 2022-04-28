@@ -1,6 +1,7 @@
 .allRegisterLogin{
   background-color: rgb(170, 187, 197);
   padding: 60px 40px;
+  height: 688px;
 }
   
 .titleAllRegisterUser{
@@ -65,7 +66,7 @@ label{
 @media (min-width: 860px) and (max-width: 1229.99px) {
   .allRegisterLogin{
     background-color: rgb(170, 187, 197);
-    padding: 40px 90PX 150PX 90PX;
+    padding: 100px 90PX 150PX 90PX;
   }
 
   .registerLoginSoon{
@@ -85,15 +86,14 @@ label{
 }
 
 @media (min-width: 1230px)  {
-    .allRegisterLogin{
+  .allRegisterLogin{
     background-color: rgb(170, 187, 197);
-    padding: 40px 100PX 150PX 100PX;
+    padding: 90px 100PX 120PX 100PX;
   }
   
   .registerLoginSoon{
     display: flex;
     justify-content: space-around;
-
   }
 
   .registerLoginStyle{

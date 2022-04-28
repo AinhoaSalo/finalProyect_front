@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  min-height: calc(100vh - 280px);
+  min-height: calc(100vh - 281px);
 }
 
 .allCollapsible{
@@ -12,47 +12,66 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin: 10px 100px 0 100px;
+  margin: 10px 40px 0 40px;
   border-radius: 15px;
   cursor: default;
 }
 
-.titleCollapsible{
-  background-color: #d3b589d7;
-  flex: 100px;
-  margin: 20px;
-  padding: 30px;
-  border-radius: 15px;
+.collapsibleAndButton{
+  position: relative;
+  flex: 150px;
+  align-items: center;
 }
 
 .titleCollapsible, .title{
-  color: grey;
+  color: white;
   font-size: 20px;
+
 }
 
 .pointer{
   cursor: pointer;
 }
 
-@media (min-width: 740px) and (max-width: 1229.99px) {
+.buttonDeleteListDataBase{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #99a486, #6e7561);
+  color: #dddddd;
+  font-size: 12px;
+  padding: 7px;
+  margin-top: 15px;
+  margin-right: 15px;
+  text-decoration: none;
+  border: #969fa8;
+}
 
-  /* .allListTravelFetch{
-    min-height: calc(100vh - 316px);
-  } */
+.travelNoCreate{
+  padding: 20px;
+  text-align: center;
+  background-color: #aa6d7f;
+  flex: 100px 1;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+@media (min-width: 740px) and (max-width: 1229.99px) {
 
   .allCollapsible{
     font-size: 18px;
+    margin: 10px 100px 0 100px;
   }
 }
 
 @media (min-width: 1230px)  {
 
   .allListTravelFetch{
-    min-height: calc(100vh - 316px);
+    min-height: calc(100vh - 300px);
   }
 
   .allCollapsible{
     font-size: 20px;
+    margin: 10px 100px 0 100px;
   }
 
 }

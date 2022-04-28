@@ -20,10 +20,8 @@ function UserArea() {
           <div className='allAreaUsers'>
             <LinksPlanning/>
             <div className="allUserLogin">
-              <div className="deleteSingOffAndPutUserLogin">
-                <PutGetDeleteSingOff/>
-                <div className="messageDeletePut"></div>
-              </div>
+              <PutGetDeleteSingOff/>
+              <div className="messageDeletePut"></div>
             </div>
           </div>
         </main>

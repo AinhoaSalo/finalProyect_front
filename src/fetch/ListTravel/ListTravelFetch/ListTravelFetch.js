@@ -80,13 +80,15 @@ function ListTravelFetch() {
             travelFetch.map((travel, i) =>{
               return (
                 <>
-                  <Travel key={i} travel={travel}/>
-                  <button onClick={()=>deleteTravel(travel)}>Borrar</button>
+                  <div className="collapsibleAndButton">
+                    <Travel key={i} travel={travel}/>
+                    <button className="buttonDeleteListDataBase" onClick={()=>deleteTravel(travel)}>Borrar</button>
+                  </div>
                 </>
               )
             })
           :
-            "No hay listas creadas"
+            <><p className="travelNoCreate">No hay viajes creados</p></>
           }
         </div>
       </div>

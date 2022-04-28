@@ -1,5 +1,5 @@
 .titleCollapsible{
-  background-color: #d3b589d7;
+  background-color: #aa6d7f;
   flex: 100px;
   margin: 20px;
   padding: 30px;
@@ -7,7 +7,7 @@
 }
 
 .title{
-  color: grey;
+  color: white;
   text-align: center;
 }
 
