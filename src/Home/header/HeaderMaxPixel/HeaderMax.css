@@ -84,7 +84,7 @@ nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
 nav .start-italia, .linkHeader:nth-child(2):hover~.animation {
 	width: 100px;
 	left: 100px;
-	background-color: #808fd3;
+	background-color: #bb96df;
 }
 nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	width: 100px;

@@ -21,7 +21,7 @@ function DestinationsToTravel() {
                   <div className='parrafHomeItaly'>
                     <div className='textItalyEeuuParrafHome'>
                       <h3>Italia</h3>
-                      <p>Aquí puedes ver ej ejemplo de 2 días en Italia</p>
+                      <p>Aquí puedes ver ejemplo de 2 días en Italia</p>
                     </div>
                   </div>
                   <img className='imgHomeItaly' src={italy} alt="Florence" />
@@ -34,7 +34,7 @@ function DestinationsToTravel() {
                   <div className='parrafHomeNewYork'>
                     <div className='textItalyEeuuParrafHome'>
                       <h3>EEUU</h3>
-                      <p>Aquí puedes ver ej ejemplo de 2 días días en NY</p>
+                      <p>Aquí puedes ver ejemplo de 2 días días en NY</p>
                     </div>
                   </div>
                   <img className='imgHomeNewYork' src={newYork} alt="NewYork" />

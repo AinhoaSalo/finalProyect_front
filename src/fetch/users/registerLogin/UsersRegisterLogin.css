@@ -52,7 +52,7 @@ label{
 }
 
 .btnRegisterLogin:hover {
-  background-image: linear-gradient(to bottom, #dfd8c4, #AD9A5A);
+  background-image: linear-gradient(to bottom, #c5bda0, #AD9A5A);
   text-decoration: none;
 }
 
