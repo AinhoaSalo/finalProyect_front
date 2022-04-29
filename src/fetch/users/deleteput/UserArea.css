@@ -20,7 +20,7 @@ main{
   margin: 20px 15px ;
 }
 
-.allStyleModify{
+.allStyleModify, .inputRenderModify{
   display: flex;
   justify-content: space-between;
   padding: 80px 20px 0 20px;
@@ -44,7 +44,24 @@ main{
   padding: 45px 0;
 }
 
-.styleButton{
+.nameAndLastnamePersonalArea{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  width: 60%;
+  padding: 30px 0;
+}
+
+.inputsModify{
+  display: inline-block;
+  width: 100px;
+  border-radius: 5px;
+  border: 1.5px solid #815260;
+  background-color: #f7e1e8;
+  margin: 10px;
+}
+
+.styleButton, .allButtonUserArea{
   display: flex;
   flex-direction: column;
 }
@@ -80,13 +97,13 @@ main{
   .styleButton{
     flex-direction: row;
   }
-
-  .styleInputs{
+  /* TE HAS QUEDADO AQUÍ, RECUERDA QUE nameAndLastnamePersonalArea tienes que separarlo y darle su formato por separado, porque se descuadra.*/
+  .styleInputs, .nameAndLastnamePersonalArea{
     width: 30%;
     padding:1px;
   }
 
-  .allStyleModify{
+  .allStyleModify, .allButtonUserArea{
     padding: 120px 10px 0 20px;
   }
 }
@@ -97,11 +114,11 @@ main{
     margin: 60px 25px ;
   }
   
-  .styleButton{
+  .styleButton, .allButtonUserArea{
     flex-direction: row;
   }
 
-  .styleInputs{
+  .styleInputs, .nameAndLastnamePersonalArea{
     width: 30%;
     padding:1px;
   }
@@ -117,11 +134,11 @@ main{
     margin: 60px 55px ;
   }
   
-  .styleButton{
+  .styleButton, .allButtonUserArea{
     flex-direction: row;
   }
 
-  .styleInputs{
+  .styleInputs, .nameAndLastnamePersonalArea{
     width: 30%;
     padding:1px;
   }
@@ -136,11 +153,11 @@ main{
     margin: 60px 150px ;
   }
   
-  .styleButton{
+  .styleButton, .allButtonUserArea{
     flex-direction: row;
   }
 
-  .styleInputs{
+  .styleInputs, .nameAndLastnamePersonalArea{
     width: 30%;
     padding:1px;
   }
@@ -156,11 +173,11 @@ main{
     margin: 60px 250px ;
   }
   
-  .styleButton{
+  .styleButton, .allButtonUserArea{
     flex-direction: row;
   }
 
-  .styleInputs{
+  .styleInputs, .nameAndLastnamePersonalArea{
     width: 30%;
     padding:1px;
   }
