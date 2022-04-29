@@ -19,8 +19,10 @@ function PutGetDeleteSingOff() {
   //SingOff
   function singOffButton() {
     sessionStorage.removeItem('nameUserLogin');
-    swal("Sesión cerrada") // TODO: pop up
-    window.location.replace("http://localhost:3000");
+    swal("Sesión cerrada")
+    .then(() => {
+      window.location.replace("http://localhost:3000");
+    }); 
   }
 
   //Delete
@@ -44,8 +46,10 @@ function PutGetDeleteSingOff() {
     .then(function (res) {
       if (res.delete == true){
         sessionStorage.removeItem('nameUserLogin');
-        swal(res.message)
-        window.location.replace("http://localhost:3000/inicio");
+        swal(res.message).then(() => {
+          window.location.replace("http://localhost:3000/inicio");
+        });
+        
       } else {
         swal(res.message)
       }

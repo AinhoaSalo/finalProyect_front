@@ -24,8 +24,12 @@ function Login() {
     .then(res => { 
       if (res.login == true){
         sessionStorage.setItem('nameUserLogin', nameUserLogin);
-        window.location.replace("http://localhost:3000/listascreadas");
+        
         swal(res.message)
+        .then(() => {
+          window.location.replace("http://localhost:3000/listascreadas");
+        });
+        
         setBodyLogin(res)
       } else {
         swal(res.message)
