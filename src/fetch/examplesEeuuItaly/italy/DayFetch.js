@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function RenderDays({travelAll, setTravelAll, button}) {
-  if (travelAll.days == undefined){
+  if (travelAll.days === undefined){
     return (<></>)
   } else {
     return(
@@ -34,7 +34,7 @@ function RenderDays({travelAll, setTravelAll, button}) {
 
   function deleteInputListUser(day) {
     let auxArray = {...travelAll}
-    if (auxArray.days == undefined){
+    if (auxArray.days === undefined){
       return
     }
     for (let i = 0; i < auxArray.days.length; i++) {

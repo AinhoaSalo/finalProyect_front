@@ -44,7 +44,7 @@ function PutGetDeleteSingOff() {
     fetch("http://localhost:8000/borrar", data)
     .then(response=>response.json())
     .then(function (res) {
-      if (res.delete == true){
+      if (res.delete === true){
         sessionStorage.removeItem('nameUserLogin');
         swal(res.message).then(() => {
           window.location.replace("http://localhost:3000/inicio");
@@ -78,7 +78,7 @@ function PutGetDeleteSingOff() {
 
   function send(){
     if ((modifyName === "") || (modifyLastname === "")){
-      alert("campo vacio, por favor, introduzca el nombre y el apellido")
+      swal("Campo vacio, por favor, introduzca el nombre y el apellido")
     }else{
       setIsEditing(false);
       setDataUser({nameRegister: modifyName,lastnameRegister: modifyLastname})
@@ -99,7 +99,7 @@ function PutGetDeleteSingOff() {
       fetch("http://localhost:8000/modificar", data)
       .then(response=>response.json())
       .then(function (res) {
-        if (res.put == true){
+        if (res.put === true){
           swal(res.message)
         } else {
           swal(res.message)

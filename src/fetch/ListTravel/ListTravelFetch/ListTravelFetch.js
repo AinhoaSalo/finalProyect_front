@@ -43,7 +43,7 @@ function ListTravelFetch() {
     fetch("http://localhost:8000/travel", data)
     .then(response=>response.json())
     .then(function (res) {
-      if (res.delete == true){
+      if (res.delete === true){
         swal(res.message);
         deleteFromTravelArray(travel);
       } else {
@@ -76,18 +76,22 @@ function ListTravelFetch() {
         <LinksPlanning/>
         <div className="allCollapsible">
           { 
-            travelFetch !== undefined
+            travelFetch !== undefined 
           ?
-            travelFetch.map((travel, i) =>{
-              return (
-                <>
-                  <div className="collapsibleAndButton">
-                    <Travel key={i} travel={travel}/>
-                    <button className="buttonDeleteListDataBase" onClick={()=>deleteTravel(travel)}>Borrar</button>
-                  </div>
-                </>
-              )
-            })
+            travelFetch.length !== 0
+            ? 
+              travelFetch.map((travel, i) =>{
+                return (
+                  <>
+                    <div className="collapsibleAndButton">
+                      <Travel key={i} travel={travel}/>
+                      <button className="buttonDeleteListDataBase" onClick={()=>deleteTravel(travel)}>Borrar</button>
+                    </div>
+                  </>
+                )
+              })
+            :
+              <><p className="travelNoCreate">No hay viajes creados</p></>
           :
             <><p className="travelNoCreate">No hay viajes creados</p></>
           }

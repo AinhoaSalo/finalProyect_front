@@ -22,7 +22,7 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
       }
     })
     let places = days.destinations[contadorDestination].places
-    if (places !== undefined && places[0].name !== undefined && places[0].name == "" && places[0].description == "") {
+    if (places !== undefined && places[0].name !== undefined && places[0].name === "" && places[0].description === "") {
       places[0].name = createPlacesList;
       places[0].description = createDescriptionList;
     } else{

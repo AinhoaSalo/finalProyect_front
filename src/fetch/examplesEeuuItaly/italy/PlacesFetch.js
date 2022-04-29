@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function RenderPlaces({day, travelAll, setTravelAll, destination, button}){
-  if (destination.places == undefined) {
+  if (destination.places === undefined) {
     return (<></>)
   }else{
     return(
@@ -39,7 +39,7 @@ function RenderPlaces({day, travelAll, setTravelAll, destination, button}){
 
   function deleteInputListUser(place) {
     let array = {...travelAll}
-    // if (array.places == undefined){
+    // if (array.places === undefined){
     //   return
     // }
     for (let i = 0; i < array.days.length; i++) {

@@ -2,7 +2,7 @@ import { useState, useEffect} from "react"
 import swal from 'sweetalert';
 
 function Register() {
-  let [body, setBody] = useState([]);
+  let body= [];
   let [nameUserRegister, setNameUserRegister] = useState("");
   let [nameRegister, setNameRegister] = useState("");
   let [lastnameRegister, setLastnameRegister] = useState("");
@@ -11,7 +11,7 @@ function Register() {
   
   useEffect(()=>{
     renderRegister()
-  }, [body])
+  }, [])
 
   function sendDataUserRegister() {
     body = {

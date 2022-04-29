@@ -22,7 +22,7 @@ function Login() {
     fetch("http://localhost:8000/conectar", data)
     .then(response=>response.json())
     .then(res => { 
-      if (res.login == true){
+      if (res.login === true){
         sessionStorage.setItem('nameUserLogin', nameUserLogin);
         
         swal(res.message)

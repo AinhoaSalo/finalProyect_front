@@ -4,7 +4,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function RenderDestination({day, travelAll, setTravelAll, button}){
   
-  if (day.destinations == undefined) {
+  if (day.destinations === undefined) {
     return (<></>)
   }else{
     return(
@@ -35,7 +35,7 @@ function RenderDestination({day, travelAll, setTravelAll, button}){
 
   function deleteInputListUser(destination) {
     let array = {...travelAll}
-    // if (auxArray.day.destinations == undefined){
+    // if (auxArray.day.destinations === undefined){
     //   return (<></>)
     // }
     for (let i = 0; i < array.days.length; i++) {
