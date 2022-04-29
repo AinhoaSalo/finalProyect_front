@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OptionsDestination from "./OptionsDestinations";
+import swal from 'sweetalert';
 
 function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
   let [createPlacesList, setcreatePlacesList] = useState("");
@@ -39,7 +40,7 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
             description: createDescriptionList
           });
         }else{
-          alert("sitio repetido")
+          swal("sitio repetido")
         }
     }
 

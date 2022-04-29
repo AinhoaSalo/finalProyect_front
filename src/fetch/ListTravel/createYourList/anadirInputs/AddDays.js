@@ -1,4 +1,6 @@
 import { useState } from "react";
+import swal from 'sweetalert';
+
 
 function AddDays({travelAll, setTravelAll}){
   let [createDayList, setcreateDayList] = useState("");
@@ -14,7 +16,7 @@ function AddDays({travelAll, setTravelAll}){
             day: createDayList
           });
         } else {
-          alert("Día repetido")
+          swal("Día repetido")
         }
       }
       setTravelAll(auxTravelDay);  

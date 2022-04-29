@@ -1,6 +1,5 @@
 import "./UserArea.css"
 import PutGetDeleteSingOff from "./deletePutFetch/PutGetDeleteSingOff";
-
 import LinksPlanning from "../../ListTravel/linksPlanning/LinksPlanning";
 
 function UserArea() {

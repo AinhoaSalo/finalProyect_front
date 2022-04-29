@@ -1,4 +1,6 @@
 import { useState } from "react"
+import swal from 'sweetalert';
+
 
 function Login() {
   let [bodyLogin, setBodyLogin] = useState([]);
@@ -23,10 +25,10 @@ function Login() {
       if (res.login == true){
         sessionStorage.setItem('nameUserLogin', nameUserLogin);
         window.location.replace("http://localhost:3000/listascreadas");
-        alert(res.message)
+        swal(res.message)
         setBodyLogin(res)
       } else {
-        alert(res.message)
+        swal(res.message)
       }
     });
   }

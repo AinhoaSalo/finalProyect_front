@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import swal from 'sweetalert';
 
 function PutGetDeleteSingOff() {
   let [dataUser, setDataUser] = useState("");
@@ -18,7 +19,7 @@ function PutGetDeleteSingOff() {
   //SingOff
   function singOffButton() {
     sessionStorage.removeItem('nameUserLogin');
-    alert("Sesión cerrada") // TODO: pop up
+    swal("Sesión cerrada") // TODO: pop up
     window.location.replace("http://localhost:3000");
   }
 
@@ -43,10 +44,10 @@ function PutGetDeleteSingOff() {
     .then(function (res) {
       if (res.delete == true){
         sessionStorage.removeItem('nameUserLogin');
-        alert(res.message)
+        swal(res.message)
         window.location.replace("http://localhost:3000/inicio");
       } else {
-        alert(res.message)
+        swal(res.message)
       }
     });
   }
@@ -95,9 +96,9 @@ function PutGetDeleteSingOff() {
       .then(response=>response.json())
       .then(function (res) {
         if (res.put == true){
-          alert(res.message)
+          swal(res.message)
         } else {
-          alert(res.message)
+          swal(res.message)
         }
       });
     }

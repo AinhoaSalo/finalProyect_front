@@ -1,7 +1,8 @@
 import "./ListTravelFetch.css"
-import LinksPlanning from "../linksPlanning/LinksPlanning";
 import { useEffect, useState} from "react"
+import swal from 'sweetalert';
 import Travel from "./travel/Travel";
+import LinksPlanning from "../linksPlanning/LinksPlanning";
 
 function ListTravelFetch() {
   let [travelFetch, setTravelFetch] = useState([]);
@@ -43,10 +44,10 @@ function ListTravelFetch() {
     .then(response=>response.json())
     .then(function (res) {
       if (res.delete == true){
-        alert(res.message);
+        swal(res.message);
         deleteFromTravelArray(travel);
       } else {
-        alert(res.message);
+        swal(res.message);
       }
     });
   }

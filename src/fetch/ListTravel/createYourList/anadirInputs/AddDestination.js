@@ -1,4 +1,5 @@
 import { useState } from "react";
+import swal from 'sweetalert';
 import OptionsDay from "./OptionsDays";
 
 function AddDestinations({travelAll, setTravelAll, day, setDay}){
@@ -24,7 +25,7 @@ function AddDestinations({travelAll, setTravelAll, day, setDay}){
             destination: createDestinationsList
           });
         }else{
-          alert("Día repetido")
+          swal("Día repetido")
         }
   
       }

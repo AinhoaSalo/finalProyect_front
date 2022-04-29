@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect} from "react"
+import swal from 'sweetalert';
 
 function Register() {
   let [body, setBody] = useState([]);
@@ -7,8 +8,12 @@ function Register() {
   let [lastnameRegister, setLastnameRegister] = useState("");
   let [passwordUserRegister, setPasswordUserRegister] = useState("");
 
+  
+  useEffect(()=>{
+    renderRegister()
+  }, [body])
+
   function sendDataUserRegister() {
-    
     body = {
       nameUserRegister,
       nameRegister,
@@ -25,14 +30,17 @@ function Register() {
     fetch("http://localhost:8000/registro", data)
     .then(response=>response.json())
     .then(res=>{
-      alert(res.message)
-      setBody(res)
-      window.location.reload()
+      swal(res.message)
+      setNameUserRegister("")
+      setNameRegister("")
+      setLastnameRegister("")
+      setPasswordUserRegister("")
     }) 
   }
 
-  return(
-    <>
+  function renderRegister(){
+    return(
+      <>
       <div className="addUserRegister">
         <h3>Registrate aquí</h3>
         <div><label className="labelInputsRegister">Usuario: </label><input className="nameUserRegisterFront inputRegLog" type="text" onChange={e=>setNameUserRegister(e.target.value)} value={nameUserRegister}/></div>
@@ -43,6 +51,11 @@ function Register() {
         <div className="messageRegistrer"></div>
       </div>
     </>
+    )
+  }
+
+  return(
+    renderRegister()
   )
 
 } 
