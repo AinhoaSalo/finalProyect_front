@@ -13,7 +13,7 @@ function RenderDays({travelAll, setTravelAll, button}) {
             if (button){
               return(
                 <>
-                  <p className="daysExampleFetch">{day.day} <FontAwesomeIcon icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(day)}/></p>
+                  <p className="daysExampleFetch">{day.day} <FontAwesomeIcon className="binInputs" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(day)}/></p>
                   
                   <RenderDestination day={day} travelAll={travelAll} setTravelAll={setTravelAll} button={button}/>
                 </>

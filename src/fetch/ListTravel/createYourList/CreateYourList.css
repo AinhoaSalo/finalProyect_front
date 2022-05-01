@@ -2,6 +2,10 @@
   margin: 1px;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .allStyleCreateYourList{
   display: flex;
   flex-direction: column;
@@ -12,15 +16,6 @@
   margin: 20px;
   padding: 30px;
   border-radius: 15px;
-}
-
-/* .title{
-  color: white;
-  text-align: center;
-} */
-
-.pointer{
-  cursor: pointer;
 }
 
 .createYourList{
@@ -44,6 +39,7 @@
 
 .textAddInputsCreateYourList{
   background-color: #a57080ef;
+  color: rgb(31, 30, 30);
   margin: 10px 20px 0 20px;
   padding: 20px;
   border-radius: 15px;
@@ -52,11 +48,29 @@
   
 }
 
+.daysExampleFetch{
+  margin-left: 10px;
+  font-style: italic;
+  
+}
+
+.destinationsExampleFetch{
+  margin-left: 22px;
+}
+
+.olExampleFetch{
+  margin-left: 22px;
+  text-align: justify;
+}
+
+.binInputs{
+  color: #633e49;
+}
+
 .input{
   border-radius: 5px;
   border: 1.5px solid #815260;
   background-color: #f7e1e8;
-  
 }
 
 .buttonCreateList{
@@ -89,8 +103,6 @@
   border-radius: 5px;
   width: 210px;
   height: 100px;
-  padding: 12px 20px;
-
   resize: none;
 }
 

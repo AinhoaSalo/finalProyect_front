@@ -14,7 +14,7 @@ function AddTitle({travelAll, setTravelAll}){
   return(
     <>
       <p className="pInput">Título:</p>
-      <input className="input" type="text" onChange={e=>setCreateTitleList(e.target.value)} value={createTitleList}/>
+      <input className="input" type="text" onChange={e=>setCreateTitleList(e.target.value)} value={createTitleList} placeholder="Ej: Irlanda"/>
       <button className="buttonCreateList" onClick={Add}>Guardar</button>
     </>
     

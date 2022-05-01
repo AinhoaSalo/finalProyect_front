@@ -54,8 +54,8 @@ function AddPlaces({travelAll, setTravelAll, day, destination, setDestination}){
     <>
       <OptionsDestination travelAll={travelAll} day={day} destination={destination} setDestination={setDestination}/>
       <p className="pInput">Sitio:</p>
-      <input className="input" type="text" onChange={e=>setcreatePlacesList(e.target.value)} value={createPlacesList}/>
-      <div><p className="pInput">Descripción lugar a visitar:</p><textarea className="inputTextArea" onChange={e=>setcreateDescriptionList(e.target.value)} value={createDescriptionList}/></div>
+      <input className="input" type="text" onChange={e=>setcreatePlacesList(e.target.value)} value={createPlacesList} placeholder="Ej: Trinity College"/>
+      <div><p className="pInput">Descripción lugar a visitar:</p><textarea className="inputTextArea" onChange={e=>setcreateDescriptionList(e.target.value)} value={createDescriptionList} placeholder="Ej: Universidad más antigua de Irlanda, ir temprano. Es preciosa."/></div>
       <button className="buttonCreateList" onClick={AddPlace}>Guardar</button>
     </>
     

@@ -10,7 +10,7 @@ function Day({day}) {
   if (day.destinations !== undefined) {
     return (
       <>
-        <Collapsible className="pointer days" trigger={<>{day.day} <FontAwesomeIcon icon={solid('circle-chevron-down')} size="2xs" rotation={open ? 180 : 0}/></>} onOpen={()=> setOpen(true)} onClose={()=> setOpen(false)}>
+        <Collapsible className="pointer daysCollapsible" trigger={<>{day.day} <FontAwesomeIcon icon={solid('circle-chevron-down')} size="2xs" rotation={open ? 180 : 0}/></>} onOpen={()=> setOpen(true)} onClose={()=> setOpen(false)}>
           {
           day.destinations.map((destinations, i)=>{
             return <Destinations key={i} destinations={destinations}/>

@@ -15,7 +15,7 @@ function RenderPlaces({day, travelAll, setTravelAll, destination, button}){
                   return(
                   <>
                     <>
-                      <li className="liExampleFetchName">{place.name}: <FontAwesomeIcon className="deleteListUser" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(place)}/></li><p className="liExampleFetchdescription">{place.description}</p>
+                      <li className="liExampleFetchName">{place.name}: <FontAwesomeIcon className="binInputs" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(place)}/></li><p className="liExampleFetchdescription">{place.description}</p>
                     </> 
                   </>
                 )

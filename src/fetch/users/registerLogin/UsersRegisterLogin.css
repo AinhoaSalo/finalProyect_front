@@ -65,7 +65,6 @@ label{
 
 @media (min-width: 860px) and (max-width: 1229.99px) {
   .allRegisterLogin{
-    background-color: rgb(170, 187, 197);
     padding: 100px 90PX 150PX 90PX;
   }
 
@@ -87,7 +86,6 @@ label{
 
 @media (min-width: 1230px)  {
   .allRegisterLogin{
-    background-color: rgb(170, 187, 197);
     padding: 90px 100PX 120PX 100PX;
   }
   

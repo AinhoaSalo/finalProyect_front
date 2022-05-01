@@ -19,14 +19,20 @@
 
 .collapsibleAndButton{
   position: relative;
-  flex: 150px;
   align-items: center;
+  flex: 150px;
+  margin: 10px;
 }
 
 .titleCollapsible, .title{
-  color: white;
+  color: rgb(207, 204, 204);
   font-size: 20px;
+  font-weight: bold;
+}
 
+.Collapsible__contentInner{
+  margin-left: 20px;
+  font-style: italic;
 }
 
 .pointer{
@@ -35,12 +41,10 @@
 
 .buttonDeleteListDataBase{
   border-radius: 10px;
-  background-image: linear-gradient(to bottom, #99a486, #6e7561);
+  background-image: linear-gradient(to bottom, #a7aaa2, #63665e);
   color: #dddddd;
   font-size: 12px;
   padding: 7px;
-  margin-top: 15px;
-  margin-right: 15px;
   text-decoration: none;
   border: #969fa8;
 }

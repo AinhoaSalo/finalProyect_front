@@ -64,8 +64,12 @@ function PutGetDeleteSingOff() {
       <>
         <div className="inputRenderModify">
           <div className="nameAndLastnamePersonalArea">
-            <p>Nombre: <input className="inputsModify" type="text"onChange={e=>setModifyName(e.target.value)} value={modifyName}></input></p>
-            <p>Apellidos: <input className="inputsModify" type="text" onChange={e=>setModifyLastname(e.target.value)} value={modifyLastname}></input></p>
+            <div className="nameAndLastname">
+              <label className="inputsModifyP"> Nombre: </label><input className="inputsModify" type="text"onChange={e=>setModifyName(e.target.value)} value={modifyName} placeholder={dataUser.nameRegister}></input>
+            </div>
+            <div className="nameAndLastname">
+              <label className="inputsModifyP">Apellidos: </label><input className="inputsModify" type="text" onChange={e=>setModifyLastname(e.target.value)} value={modifyLastname} placeholder={dataUser.lastnameRegister}></input>
+            </div>
           </div>
           <div className="allButtonUserArea">
             <button onClick={()=>send()} className="btnDeleteModifySingOff">Enviar datos</button>
