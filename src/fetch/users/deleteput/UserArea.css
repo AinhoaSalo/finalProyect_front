@@ -32,6 +32,8 @@ main{
   color: #dddddd;
   font-size: 12px;
   padding: 7px;
+  margin-bottom: 20px;
+  width: 110px;
   text-decoration: none;
   border: #969fa8;
 }
@@ -63,23 +65,17 @@ main{
 }
 
 .inputsModify{
-  width: 90px;
+  width: 130px;
   height: 25px;
   border-radius: 5px;
   border: 1.5px solid #815260;
   background-color: #f7e1e8;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .styleButton{
   display: flex;
   flex-direction: column;
-}
-
-.btnDeleteModifySingOff{
-  margin-bottom: 20px;
-  margin-right: 20px;
-  width: 110px;
 }
 
 .btnDeleteModifySingOff:hover {
@@ -111,8 +107,7 @@ main{
   }
   
   .allButtonUserArea{
-
-    width: 70%;
+    width: 46%;
   }
 
   .allStyleModify{
@@ -141,8 +136,12 @@ main{
   }
 
   .inputRenderModify{
-    padding-left: 40px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 5px;
+  }
+
+  .btnDeleteModifySingOff{
+    margin-right: 10px;
   }
 }
 
