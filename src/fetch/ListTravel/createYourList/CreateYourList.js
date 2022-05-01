@@ -20,7 +20,7 @@ function CreateYourList() {
   }
 
   function redirect(){
-    window.location.replace("http://localhost:3000/registro");
+    window.location.replace("/registro");
   }
 
   useEffect(()=>{

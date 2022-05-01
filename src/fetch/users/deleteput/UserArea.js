@@ -9,7 +9,7 @@ function UserArea() {
     isLogged = true;
   }
   function redirect(){
-    window.location.replace("http://localhost:3000/registro");
+    window.location.replace("/registro");
   }
 
   function renderPage() {

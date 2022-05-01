@@ -27,7 +27,7 @@ function Login() {
         
         swal(res.message)
         .then(() => {
-          window.location.replace("http://localhost:3000/listascreadas");
+          window.location.replace("/listascreadas");
         });
         
         setBodyLogin(res)
