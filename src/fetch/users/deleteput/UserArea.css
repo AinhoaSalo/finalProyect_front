@@ -44,6 +44,12 @@ main{
   padding: 45px 0;
 }
 
+.allButtonUserArea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .nameAndLastnamePersonalArea{
   display: flex;
   flex-direction: column;
@@ -54,25 +60,22 @@ main{
 
 .inputsModify{
   display: inline-block;
-  width: 100px;
+  width: 90px;
   border-radius: 5px;
   border: 1.5px solid #815260;
   background-color: #f7e1e8;
   margin: 10px;
 }
 
-.styleButton, .allButtonUserArea{
+.styleButton{
   display: flex;
   flex-direction: column;
-}
-
-.nameLastnamePersonalArea{
-  margin: 30px;
 }
 
 .btnDeleteModifySingOff{
   margin-bottom: 20px;
   margin-right: 20px;
+  width: 110px;
 }
 
 .btnDeleteModifySingOff:hover {
@@ -89,6 +92,11 @@ main{
   display: block;
 }
 
+label{
+  display: inline-block;
+  width: 90px;
+}
+
 @media (min-width: 608px) and (max-width: 677.99px) {
   .allUserLogin{
     margin: 60px 25px ;
@@ -97,13 +105,22 @@ main{
   .styleButton{
     flex-direction: row;
   }
-  /* TE HAS QUEDADO AQUÍ, RECUERDA QUE nameAndLastnamePersonalArea tienes que separarlo y darle su formato por separado, porque se descuadra.*/
-  .styleInputs, .nameAndLastnamePersonalArea{
+ 
+  .styleInputs{
     width: 30%;
     padding:1px;
   }
+  
+  .allButtonUserArea{
 
-  .allStyleModify, .allButtonUserArea{
+    width: 70%;
+  }
+  .nameAndLastnamePersonalArea{
+    width: 50%;
+    padding:1px;
+  }
+
+  .allStyleModify{
     padding: 120px 10px 0 20px;
   }
 }
@@ -118,7 +135,7 @@ main{
     flex-direction: row;
   }
 
-  .styleInputs, .nameAndLastnamePersonalArea{
+  .styleInputs{
     width: 30%;
     padding:1px;
   }
@@ -138,7 +155,7 @@ main{
     flex-direction: row;
   }
 
-  .styleInputs, .nameAndLastnamePersonalArea{
+  .styleInputs{
     width: 30%;
     padding:1px;
   }
@@ -157,7 +174,7 @@ main{
     flex-direction: row;
   }
 
-  .styleInputs, .nameAndLastnamePersonalArea{
+  .styleInputs{
     width: 30%;
     padding:1px;
   }
@@ -177,7 +194,7 @@ main{
     flex-direction: row;
   }
 
-  .styleInputs, .nameAndLastnamePersonalArea{
+  .styleInputs{
     width: 30%;
     padding:1px;
   }

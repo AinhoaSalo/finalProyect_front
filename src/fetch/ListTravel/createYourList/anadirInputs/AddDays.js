@@ -28,7 +28,7 @@ function AddDays({travelAll, setTravelAll}){
     <>
       <p className="pInput">Día:</p>
       <input className="input" type="text" onChange={e=>setcreateDayList(e.target.value)} value={createDayList}/>
-      <button onClick={AddDay}>Guardar</button>
+      <button className="buttonCreateList" onClick={AddDay}>Guardar</button>
     </>
     
   )

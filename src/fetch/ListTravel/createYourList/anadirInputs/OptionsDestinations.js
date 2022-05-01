@@ -9,13 +9,13 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
   }
   if (travelAll.days !== undefined && travelAll.days[contador] !== undefined && travelAll.days[contador].destinations === undefined ){   
     return ( 
-      <select>      
+      <select className="selectCreateList">      
           <option>Añade un destino</option>
       </select>)
    } else if(travelAll.days !== undefined && travelAll.days[contador] !== undefined && travelAll.days[contador].destinations.length > 0){
     return (
       <>
-      <select onChange={(e)=> setDestination(e.target.value)} value={destination}>
+      <select className="selectCreateList" onChange={(e)=> setDestination(e.target.value)} value={destination}>
       {travelAll.days[contador].destinations.map((destination, i)=>{
         return(    
           <>     
@@ -28,7 +28,7 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
     )
   } else {
     return ( 
-    <select>      
+    <select className="selectCreateList">      
         <option>Añade un destino</option>
     </select>)
   }

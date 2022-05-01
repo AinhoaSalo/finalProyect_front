@@ -39,7 +39,7 @@ function AddDestinations({travelAll, setTravelAll, day, setDay}){
       <OptionsDay travelAll={travelAll} day={day} setDay={setDay}/>
       <p className="pInput">Destino:</p>
       <input className="input" type="text" onChange={e=>setcreateDestinationsList(e.target.value)} value={createDestinationsList}/>
-      <button onClick={AddDestination}>Guardar</button>
+      <button className="buttonCreateList" onClick={AddDestination}>Guardar</button>
     </>
     
   )

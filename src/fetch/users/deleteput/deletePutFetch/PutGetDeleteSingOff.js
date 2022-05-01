@@ -105,6 +105,8 @@ function PutGetDeleteSingOff() {
           swal(res.message)
         }
       });
+      setModifyName("")
+      setModifyLastname("")
     }
   }
 

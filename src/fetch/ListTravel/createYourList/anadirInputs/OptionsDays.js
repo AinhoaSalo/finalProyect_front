@@ -2,7 +2,7 @@ function OptionsDay({travelAll, day, setDay}) {
   if (travelAll.days !== undefined && travelAll.days[0] !== undefined && travelAll.days[0].day !== "" && travelAll.days.length > 0){   
     return (
       <>
-      <select onChange={(e)=> setDay(e.target.value)} value={day}>
+      <select className="selectCreateList" onChange={(e)=> setDay(e.target.value)} value={day}>
       {travelAll.days.map((day, i)=>{
         return(    
           <>     
@@ -15,7 +15,7 @@ function OptionsDay({travelAll, day, setDay}) {
     )
   } else {
     return ( 
-    <select>      
+    <select className="selectCreateList">      
         <option>Añade un día</option>
     </select>)
 }

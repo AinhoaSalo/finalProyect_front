@@ -67,12 +67,14 @@ function CreateYourList() {
                 <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
               <div className="buttonEnviar">
-                <button onClick={()=>sendTravel()}>Enviar</button>
+                <button className="buttonCreateList" onClick={()=>sendTravel()}>Enviar</button>
               </div>
             </div>
             <div className="textAddInputsCreateYourList">
-              <h2>{travelAll.title}</h2>
-              <RenderDays travelAll={travelAll} setTravelAll={setTravelAll} button={true}/>
+              <div className="inputsSaveUser">
+                <h2>{travelAll.title}</h2>
+                <RenderDays travelAll={travelAll} setTravelAll={setTravelAll} button={true}/>
+              </div>
             </div>
           </div>
         </div>

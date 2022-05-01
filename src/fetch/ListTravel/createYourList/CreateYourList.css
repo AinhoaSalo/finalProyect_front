@@ -1,3 +1,98 @@
+.allStyleCreateYourList{
+  display: flex;
+  flex-direction: column;
+}
+
+.titleCollapsible{
+  background-color: #aa6d7f;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.title{
+  color: white;
+  text-align: center;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.createYourList{
+  background: url(./img/workplace-g41ff900d6_1280.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding-bottom: 266px;
+}
+
+
+.allInputsCreateYourList{
+  background-color: rgba(187, 193, 199, 0.58);
+  margin: 10px 20px 0 20px;
+  padding: 20px 20px 80px 60px;
+  border-radius: 15px;
+  cursor: default;
+  font-size: 18px;
+}
+
+.textAddInputsCreateYourList{
+  background-color: rgba(187, 193, 199, 0.58);
+  margin: 10px 80px 0 80px;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: default;
+  font-size: 18px;
+  width: 50%;
+}
+
+.inputsSaveUser{
+  background-color: rgba(47, 96, 145);
+  padding: 80px;
+}
+
+.input{
+  border-radius: 5px;
+  border: 1.5px solid #815260;
+  background-color: #f7e1e8;
+  margin: 10px;
+}
+
+.buttonCreateList{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #c2c3c4, #6f7172);
+  color: #dddddd;
+  font-size: 12px;
+  padding: 7px;
+  text-decoration: none;
+  border: #969fa8;
+}
+
+
+@media (min-width: 608px) and (max-width: 677.99px) {
+
+
+}
+
+@media (min-width: 678px) and (max-width: 884.99px) {
+
+
+}
+
+@media (min-width: 885px) and (max-width: 1114.99px){
+
+
+}
+
+@media (min-width: 1115px) and (max-width: 1309.99px)  {
+
+
+}
+
+@media (min-width: 1310px) {
+
 .titleCollapsible{
   background-color: #aa6d7f;
   flex: 100px;
@@ -49,6 +144,8 @@
   width: 50%;
 }
 
-/* .hidden{
-  display: none;
-} */
+.inputsSaveUser{
+  background-color: rgba(47, 96, 145, 0.58);
+  padding: 100px;
+}
+}
