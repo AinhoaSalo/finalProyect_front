@@ -10,10 +10,6 @@ import UserArea from './fetch/users/deleteput/UserArea';
 import Footer from './Home/footer/Footer';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 
-
-
-
-
 function App() {
   return (
     <>

@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react"
+import {config} from "../../objets/constants"
 import RenderDays from "./DayFetch";
 import "../italyEeuuFetch.css";
 import italyImg from "../img/italy.jpg";
@@ -9,7 +10,7 @@ function ItalyFetch() {
   let [italy, setItaly] = useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:8000/italia")
+    fetch(config.url.API_URL + "/italia")
     .then(response=>response.json())
     .then(res=>{
       setItaly(res.italy)

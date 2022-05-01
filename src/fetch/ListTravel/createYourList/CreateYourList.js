@@ -1,5 +1,6 @@
 import "./CreateYourList.css"
 import { useState, useEffect } from "react";
+import {config} from "../../objets/constants"
 import LinksPlanning from "../linksPlanning/LinksPlanning";
 import AddTitle from "./anadirInputs/AddTitle";
 import objetTravel from "../../objets/objetTravel";
@@ -38,7 +39,7 @@ function CreateYourList() {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(objectToSend),
     };
-    fetch("http://localhost:8000/travel", data)
+    fetch(config.url.API_URL + "/travel", data)
     .then(response=>response.json())
     .then(res=>{
       setTravelAll(objetTravel2);

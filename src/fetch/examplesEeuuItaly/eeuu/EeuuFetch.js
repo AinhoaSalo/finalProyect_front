@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react";
+import {config} from "../../objets/constants"
 import RenderDays from "../italy/DayFetch";
 import "../italyEeuuFetch.css";
 import nyc from "../img/nyc.jpg";
@@ -11,11 +12,11 @@ function EeuuFetch() {
   let [eeuu, setEeuu] = useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:8000/eeuu")
+    fetch(config.url.API_URL + "/eeuu")
     .then(response=>response.json())
     .then(res=>{
       setEeuu(res.eeuu)
-    })
+    }) 
   }, [])
 
   function renderEeuu() {
@@ -38,7 +39,6 @@ function EeuuFetch() {
       </>
     )    
   }
-
 
   return (
     <>

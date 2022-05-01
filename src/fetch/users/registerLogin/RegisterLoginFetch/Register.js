@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react"
+import {config} from "../../../objets/constants"
 import swal from 'sweetalert';
 
 function Register() {
@@ -27,7 +28,7 @@ function Register() {
       body: JSON.stringify(body),
     };
   
-    fetch("http://localhost:8000/registro", data)
+    fetch(config.url.API_URL + "/registro", data)
     .then(response=>response.json())
     .then(res=>{
       swal(res.message)

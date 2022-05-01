@@ -1,5 +1,6 @@
 import "./ListTravelFetch.css"
 import { useEffect, useState} from "react"
+import {config} from "../../objets/constants"
 import swal from 'sweetalert';
 import Travel from "./travel/Travel";
 import LinksPlanning from "../linksPlanning/LinksPlanning";
@@ -13,7 +14,7 @@ function ListTravelFetch() {
   }
 
   useEffect(()=>{
-    fetch("http://localhost:8000/travel?" + new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),}))
+    fetch(config.url.API_URL + "/travel?" + new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),}))
     .then(response=>response.json())
     .then(res=>{
       setTravelFetch(res.travel);
@@ -40,7 +41,7 @@ function ListTravelFetch() {
       body: JSON.stringify(travelDelete),
     };
 
-    fetch("http://localhost:8000/travel", data)
+    fetch(config.url.API_URL + "/travel", data)
     .then(response=>response.json())
     .then(function (res) {
       if (res.delete === true){

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {config} from "../../../objets/constants"
 import swal from 'sweetalert';
 
 function PutGetDeleteSingOff() {
@@ -9,7 +10,7 @@ function PutGetDeleteSingOff() {
 
   //get
   useEffect(()=>{
-    fetch("http://localhost:8000/areapersonal?"+ new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),})) 
+    fetch(config.url.API_URL + "/areapersonal?"+ new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),})) 
     .then(response=>response.json())
     .then(res=>{
       setDataUser(res);
@@ -21,7 +22,7 @@ function PutGetDeleteSingOff() {
     sessionStorage.removeItem('nameUserLogin');
     swal("Sesión cerrada")
     .then(() => {
-      window.location.replace("http://localhost:3000");
+      window.location.replace("/inicio");
     }); 
   }
 
@@ -41,13 +42,13 @@ function PutGetDeleteSingOff() {
       body: JSON.stringify(userDelete),
     };
 
-    fetch("http://localhost:8000/borrar", data)
+    fetch(config.url.API_URL + "/borrar", data)
     .then(response=>response.json())
     .then(function (res) {
       if (res.delete === true){
         sessionStorage.removeItem('nameUserLogin');
         swal(res.message).then(() => {
-          window.location.replace("http://localhost:3000/inicio");
+          window.location.replace("/inicio");
         });
         
       } else {
@@ -96,7 +97,7 @@ function PutGetDeleteSingOff() {
         body: JSON.stringify(userPut),
       };
   
-      fetch("http://localhost:8000/modificar", data)
+      fetch(config.url.API_URL + "/modificar", data)
       .then(response=>response.json())
       .then(function (res) {
         if (res.put === true){

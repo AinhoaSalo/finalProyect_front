@@ -1,3 +1,7 @@
+.linkListTravel{
+  margin: 1px;
+}
+
 .allStyleCreateYourList{
   display: flex;
   flex-direction: column;
@@ -10,10 +14,10 @@
   border-radius: 15px;
 }
 
-.title{
+/* .title{
   color: white;
   text-align: center;
-}
+} */
 
 .pointer{
   cursor: pointer;
@@ -25,21 +29,21 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  padding-bottom: 266px;
+  padding-bottom: 50px;
 }
 
 
 .allInputsCreateYourList{
   background-color: #a5708088;
   margin: 10px 20px 0 20px;
-  padding: 20px 20px 80px 60px;
+  padding: 20px;
   border-radius: 15px;
   cursor: default;
   font-size: 18px;
 }
 
 .textAddInputsCreateYourList{
-  background-color: #a5708088;
+  background-color: #a57080ef;
   margin: 10px 20px 0 20px;
   padding: 20px;
   border-radius: 15px;
@@ -69,7 +73,7 @@
 .selectCreateList{
   border-radius: 5px;
   background-image: linear-gradient(to bottom, #c2c3c4, #d9dbdb);
-  color: #464545;
+  color: #2e2d2d;
   font-size: 12px;
   padding: 3px;
   text-decoration: none;
@@ -77,12 +81,24 @@
 
 .input, .pInput{
   margin-top: 5px;
+}
 
+.inputTextArea{
+  border: 1.5px solid #815260;
+  background-color: #f7e1e8;
+  border-radius: 5px;
+  width: 210px;
+  height: 100px;
+  padding: 12px 20px;
+
+  resize: none;
 }
 
 
 @media (min-width: 608px) and (max-width: 677.99px) {
-
+  .linkListTravel{
+    margin: 5px;
+  }
 
 }
 
@@ -90,6 +106,10 @@
   .allStyleCreateYourList{
     display: flex;
     flex-direction: row;
+  }
+  .textAddInputsCreateYourList, .allInputsCreateYourList{
+    width: 50%; 
+    background-color: #a5708088;
   }
 
 }
@@ -100,6 +120,11 @@
     flex-direction: row;
   }
 
+  .textAddInputsCreateYourList, .allInputsCreateYourList{
+    width: 50%; 
+    background-color: #a5708088;
+  }
+
 }
 
 @media (min-width: 1115px) and (max-width: 1309.99px)  {
@@ -107,6 +132,11 @@
   .allStyleCreateYourList{
     display: flex;
     flex-direction: row;
+  }
+
+  .textAddInputsCreateYourList, .allInputsCreateYourList{
+    width: 50%; 
+    background-color: #a5708088;
   }
 }
 
@@ -121,7 +151,25 @@
   flex-direction: row;
 }
 
+.textAddInputsCreateYourList{
+  width: 50%; 
+  background-color: #a5708088;
+  flex-direction: column;
+  display: flex;
+  
+}
+
 .allInputsCreateYourList{
+  width: 50%; 
+  background-color: #a5708088;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* .allInputsCreateYourList{
   margin: 10px 80px 0 80px;
   padding: 20px 20px 0px 20px;
   width: 50%;
@@ -131,7 +179,7 @@
   margin: 10px 80px 0 80px;
   padding: 20px;
   width: 50%;
-}
+} */
 
 
 }

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {config} from "../../../objets/constants"
 import swal from 'sweetalert';
 
 
@@ -19,7 +20,7 @@ function Login() {
       body: JSON.stringify(bodyLogin),
     };
 
-    fetch("http://localhost:8000/conectar", data)
+    fetch(config.url.API_URL +"/conectar", data)
     .then(response=>response.json())
     .then(res => { 
       if (res.login === true){
