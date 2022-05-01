@@ -66,7 +66,7 @@ function CreateYourList() {
               <div className="inputCreateList">
                 <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
-              <div className="buttonEnviar">
+              <div className="buttonSend">
                 <button className="buttonCreateList" onClick={()=>sendTravel()}>Enviar</button>
               </div>
             </div>
