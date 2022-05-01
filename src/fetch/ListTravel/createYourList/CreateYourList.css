@@ -106,6 +106,12 @@
   resize: none;
 }
 
+.buttonCreateList:hover {
+  background-image: linear-gradient(to bottom, #9c6b7a, #815260);
+  color: white;
+  text-decoration: none;
+}
+
 
 @media (min-width: 608px) and (max-width: 677.99px) {
   .linkListTravel{
@@ -154,44 +160,30 @@
 
 @media (min-width: 1310px) {
 
-.createYourList{
-  padding-bottom: 143px;
-}
+  .createYourList{
+    padding-bottom: 143px;
+  }
 
-.allStyleCreateYourList{
-  display: flex;
-  flex-direction: row;
-}
+  .allStyleCreateYourList{
+    display: flex;
+    flex-direction: row;
+  }
 
-.textAddInputsCreateYourList{
-  width: 50%; 
-  background-color: #a5708088;
-  flex-direction: column;
-  display: flex;
-  
-}
+  .textAddInputsCreateYourList{
+    width: 50%; 
+    background-color: #a5708088;
+    flex-direction: column;
+    display: flex;
+    
+  }
 
-.allInputsCreateYourList{
-  width: 50%; 
-  background-color: #a5708088;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-/* .allInputsCreateYourList{
-  margin: 10px 80px 0 80px;
-  padding: 20px 20px 0px 20px;
-  width: 50%;
-}
-
-.textAddInputsCreateYourList{
-  margin: 10px 80px 0 80px;
-  padding: 20px;
-  width: 50%;
-} */
-
+  .allInputsCreateYourList{
+    width: 50%; 
+    background-color: #a5708088;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 }
