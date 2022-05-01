@@ -1,4 +1,6 @@
 import { useState } from "react"
+import swal from 'sweetalert';
+
 
 function Login() {
   let [bodyLogin, setBodyLogin] = useState([]);
@@ -20,13 +22,17 @@ function Login() {
     fetch("http://localhost:8000/conectar", data)
     .then(response=>response.json())
     .then(res => { 
-      if (res.login == true){
+      if (res.login === true){
         sessionStorage.setItem('nameUserLogin', nameUserLogin);
-        window.location.replace("http://localhost:3000/listascreadas");
-        alert(res.message)
+        
+        swal(res.message)
+        .then(() => {
+          window.location.replace("http://localhost:3000/listascreadas");
+        });
+        
         setBodyLogin(res)
       } else {
-        console.log(res)
+        swal(res.message)
       }
     });
   }
@@ -37,7 +43,7 @@ function Login() {
         <h3>Conectate aquí</h3>
         <div><label className="labelInputsLogin">Usuario: </label><input className="nameUserLogin inputRegLog" type="text" onChange={e=>setNameUserLogin(e.target.value)} value={nameUserLogin}/></div>
         <div><label className="labelInputsLogin">Contraseña: </label><input className="passwordUserLogin inputRegLog" type="password" onChange={e=>setPasswordUserLogin(e.target.value)} value={passwordUserLogin}/></div>
-        <div><button onClick={()=>sendDataUserLogin()} className="btnLogin">Conectar</button></div>
+        <div><button onClick={()=>sendDataUserLogin()} className="btnRegisterLogin">Conectar</button></div>
         <div className="messageLogin"></div>
       </div>
     </>

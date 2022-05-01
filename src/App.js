@@ -1,8 +1,8 @@
 import './App.css';
 import Header from './Home/header/Header';
 import Main from './Home/mainHome/Main';
-import ItalyFetch from './fetch/italy/ItalyFetch';
-import EeuuFetch from './fetch/eeuu/EeuuFetch';
+import ItalyFetch from './fetch/examplesEeuuItaly/italy/ItalyFetch';
+import EeuuFetch from './fetch/examplesEeuuItaly/eeuu/EeuuFetch';
 import ListTravelFetch from './fetch/ListTravel/ListTravelFetch/ListTravelFetch';
 import CreateYourList from './fetch/ListTravel/createYourList/CreateYourList';
 import UsersRegisterLogin from './fetch/users/registerLogin/UsersRegisterLogin';
@@ -13,21 +13,24 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 
 
 
+
 function App() {
   return (
     <>
       <Router>
         <Header/>
-        <Routes>
-          <Route path="/" element={<Navigate to="/inicio" replace />}/>
-          <Route path='/inicio'  element={<Main/>}/>
-          <Route path='/italia'  element={<ItalyFetch/>}/>
-          <Route path='/eeuu'  element={<EeuuFetch/>}/>
-          <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
-          <Route path='/creatulista'  element={<CreateYourList/>}/>
-          <Route path='/registro'  element={<UsersRegisterLogin/>}/>
-          <Route path='/areapersonal'  element={<UserArea/>}/>
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/inicio" replace />}/>
+            <Route path='/inicio'  element={<Main/>}/>
+            <Route path='/italia'  element={<ItalyFetch/>}/>
+            <Route path='/eeuu'  element={<EeuuFetch/>}/>
+            <Route path='/listascreadas'  element={<ListTravelFetch/>}/>
+            <Route path='/creatulista'  element={<CreateYourList/>}/>
+            <Route path='/areapersonal'  element={<UserArea/>}/>
+            <Route path='/registro'  element={<UsersRegisterLogin/>}/>
+          </Routes>
+        </main>
         <Footer/>
       </Router>
     </>

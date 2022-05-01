@@ -1,6 +1,7 @@
 .allRegisterLogin{
   background-color: rgb(170, 187, 197);
   padding: 60px 40px;
+  height: 688px;
 }
   
 .titleAllRegisterUser{
@@ -37,7 +38,22 @@
 
 label{
   display: inline-block;
-  width: 80px;
+  width: 90px;
+}
+
+.btnRegisterLogin{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #c2c3c4, #6f7172);
+  color: #dddddd;
+  font-size: 12px;
+  padding: 7px;
+  text-decoration: none;
+  border: #969fa8;
+}
+
+.btnRegisterLogin:hover {
+  background-image: linear-gradient(to bottom, #c5bda0, #AD9A5A);
+  text-decoration: none;
 }
 
 @media (min-width: 535px) and (max-width: 859.99px) {
@@ -50,7 +66,7 @@ label{
 @media (min-width: 860px) and (max-width: 1229.99px) {
   .allRegisterLogin{
     background-color: rgb(170, 187, 197);
-    padding: 40px 90PX 150PX 90PX;
+    padding: 100px 90PX 150PX 90PX;
   }
 
   .registerLoginSoon{
@@ -70,15 +86,14 @@ label{
 }
 
 @media (min-width: 1230px)  {
-    .allRegisterLogin{
+  .allRegisterLogin{
     background-color: rgb(170, 187, 197);
-    padding: 40px 100PX 150PX 100PX;
+    padding: 90px 100PX 120PX 100PX;
   }
   
   .registerLoginSoon{
     display: flex;
     justify-content: space-around;
-
   }
 
   .registerLoginStyle{

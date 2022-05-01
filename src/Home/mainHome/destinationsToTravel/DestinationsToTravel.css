@@ -1,18 +1,20 @@
 .allTravelHome{
-  margin: 90px;
+  margin: 50px;
 }
 
 .styleSpaceDescriptionPage{
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: justify;
 	background: linear-gradient(to bottom, #dddedf, #707070);
   background-color: #A9CFD0;
-	color: #525e5e;
+	color: #565a50;
 }
 
 .titleDestinationsToTravel{
   padding-top: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .travelHome{
@@ -119,7 +121,7 @@
 }
 
 .textItalyEeuuParrafHome{
-  background-color: #525e5e;
+  background-color: #5992b6;
   color: white;
   font-size: 13px;
   padding: 16px 32px;
@@ -169,6 +171,11 @@
     flex-direction: row;
   }
 
+  .titleDestinationsToTravel{
+    text-align: center;
+    font-size: 18px;
+  }
+
   .italyHomePage{
     text-align: center;
     padding: 50px 0;
@@ -189,7 +196,7 @@
   }
 
   .textItalyEeuuParrafHome{
-    font-size: 20px;
+    font-size: 15px;
   }
 
 }

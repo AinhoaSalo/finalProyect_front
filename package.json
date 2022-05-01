@@ -24,6 +24,7 @@
     "react-scroll-parallax": "^3.0.5",
     "react-select": "^5.2.2",
     "redux-burger-menu": "^0.2.8",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.18"
   },

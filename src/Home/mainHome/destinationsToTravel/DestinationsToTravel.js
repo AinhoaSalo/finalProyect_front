@@ -13,7 +13,7 @@ function DestinationsToTravel() {
     <> 
       <div className='styleSpaceDescriptionPage'>
         <div className='allTravelHome'>
-          <div className='titleDestinationsToTravel'><h2>Ideas de como como organizar tus viajes</h2></div>
+          <div className='titleDestinationsToTravel'><h2>Ejemplos de como crear tu itinerario para tus viajes</h2></div>
           <div className='travelHome'>
             <div className='italyHomePage'>
               <Link className='linkItaly' to="/italia">
@@ -21,7 +21,7 @@ function DestinationsToTravel() {
                   <div className='parrafHomeItaly'>
                     <div className='textItalyEeuuParrafHome'>
                       <h3>Italia</h3>
-                      <p>Aquí puedes ver un ejemplo de itinerario para 9 días en Italia</p>
+                      <p>Aquí puedes ver ejemplo de 2 días en Italia</p>
                     </div>
                   </div>
                   <img className='imgHomeItaly' src={italy} alt="Florence" />
@@ -34,7 +34,7 @@ function DestinationsToTravel() {
                   <div className='parrafHomeNewYork'>
                     <div className='textItalyEeuuParrafHome'>
                       <h3>EEUU</h3>
-                      <p>Aquí puedes ver un ejemplo de itinerario para 8 días en NY</p>
+                      <p>Aquí puedes ver ejemplo de 2 días días en NY</p>
                     </div>
                   </div>
                   <img className='imgHomeNewYork' src={newYork} alt="NewYork" />

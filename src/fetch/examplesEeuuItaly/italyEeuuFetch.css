@@ -1,0 +1,110 @@
+.allExampleFetch{
+  background: url(./img/circleColors.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 12px -18px inset;
+}
+
+.styleExampleFetch{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 10px;
+}
+
+.titleRenderExample{
+  padding: 20px;
+  text-align: justify;
+}
+
+.divImgItalyEeuu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.imgItalyEeuu{
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 505px) and (max-width: 640.99px) {
+
+  .allExampleFetch{
+    padding: 50px 50px;
+  }
+
+  .imgItalyEeuu{
+    width: 130px;
+    height: 80px;
+    margin: 5px;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 971.99px) {
+
+  .allExampleFetch{
+    padding: 50px 50px;
+  }
+
+  .imgItalyEeuu{
+    width: 230px;
+    height: 110px;
+    margin: 5px;
+  }
+
+}
+
+@media (min-width: 972px) and (max-width: 1229.99px) {
+
+  .allExampleFetch{
+    padding: 50px 100px;
+  }
+
+  .imgItalyEeuu{
+    width: 250px;
+    height: 130px;
+  }
+
+}
+
+@media (min-width: 1230px)  {
+
+  .allExampleFetch{
+    padding: 50px 100px;
+  }
+
+  .styleExampleFetch{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .titleRenderExample{
+    width: 70%;
+    padding: 50px 50px 80px 50px;
+  }
+
+
+  .divImgItalyEeuu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 30px 80px 50px;
+  }
+
+  .imgItalyEeuu{
+    width: 450px;
+    height: 350px;
+  }
+
+  .EeuuImg{
+    width: 320px;
+    height: 200px;
+  }
+}

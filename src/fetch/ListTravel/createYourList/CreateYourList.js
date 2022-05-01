@@ -1,12 +1,13 @@
 import "./CreateYourList.css"
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import LinksPlanning from "../linksPlanning/LinksPlanning";
 import AddTitle from "./anadirInputs/AddTitle";
 import objetTravel from "../../objets/objetTravel";
+import objetTravel2 from "../../objets/objetTravel2";
 import AddDays from "./anadirInputs/AddDays"
 import AddDestinations from "./anadirInputs/AddDestination";
 import AddPlaces from "./anadirInputs/AddPlaces";
-
+import RenderDays from "../../examplesEeuuItaly/italy/DayFetch";
 
 function CreateYourList() {
   let [travelAll, setTravelAll] = useState(objetTravel);
@@ -22,35 +23,31 @@ function CreateYourList() {
     window.location.replace("http://localhost:3000/registro");
   }
 
-  function renderPage() {
-    let list = 
-    travelAll.days.map(days=>{
-      return (
-      <>
-        <p>{days.day}</p>
-        {
-          days.destinations ?
-          days.destinations.map(destinations=>{
-            return (  
-              <>
-                <p>{destinations.destination}</p>
-                {
-                  destinations.places ?
-                  destinations.places.map(places=>{
-                      return <p>{places.name}</p>
-                  })
-                  : <></>
-                }
-              </> 
-            )
-          
-          })
-          : <></>
-        }
-      </>
-      )
-    })
+  useEffect(()=>{
+    renderPage()
+  }, [travelAll])
 
+  function sendTravel() {
+    let user = sessionStorage.getItem('nameUserLogin');
+    let objectToSend = {
+      travel: travelAll,
+      user: user
+    }
+    let data = {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(objectToSend),
+    };
+    fetch("http://localhost:8000/travel", data)
+    .then(response=>response.json())
+    .then(res=>{
+      setTravelAll(objetTravel2);
+      window.location.reload()
+    })
+      
+  }
+
+  function renderPage() {
     return (
       <>
         <div className="createYourList">
@@ -58,40 +55,41 @@ function CreateYourList() {
           <div className="allStyleCreateYourList">
             <div className="allInputsCreateYourList">
               <div className="inputCreateList">
-              <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
+                <AddTitle travelAll={travelAll} setTravelAll={setTravelAll}/>
               </div>
               <div className="inputCreateList">
-              <AddDays travelAll={travelAll} setTravelAll={setTravelAll} />
+                <AddDays travelAll={travelAll} setTravelAll={setTravelAll} />
               </div>
               <div className="inputCreateList">
-              <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
+                <AddDestinations travelAll={travelAll} setTravelAll={setTravelAll} day={day} setDay={setDay}/>
               </div>
               <div className="inputCreateList">
-                
-              <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
+                <AddPlaces travelAll={travelAll} setTravelAll={setTravelAll} day={day} destination={destination} setDestination={setDestination}/>
               </div>
-              <div className="inputCreateList">
-                <p className="pInput">Descripción lugar a visitar:</p>
+              <div className="buttonSend">
+                <button className="buttonCreateList" onClick={()=>sendTravel()}>Enviar</button>
               </div>
             </div>
             <div className="textAddInputsCreateYourList">
-              <h2>{travelAll.title}</h2>
-              {list}
-
+              <div className="inputsSaveUser">
+                <h2>{travelAll.title}</h2>
+                <RenderDays travelAll={travelAll} setTravelAll={setTravelAll} button={true}/>
+              </div>
             </div>
           </div>
         </div>
       </>
     );
   }
-  
-
-  
 
   return (
     isLogged ? renderPage() : redirect()
   );
 }
+
+
+
+
 
 export default CreateYourList;
 

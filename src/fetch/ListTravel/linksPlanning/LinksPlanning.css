@@ -1,23 +1,51 @@
 
 .navLinkListTravel{
-    display: flex;
-	padding: 50px 0 0 100px;
+  display: flex;
+	justify-content: center;
+}
+
+.allLinksListTravel{
+  margin: 20px 0 10px 0;
 }
 
 .linkListTravel{
-    margin: 5px;
-    background-color: #d3b589d7;
-    line-height: 20px;
-	height: 100%;
-	font-size: 15px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
-	color: rgb(66, 65, 65);
-	cursor: pointer;
-    padding: 5px;
-    border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+	z-index: 1;
+  color: white;
+  background-color: #815260;
+  line-height: 20px;
+	height: 100%;
+	margin: 0 5px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 10px;
 }    
+
+.linkListTravel:hover {
+  background-image: linear-gradient(to bottom, #dd98a3, #c78993);
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 500px) and (max-width: 884.99px)  {
+  .linkListTravel{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 885px) and (max-width: 1000.99px)  {
+  .linkListTravel{
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 885px) {
+  .linkListTravel{
+    font-size: 15px;
+  }
+}

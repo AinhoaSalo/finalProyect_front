@@ -6,19 +6,17 @@
   padding: 0 20px;
   margin: 250px 50px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #dddedf;
   color: #525e5e;
 }
 
 .titleDescripcionPage{
-  font-family: "cherry swash";
   padding: 0 60px;
   padding-top: 50px;
 }
 
 .parrafDescripcionPage {
- 	font-family: "cherry swash";
   margin: 0 20px;
   margin-bottom: 50px;
   text-align: justify;
@@ -36,7 +34,6 @@
 
   .descriptionPage{
     margin: 250px 170px;
-    font-size: 20px;
   }
 
 }
@@ -45,7 +42,6 @@
 
   .descriptionPage{
     margin: 300px 200px;
-    font-size: 20px;
   }
 
 }

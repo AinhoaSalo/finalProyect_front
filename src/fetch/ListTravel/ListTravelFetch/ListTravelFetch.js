@@ -1,7 +1,8 @@
 import "./ListTravelFetch.css"
-import LinksPlanning from "../linksPlanning/LinksPlanning";
-import { useState} from "react"
+import { useEffect, useState} from "react"
+import swal from 'sweetalert';
 import Travel from "./travel/Travel";
+import LinksPlanning from "../linksPlanning/LinksPlanning";
 
 function ListTravelFetch() {
   let [travelFetch, setTravelFetch] = useState([]);
@@ -10,30 +11,89 @@ function ListTravelFetch() {
   if (user != null) {
     isLogged = true;
   }
-  function redirect(){
-    window.location.replace("http://localhost:3000/registro");
-  }
 
-  function renderPage() {
-    fetch("http://localhost:8000/travel?nameUserLogin=test")
+  useEffect(()=>{
+    fetch("http://localhost:8000/travel?" + new URLSearchParams({nameUserLogin: sessionStorage.getItem('nameUserLogin'),}))
     .then(response=>response.json())
     .then(res=>{
       setTravelFetch(res.travel);
     }) 
-    
+  }, [])
+  
+  function redirect(){
+    window.location.replace("http://localhost:3000/registro");
+  }
+
+  function deleteTravel(travel){
+    let nameUserLogin = sessionStorage.getItem('nameUserLogin');
+
+    let travelDelete = {
+      nameUserLogin,
+      travel,
+    };
+
+    let data = {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(travelDelete),
+    };
+
+    fetch("http://localhost:8000/travel", data)
+    .then(response=>response.json())
+    .then(function (res) {
+      if (res.delete === true){
+        swal(res.message);
+        deleteFromTravelArray(travel);
+      } else {
+        swal(res.message);
+      }
+    });
+  }
+
+  useEffect(()=>{
+    renderPage()
+  }, [travelFetch])
+
+  function deleteFromTravelArray(travel){
+    let auxTravel = {...travelFetch};
+    //Recorremos el diccionario y eliminamos el que toca
+    for (let i = Object.keys(auxTravel).length - 1; i >= 0; i--){
+      if (auxTravel[i].title === travel.title){
+        delete auxTravel[i]
+      }
+    }
+    //Transforma el diccionario en un array
+    auxTravel = Object.values(auxTravel)
+    setTravelFetch(auxTravel)
+  }
+
+  function renderPage() {
     return (
       <>
       <div className="allListTravelFetch">
         <LinksPlanning/>
         <div className="allCollapsible">
-          {
-            travelFetch !== 0
+          { 
+            travelFetch !== undefined 
           ?
-            travelFetch.map((travel, i) =>{
-              return <Travel key={i} travel={travel}/>
-            })
+            travelFetch.length !== 0
+            ? 
+              travelFetch.map((travel, i) =>{
+                return (
+                  <>
+                    <div className="collapsibleAndButton">
+                      <Travel key={i} travel={travel}/>
+                      <button className="buttonDeleteListDataBase" onClick={()=>deleteTravel(travel)}>Borrar</button>
+                    </div>
+                  </>
+                )
+              })
+            :
+              <><p className="travelNoCreate">No hay viajes creados</p></>
           :
-            ""
+            <><p className="travelNoCreate">No hay viajes creados</p></>
           }
         </div>
       </div>
@@ -42,7 +102,9 @@ function ListTravelFetch() {
   }
 
   return (
-    isLogged ? renderPage() : redirect()
+    <>
+    {isLogged ? renderPage() : redirect()}
+    </>
   );
 }
 

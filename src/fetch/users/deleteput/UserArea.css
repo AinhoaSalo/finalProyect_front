@@ -1,10 +1,87 @@
+main{
+  min-height: calc(100vh - 300px);
+}
+
 .allAreaUsers{
-  background: url(../../ListTravel/createYourList/img/workplace-g41ff900d6_1280.jpg);
+  background: url(../../ListTravel/createYourList/img/coffee.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  padding-bottom: 266px;
+  height: 688px;
+  padding-top: 50px;
+
+}
+
+.allUserLogin{
+  background-color: rgba(255, 255, 255, 0.705);
+  height: 300px;
+  border-radius: 10px;
+  margin: 20px 15px ;
+}
+
+.allStyleModify, .inputRenderModify{
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 20px 0 20px;
+}
+
+.btnDeleteModifySingOff{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #c2c3c4, #6f7172);
+  color: #dddddd;
+  font-size: 12px;
+  padding: 7px;
+  text-decoration: none;
+  border: #969fa8;
+}
+
+.styleInputs{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  width: 60%;
+  padding: 45px 0;
+}
+
+.allButtonUserArea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameAndLastnamePersonalArea{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  width: 60%;
+  padding: 30px 0;
+}
+
+.inputsModify{
+  display: inline-block;
+  width: 90px;
+  border-radius: 5px;
+  border: 1.5px solid #815260;
+  background-color: #f7e1e8;
+  margin: 10px;
+}
+
+.styleButton{
+  display: flex;
+  flex-direction: column;
+}
+
+.btnDeleteModifySingOff{
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 110px;
+}
+
+.btnDeleteModifySingOff:hover {
+  background-image: linear-gradient(to bottom, #f7ced5, #c78993);
+  color: white;
+  text-decoration: none;
 }
 
 .hide{
@@ -13,4 +90,116 @@
 
 .show{
   display: block;
+}
+
+label{
+  display: inline-block;
+  width: 90px;
+}
+
+@media (min-width: 608px) and (max-width: 677.99px) {
+  .allUserLogin{
+    margin: 60px 25px ;
+  }
+  
+  .styleButton{
+    flex-direction: row;
+  }
+ 
+  .styleInputs{
+    width: 30%;
+    padding:1px;
+  }
+  
+  .allButtonUserArea{
+
+    width: 70%;
+  }
+  .nameAndLastnamePersonalArea{
+    width: 50%;
+    padding:1px;
+  }
+
+  .allStyleModify{
+    padding: 120px 10px 0 20px;
+  }
+}
+
+@media (min-width: 678px) and (max-width: 884.99px) {
+
+  .allUserLogin{
+    margin: 60px 25px ;
+  }
+  
+  .styleButton, .allButtonUserArea{
+    flex-direction: row;
+  }
+
+  .styleInputs{
+    width: 30%;
+    padding:1px;
+  }
+
+  .allStyleModify{
+    padding: 120px 50px 0 50px;
+  }
+}
+
+@media (min-width: 885px) and (max-width: 1114.99px){
+
+  .allUserLogin{
+    margin: 60px 55px ;
+  }
+  
+  .styleButton, .allButtonUserArea{
+    flex-direction: row;
+  }
+
+  .styleInputs{
+    width: 30%;
+    padding:1px;
+  }
+
+  .allStyleModify{
+    padding: 120px 90px 0 120px;
+  }
+}
+@media (min-width: 1115px) and (max-width: 1309.99px)  {
+
+  .allUserLogin{
+    margin: 60px 150px ;
+  }
+  
+  .styleButton, .allButtonUserArea{
+    flex-direction: row;
+  }
+
+  .styleInputs{
+    width: 30%;
+    padding:1px;
+  }
+
+  .allStyleModify{
+    padding: 120px 100px 0 100px;
+  }
+}
+
+@media (min-width: 1310px) {
+
+  .allUserLogin{
+    margin: 60px 250px ;
+  }
+  
+  .styleButton, .allButtonUserArea{
+    flex-direction: row;
+  }
+
+  .styleInputs{
+    width: 30%;
+    padding:1px;
+  }
+
+  .allStyleModify{
+    padding: 120px 100px 0 140px;
+  }
 }

@@ -1,20 +1,30 @@
 import "./HamburgerMenu.css"
 import React from "react";
-import {slide as Menu} from 'react-burger-menu';
-import {decorator as reduxBurgerMenu} from 'redux-burger-menu';
-import {NavLink , useLocation} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import logoSmall from "../img/logoSmall.png"
 
 function HeaderBurguer() {
-
+  let [open, setOpen]= useState(false)
   return(
     <>
-      <Menu>
-        <div className='headerBurguer'>
-          <NavLink id="home" className="menu-item" to="/inicio">Inicio</NavLink>
-          <NavLink id="about" className="menu-item" to="/about">About</NavLink>
-          <NavLink id="contact" className="menu-item" to="/contact">Contact</NavLink>
+      <div className="mobile-container">
+        <div className="topnav">
+          <NavLink to="/inicio"><img className="linkHeaderImgBurguer" src={logoSmall} alt="mundo" /></NavLink>
+          {open ? <div id="myLinks">
+            <NavLink className="linkHeader" to="/inicio">Inicio</NavLink>
+            <NavLink className="linkHeader" to="/italia">Italia</NavLink>
+            <NavLink className="linkHeader" to="/eeuu">EEUU</NavLink>
+            <NavLink className="linkHeader" to="/listascreadas">Planning</NavLink>
+            <NavLink className="linkHeader" to="/registro">Registro</NavLink>
+          </div>: <></>}
+          <a className="icon" onClick={()=>setOpen(!open)}>
+          <FontAwesomeIcon icon={solid('bars')} size="2x" />
+          </a>
         </div>
-      </Menu>
+      </div>
     </>  
 
   )
