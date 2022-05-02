@@ -29,6 +29,6 @@ Así se instala todos los paquetes que he usado en el proyecto.
 
 Esta parte del proyecto es el frontend, se verá de la siguiente forma:
 
-![Image text](../public/home.jpg)
+![Image text](./public/home.jpg)
 
 
