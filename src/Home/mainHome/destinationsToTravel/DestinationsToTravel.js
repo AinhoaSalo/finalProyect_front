@@ -13,7 +13,7 @@ function DestinationsToTravel() {
     <> 
       <div className='styleSpaceDescriptionPage'>
         <div className='allTravelHome'>
-          <div className='titleDestinationsToTravel'><h2>Ejemplos de como crear tu itinerario para tus viajes</h2></div>
+          <div className='titleDestinationsToTravel'><h2>Ejemplos de cómo crear tu itinerario para tus viajes</h2></div>
           <div className='travelHome'>
             <div className='italyHomePage'>
               <Link className='linkItaly' to="/italia">

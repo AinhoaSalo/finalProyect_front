@@ -41,7 +41,7 @@ function Login() {
   return(
     <>
       <div className="addUserLogin">
-        <h3>Conectate aquí</h3>
+        <h3>Conéctate aquí</h3>
         <div><label className="labelInputsLogin">Usuario: </label><input className="nameUserLogin inputRegLog" type="text" onChange={e=>setNameUserLogin(e.target.value)} value={nameUserLogin}/></div>
         <div><label className="labelInputsLogin">Contraseña: </label><input className="passwordUserLogin inputRegLog" type="password" onChange={e=>setPasswordUserLogin(e.target.value)} value={passwordUserLogin}/></div>
         <div><button onClick={()=>sendDataUserLogin()} className="btnRegisterLogin">Conectar</button></div>

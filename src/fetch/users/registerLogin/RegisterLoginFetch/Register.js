@@ -43,7 +43,7 @@ function Register() {
     return(
       <>
       <div className="addUserRegister">
-        <h3>Registrate aquí</h3>
+        <h3>Regístrate aquí</h3>
         <div><label className="labelInputsRegister">Usuario: </label><input className="nameUserRegisterFront inputRegLog" type="text" onChange={e=>setNameUserRegister(e.target.value)} value={nameUserRegister}/></div>
         <div><label className="labelInputsRegister">Nombre: </label><input className="nameRegisterFront inputRegLog" type="text" onChange={e=>setNameRegister(e.target.value)} value={nameRegister}/></div>
         <div><label className="labelInputsRegister">Apellidos: </label><input className="lastnameRegisterFront inputRegLog" type="text" onChange={e=>setLastnameRegister(e.target.value)} value={lastnameRegister}/></div>
