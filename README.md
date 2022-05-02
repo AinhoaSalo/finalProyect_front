@@ -17,11 +17,11 @@ https://nodejs.org/ y hacer click en versión LTS para descargar e instalar.
 
 **NPM**
 
-En la terminal ponermo:
+En la terminal ponemos:
 
 *npm init*
 
-Con esto arrancamos npm, despues ponermos:
+Con esto arrancamos npm, despues ponemos:
 
 *npm install*
 
