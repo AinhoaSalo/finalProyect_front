@@ -19,11 +19,11 @@ https://nodejs.org/ y hacer click en versión LTS para descargar e instalar.
 
 En la terminal ponermo:
 
-npm init
+*npm init*
 
 Con esto arrancamos npm, despues ponermos:
 
-npm install
+*npm install*
 
 Así se instala todos los paquetes que he usado en el proyecto.
 
