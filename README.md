@@ -27,8 +27,15 @@ Con esto arrancamos npm, despues ponemos:
 
 Así se instala todos los paquetes que he usado en el proyecto.
 
+## Conectar con Backend
+
 Esta parte del proyecto es el frontend, se verá de la siguiente forma:
 
 ![Image text](./public/home.jpg)
 
+Para que el proyecto funcione hay que clonar el siguiente repositorio:
+
+https://github.com/AinhoaSalo/finalProyect_back
+
+Esta es la parte del backend con la que conecta el proyecto.
 
