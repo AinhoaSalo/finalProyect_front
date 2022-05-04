@@ -36,3 +36,10 @@ https://github.com/AinhoaSalo/finalProyect_back
 
 Esta es la parte del backend con la que conecta el proyecto.
 
+
+## Para arrancar el programa
+
+Poner en la terminal 
+
+*npm start*
+
