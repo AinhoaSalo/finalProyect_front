@@ -2,7 +2,7 @@
 
 Página para crear tu itinerario de viaje, para tener todo detallado.
 
-http://planyourtrip.myvnc.com:3000/
+http://planyourtrip.myvnc.com:3000/inicio
 
 ## Prerequisitos
 
