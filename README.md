@@ -32,7 +32,7 @@ Esta parte del proyecto es el frontend, se verá de la siguiente forma:
 ## Conectar con Backend
 Para que el proyecto funcione hay que clonar el siguiente repositorio:
 
-[Github Backend proyecto](https://github.com/AinhoaSalo/finalProyect_back)
+[Github Backend](https://github.com/AinhoaSalo/finalProyect_back)
 
 Esta es la parte del backend con la que conecta el proyecto.
 
