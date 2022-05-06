@@ -8,6 +8,18 @@
 body{
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+	padding-top: 80px;
+}
+
+header{
+  z-index: 1; /*Se consigue posicionar el header por encima del main*/
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición*/
 }
 
 .react-parallax{
@@ -16,5 +28,6 @@ body{
 
 main{
   min-height: calc(100vh - 316px);
+  z-index: 0;
 }
 

@@ -1,6 +1,5 @@
 .footer{
   background: linear-gradient(to bottom, #dddedf, #707070);
-  /* background:  #bea989; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +15,17 @@
   color: #464444;
 }
 
+ul{
+  list-style-type: none;
+}
+
+.socialMedia{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+
 .fa-twitter,
 .fa-linkedin,
 .fa-github{
@@ -23,3 +33,4 @@
   margin: 10px;
   padding-bottom: 10px;
 }
+

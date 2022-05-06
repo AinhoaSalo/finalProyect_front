@@ -6,14 +6,12 @@
 
 .topnav a {
   color: rgb(90, 89, 89);
-  /* padding: 15px 16px; */
   text-decoration: none;
   font-size: 21px;
   display: block;
 }
 
 .topnav a.icon {
-  background-color: #979e8b;
   display: block;
   position: absolute;
   right: 0;
@@ -25,7 +23,6 @@
 }
 
 .topnav a:hover {
-  /* background-color: #4f7a94; */
   color: rgb(250, 248, 248);
 }
 
