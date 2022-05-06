@@ -27,7 +27,7 @@ function EeuuFetch() {
           <div className="styleExampleFetch">
             <div className="titleRenderExample">
               <h2 className="titleExampleFetch">{title}</h2>
-              <RenderDays travelAll={eeuu} button={false}/>
+              <RenderDays key={eeuu.title} travelAll={eeuu} button={false}/>
             </div>
             <div className="divImgItalyEeuu">
               <img className="imgItalyEeuu EeuuImg" src={nyc} alt="" />

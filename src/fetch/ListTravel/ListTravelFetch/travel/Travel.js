@@ -12,8 +12,8 @@ function Travel({travel}) {
       <div className="titleCollapsible">
         <Collapsible className="pointer title" trigger={<>{travel.title} <FontAwesomeIcon icon={solid('circle-chevron-down')} size="xs" rotation={open ? 180 : 0}/></>} onOpen={()=> setOpen(true)} onClose={()=> setOpen(false)}>
           {
-          travel.days.map((day, i)=>{
-            return <Day key={i} day={day}/>
+          travel.days.map(day=>{
+            return <Day key={travel.title} day={day} travel={travel}/>
           })
           }
         </Collapsible>

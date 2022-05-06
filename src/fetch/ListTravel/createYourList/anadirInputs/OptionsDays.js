@@ -3,10 +3,10 @@ function OptionsDay({travelAll, day, setDay}) {
     return (
       <>
       <select className="selectCreateList" onChange={(e)=> setDay(e.target.value)} value={day}>
-      {travelAll.days.map((day, i)=>{
+      {travelAll.days.map((day)=>{
         return(    
           <>     
-            <option key={i} value={day.day}>{day.day}</option>
+            <option key={travelAll.title} value={day.day}>{day.day}</option>
           </>
         )
       })}

@@ -16,10 +16,10 @@ function OptionsDestination({travelAll, day, destination, setDestination}) {
     return (
       <>
       <select className="selectCreateList" onChange={(e)=> setDestination(e.target.value)} value={destination}>
-      {travelAll.days[contador].destinations.map((destination, i)=>{
+      {travelAll.days[contador].destinations.map(destination=>{
         return(    
           <>     
-            <option key={i} value={destination.destination}>{destination.destination}</option>
+            <option key={travelAll.title} value={destination.destination}>{destination.destination}</option>
           </>
         )
       })}

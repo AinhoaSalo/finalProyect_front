@@ -28,7 +28,10 @@ header{
   font-size: 25px;
 }
 
-nav {
+ul {
+	list-style-type: none;
+	display: flex;
+	padding: 0;
 	margin: 35px 50px 0;
 	position: relative;
 	height: 50px;
@@ -38,20 +41,25 @@ nav {
 }
 
 nav .linkHeader {
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.link{
+	text-decoration: none;
+	color: rgb(212, 209, 209);
 	line-height: 50px;
 	height: 100%;
 	font-size: 15px;
 	display: inline-block;
 	position: relative;
 	z-index: 1;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
 	color: rgb(212, 209, 209);
 	cursor: pointer;
 }
 
-nav .animation {
+ul .animation {
 	position: absolute;
 	height: 100%;
 	top: 0;
@@ -76,28 +84,28 @@ nav .animation {
 	width: 110px;
 }
 
-nav .start-inicio, .linkHeader:nth-child(1):hover~.animation {
+ul .start-inicio, .linkHeader:nth-child(1):hover~.animation {
 	width: 100px;
 	left: 0;
 	background-color: #6a9fa8;
 }
-nav .start-italia, .linkHeader:nth-child(2):hover~.animation {
+ul .start-italia, .linkHeader:nth-child(2):hover~.animation {
 	width: 100px;
 	left: 100px;
 	background-color: #7c71af;
 }
-nav .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
+ul .start-eeuu, .linkHeader:nth-child(3):hover~.animation {
 	width: 100px;
 	left: 200px;
 	background-color: #356483;
 }
-nav .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, nav .start-creatulista, nav .start-areapersonal, .linkHeader:nth-child(4):hover~.animation{
+ul .start-listascreadas, .linkHeader:nth-child(4):hover~.animation, ul .start-creatulista, ul .start-areapersonal, .linkHeader:nth-child(4):hover~.animation{
 	width: 110px;
 	left: 300px;
 	background-color: #c78993;
 }
 
-nav .start-registro, .linkHeader:nth-child(5):hover~.animation {
+ul .start-registro, .linkHeader:nth-child(5):hover~.animation {
 	width: 110px;
 	left: 410px;
 	background-color: #ad9a5a;

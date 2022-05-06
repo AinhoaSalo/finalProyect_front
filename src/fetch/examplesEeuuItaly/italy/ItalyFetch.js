@@ -25,7 +25,7 @@ function ItalyFetch() {
           <div className="styleExampleFetch">
             <div className="titleRenderExample">
               <h2 className="titleExampleFetch">{title}</h2>
-              <RenderDays travelAll={italy} button={false}/>
+              <RenderDays key={italy.title} travelAll={italy} button={false}/>
             </div>
             <div className="divImgItalyEeuu">
               <img className="imgItalyEeuu" src={italyImg} alt="" />

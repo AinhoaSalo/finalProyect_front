@@ -15,14 +15,14 @@ function RenderDays({travelAll, setTravelAll, button}) {
                 <>
                   <p className="daysExampleFetch">{day.day} <FontAwesomeIcon className="binInputs" icon={solid('trash-can')} size="xs" onClick={()=>deleteInputListUser(day)}/></p>
                   
-                  <RenderDestination day={day} travelAll={travelAll} setTravelAll={setTravelAll} button={button}/>
+                  <RenderDestination key={travelAll.title} day={day} travelAll={travelAll} setTravelAll={setTravelAll} button={button}/>
                 </>
               )
             } else {
               return(
                 <>
                   <p className="daysExampleFetch">{day.day}</p>
-                  <RenderDestination day={day} travellAll={travelAll} button={button}/>
+                  <RenderDestination  key={travelAll.title} day={day} travellAll={travelAll} button={button}/>
                 </>
               )
             }

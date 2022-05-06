@@ -81,11 +81,11 @@ function ListTravelFetch() {
           ?
             travelFetch.length !== 0
             ? 
-              travelFetch.map((travel, i) =>{
+              travelFetch.map(travel =>{
                 return (
                   <>
                     <div className="collapsibleAndButton">
-                      <Travel key={i} travel={travel}/>
+                      <Travel  key={travel.title} travel={travel}/>
                       <button className="buttonDeleteListDataBase" onClick={()=>deleteTravel(travel)}>Borrar</button>
                     </div>
                   </>
