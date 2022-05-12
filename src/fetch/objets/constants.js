@@ -1,8 +1,7 @@
 // Constants.js
 const prod = {
     url: {
-        API_URL: 'http://planyourtrip.myvnc.com:8000',
-        API_URL_USERS: 'https://myapp.herokuapp.com/users'}
+        API_URL: 'http://planyourtrip.myvnc.com:8000'
     };
 const dev = {
     url: {
